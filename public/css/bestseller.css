@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bestsell{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bestsell .head_bls{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 50px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+.bestsell .content_bsl{
+  display: flex;
+  width: 80%;
+}
+.bestsell .content_bsl .left{
+  width: 50%;
+  height: auto;
+  /* background-color: bisque; */
+  /* border-right: 2px black solid; */
+}
+.bestsell .content_bsl .right{
+  width: 50%;
+  height: auto;
+  /* background-color: bisque; */
+}
+
+.bestsell .content_bsl .lefItem1{
+  background-color: rgb(130, 108, 252);
+   border-bottom-right-radius: 0;
+}
+.bestsell .content_bsl .lefItem2{
+  background-color: rgb(235, 223, 250);
+  margin-top: 50px;
+   border-bottom-right-radius: 0;
+}
+.bestsell .content_bsl .rightItem1{
+  background-color: rgb(235, 223, 250);
+  margin-top: 35%;
+   border-bottom-left-radius: 0;
+}
+.bestsell .content_bsl .rightItem2{
+  background-color: rgb(130, 108, 252);
+  margin-top: 50px;
+  margin-bottom: 50px;
+   border-bottom-left-radius: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Item Card */
+.item {
+  position: relative;
+  width: 700px;
+  height: 450px;
+  margin: 0px 30px 0px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 0px;
+  transition: 0.5s;
+  border-radius: 30px;
+  /* border-bottom-right-radius: 0; */
+  /* border: 5px #fe53bb solid; */
+}
+
+/* --Item-img-- */
+.item .item-img img {
+  position: absolute;
+  bottom: 0;
+  left: 52%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+  height: 420px;
+}
+.item:hover .item-img img {
+  left: 80%;
+  height: 550px;
+}
+.lefItem1:hover .item-img img,.rightItem2:hover .item-img img{
+  left: 15%;
+  height: 550px;
+}
+.item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px gray;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+/* --End Item-img-- */
+/* --Item-text-- */
+.item .item-text h1 {
+  font-size: 2rem;
+  color: #f3654a;
+  letter-spacing: 1.8px;
+  font-weight: 500;
+}
+.item .item-text p {
+  font-size: 0.9rem;
+  color: #6d2936;
+}
+.item .item-text {
+  position: absolute;
+  width: 62%;
+  left: 20%;
+  padding: 20px 20px 20px 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.item:hover .item-text {
+  opacity: 1;
+  visibility: visible;
+  left: 2%;
+}
+.lefItem1:hover .item-text,.rightItem2:hover .item-text{
+  opacity: 1;
+  visibility: visible;
+  left: 35%;
+}
+/* --End Item-text-- */
+
+.item .item-text .button {
+  border: 2px #f3654a solid;
+  width: fit-content;
+  padding: 3px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f3654a;
+  margin-top: 5px;
+}
+.item .item-text .button:hover {
+  color: black;
+  background-color: white;
+  border: 2px white solid;
+  box-shadow: 0 0 5px white, 0 0 20px white;
+}
+/* End Item Card */
+

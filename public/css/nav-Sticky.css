@@ -1,0 +1,114 @@
+.backgr {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.767);
+    position: fixed;
+    top: -100px;
+    width: 100%;
+    transition: top 0.3s;
+    z-index: 2000;
+    /* padding: 5px; */
+  }
+  .bot-head-sticky {
+    width: 1190px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .bot-head-sticky .menu-sticky {
+    display: flex;
+  }
+  .bot-head-sticky .menu-sticky a {
+    padding: 7px 15px 7px 15px;
+    font-size: 1vw;
+    font-weight: 300;
+    font-weight: 700;
+    font-family: "Amiri", serif;
+    color: rgb(187, 185, 185);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: white;
+  }
+  
+  .menu-sticky .ao:hover,
+  .menu-sticky .quan:hover,
+  .menu-sticky .nhan:hover,
+  .menu-sticky .non:hover,
+  .menu-sticky .kinh:hover,
+  .menu-sticky .about:hover {
+    color: #6dd3ff;
+    font-weight: 600;
+  }
+  .account-sticky {
+    padding: 10px 0px;
+  }
+  .account-sticky .log {
+    color: white;
+  }
+  .account-sticky .iconlog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+  }
+  .account-sticky .iconlog .headd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .account-sticky .iconlog .img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #6dd3ff;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .account-sticky .iconlog img {
+    display: block;
+    min-height: 40px;
+    min-width: 40px;
+    max-height: 70px;
+    max-width: 70px;
+    /* position: absolute; */
+    z-index: 10000;
+  }
+  .account-sticky .iconlog .subLogin {
+    position: absolute;
+    width: fit-content;
+    top: 100%;
+    background-color: black;
+    padding: 0px;
+    height: 0px;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+  }
+  .account-sticky .iconlog:hover .subLogin {
+    height: fit-content;
+  }
+  .account-sticky .iconlog .subLogin ul li {
+    padding: 5px 20px;
+    font-size: 18px;
+  }
+  .account-sticky .iconlog .subLogin ul li:hover a {
+    color: white;
+  }
+  
+  .account-sticky a {
+    text-decoration: none;
+    color: rgb(187, 185, 185);
+  }
+  .account-sticky i {
+    margin-right: 5px;
+  }
+  .account-sticky .text {
+    margin-right: 18px;
+  }
+  

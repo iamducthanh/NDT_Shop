@@ -1,0 +1,119 @@
+@media (max-width: 1420px) {
+  .midAo .card {
+    width: 22%;
+  }
+  .bodyAo .rightAo {
+    margin-right: 5px;
+    padding-left: 0px;
+  }
+  .rightAo .danhmuc {
+    padding-left: 0px;
+  }
+  .hdhd {
+    width: 100%;
+  }
+}
+@media (max-width: 970px) {
+  .midAo .card {
+    width: 46%;
+  }
+  .bodyAo .rightAo {
+    width: 30%;
+    margin-right: 5px;
+    padding-left: 0px;
+  }
+  .rightAo .danhmuc {
+    padding-left: 0px;
+  }
+  .hdhd {
+    width: 100%;
+  }
+
+  .midAo .card .text .dcs {
+    font-size: 2.2vw;
+  }
+  .midAo .card .text p {
+    font-size: 1.4vw;
+  }
+  .midAo .card .text .star i {
+    font-size: 2vw;
+  }
+  .midAo .card .text .price {
+    font-size: 2vw;
+  }
+  .midAo .card .text .buy a {
+    font-size: 2.2vw;
+  }
+}
+@media (max-width: 790px) {
+  .bodyAo {
+    flex-direction: column;
+  }
+  .bodyAo .leftAo {
+    width: 100%;
+  }
+  .bodyAo .rightAo {
+    width: 100%;
+  }
+  .rightAo .danhmuc h2 {
+    font-size: 5vw;
+  }
+  .rightAo .danhmuc p {
+    font-size: 5vw;
+  }
+  .rightAo .danhmuc .list a {
+    font-size: 4vw;
+    text-align: center;
+  }
+  .rightAo .danhmuc {
+    margin-bottom: 20px;
+  }
+
+  .midAo .card .text .dcs {
+    font-size: 2.5vw;
+    margin-top: 2%;
+  }
+  .midAo .card .text p {
+    font-size: 1.7vw;
+  }
+  .midAo .card .text .star i {
+    font-size: 2.3vw;
+  }
+  .midAo .card .text .price {
+    font-size: 2.3vw;
+  }
+  .midAo .card .text .buy a {
+    font-size: 2.6vw;
+  }
+}
+@media (max-width: 500px) {
+  .midAo .card {
+    width: 44%;
+  }
+  .midAo .card .text .dcs {
+    font-size: 3.5vw;
+    margin-top: 2%;
+  }
+  .midAo .card .text p {
+    font-size: 1.7vw;
+  }
+  .midAo .card .text .star i {
+    font-size: 2.8vw;
+  }
+  .midAo .card .text .price {
+    font-size: 3vw;
+  }
+  .midAo .card .text .buy a {
+    font-size: 3vw;
+  }
+}
+@media (max-width: 340px) {
+  .midAo .card {
+    width: 42%;
+  }
+}
+@media (max-width: 260px) {
+  .midAo .card {
+    width: 100%;
+  }
+}

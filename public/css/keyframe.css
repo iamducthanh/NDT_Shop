@@ -1,0 +1,159 @@
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
+@keyframes rainbow-text-animation {
+    0% {
+      background-size: 57%;
+      background-position: 0 0;
+    }
+    20% {
+      background-size: 57%;
+      background-position: 0 1em;
+    }
+    100% {
+      background-size: 300%;
+      background-position: -9em 1em;
+    }
+  }
+  
+  /* Move the background and make it smaller. */
+  /* Animation shown when entering the page and after the hover animation. */
+  @keyframes rainbow-text-animation-rev {
+    0% {
+      background-size: 300%;
+      background-position: -9em 1em;
+    }
+    20% {
+      background-size: 57%;
+      background-position: 0 1em;
+    }
+    100% {
+      background-size: 57%;
+      background-position: 0 0;
+    }
+  }
+  
+  /* .right .text2 h3 {
+    background: linear-gradient(to right, #f3654a 0%, #dc2743 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  } */
+
+
+  @keyframes rainbow-text-simple-animation-rev {
+    0% {
+        background-size: 650%;
+    }
+    40% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
+@keyframes rainbow-text-simple-animation {
+    0% {
+        background-size: 100%;
+    }
+    80% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 650%;
+    }
+}
+
+  @keyframes lala {
+    0% {
+      width: 20px;
+      height: 20px;
+      opacity: 0%;
+    }
+    60% {
+      width: 500px;
+      height: 500px;
+      opacity: 100%;
+      background-color: #75d4fd8f;
+    }
+    100% {
+      width: 1500px;
+      height: 1500px;
+      opacity: 0%;
+    }
+  }
+  
+  /* @keyframes h1 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes h3 {
+    0% {
+      margin-left: 50%;
+      opacity: 0;
+    }
+    100% {
+      margin-left: 0px;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes col1 {
+    0% {
+      margin-top: 100px;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 0px;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes col2 {
+    0% {
+      margin-left: 100px;
+      opacity: 0;
+    }
+    100% {
+      margin-left: 0px;
+      opacity: 1;
+    }
+  } */
+
+
+  @keyframes nhunNhayTop {
+    0%{
+      transform: translateY(0px);
+    }
+    50%{
+      transform: translateY(-15px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+  }
+  @keyframes nhunNhayBot {
+    0%{
+      transform: translateY(0px);
+    }
+    50%{
+      transform: translateY(15px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes opac{
+    0%{
+        opacity: 0%;
+    }50%,100%{
+        opacity: 100%;
+    }
+    }

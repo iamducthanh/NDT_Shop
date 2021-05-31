@@ -1,0 +1,92 @@
+{
+    "aokhoac": [
+        {
+            "id": "1",
+            "name": "Refined Steel Shoes22",
+            "priceMin": "8491",
+            "priceMax": "8491",
+            "image1": "826",
+            "image2": "826",
+            "image3": "826"
+        },
+        {
+            "id": "2",
+            "name": "Refined Steel Shoes22",
+            "priceMin": "8491",
+            "priceMax": "8491",
+            "image1": "826",
+            "image2": "826",
+            "image3": "826"
+        },
+        {
+            "id": "3",
+            "name": "Refined Steel Shoes22",
+            "priceMin": "8491",
+            "priceMax": "8491",
+            "image1": "826",
+            "image2": "826",
+            "image3": "826"
+        },
+        {
+            "id": "4",
+            "name": "Refined Steel Shoes22",
+            "priceMin": "8491",
+            "priceMax": "8491",
+            "image1": "826",
+            "image2": "826",
+            "image3": "826"
+        },
+        {
+            "id": "5",
+            "name": "Refined Steel Shoes22",
+            "priceMin": "8491",
+            "priceMax": "8491",
+            "image1": "826",
+            "image2": "826",
+            "image3": "826"
+        },
+        {
+            "id": "6",
+            "name": "Refined Steel Shoes22",
+            "priceMin": "8491",
+            "priceMax": "8491",
+            "image1": "826",
+            "image2": "826",
+            "image3": "826"
+        },
+        {
+            "id": "7",
+            "name": "Refined Steel Shoes22",
+            "priceMin": "8491",
+            "priceMax": "8491",
+            "image1": "826",
+            "image2": "826",
+            "image3": "826"
+        },
+        {
+            "id": "8",
+            "name": "Refined Steel Shoes22",
+            "priceMin": "8491",
+            "priceMax": "8491",
+            "image1": "826",
+            "image2": "826",
+            "image3": "826"
+        }
+    ],
+
+    "user": [
+        {
+            "id": "1",
+            "username": "1",
+            "password": "1",
+            "vaitro": "1"
+        },
+        {
+            "id": "2",
+            "username": "2",
+            "password": "2",
+            "vaitro": "0"
+        }
+        
+    ]
+}
