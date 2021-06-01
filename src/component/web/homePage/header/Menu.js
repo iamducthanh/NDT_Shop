@@ -7,10 +7,10 @@ class Menu extends Component {
             <div className="bot-head">
                 <div className="menu" id="menu">
                     <div className="ao">
-                        <Link className="bmenu" to="/product">Áo</Link>
+                        <Link className="bmenu" to="#">Áo</Link>
                         <div className="sub">
                             <ul>
-                                <li><a style={{ width: '100%' }} className="subli" href="">jacket</a></li>
+                                <li><Link style={{ paddingLeft: 40}} className="subli" to="/product/ao-khoac">Áo khoác</Link></li>
                                 <li><a style={{ width: '100%' }} className="subli" href="">tee</a></li>
                                 <li><a style={{ width: '100%' }} className="subli" href="#">sweater</a></li>
                                 <li><a style={{ width: '100%' }} className="subli" href="">shirt</a></li>
@@ -56,7 +56,7 @@ class Menu extends Component {
                         </div>
                     </div>
                     <a className="bmenu" href="https://iamducthanh.tk" target="_blank">about me</a>
-                    {localStorage.getItem("accessToken") ? <Link className="bmenu" to="/admin">Admin</Link> : null}
+                    {localStorage.getItem("accessToken") ? <Link className="bmenu" to="/admin/">Admin</Link> : null}
                 </div>
                 <div className="burger" id="burger">
                     <i className="fa fa-bars" id="burgericon" />

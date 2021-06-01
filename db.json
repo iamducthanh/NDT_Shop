@@ -1,92 +1,427 @@
 {
-    "aokhoac": [
-        {
-            "id": "1",
-            "name": "Refined Steel Shoes22",
-            "priceMin": "8491",
-            "priceMax": "8491",
-            "image1": "826",
-            "image2": "826",
-            "image3": "826"
-        },
-        {
-            "id": "2",
-            "name": "Refined Steel Shoes22",
-            "priceMin": "8491",
-            "priceMax": "8491",
-            "image1": "826",
-            "image2": "826",
-            "image3": "826"
-        },
-        {
-            "id": "3",
-            "name": "Refined Steel Shoes22",
-            "priceMin": "8491",
-            "priceMax": "8491",
-            "image1": "826",
-            "image2": "826",
-            "image3": "826"
-        },
-        {
-            "id": "4",
-            "name": "Refined Steel Shoes22",
-            "priceMin": "8491",
-            "priceMax": "8491",
-            "image1": "826",
-            "image2": "826",
-            "image3": "826"
-        },
-        {
-            "id": "5",
-            "name": "Refined Steel Shoes22",
-            "priceMin": "8491",
-            "priceMax": "8491",
-            "image1": "826",
-            "image2": "826",
-            "image3": "826"
-        },
-        {
-            "id": "6",
-            "name": "Refined Steel Shoes22",
-            "priceMin": "8491",
-            "priceMax": "8491",
-            "image1": "826",
-            "image2": "826",
-            "image3": "826"
-        },
-        {
-            "id": "7",
-            "name": "Refined Steel Shoes22",
-            "priceMin": "8491",
-            "priceMax": "8491",
-            "image1": "826",
-            "image2": "826",
-            "image3": "826"
-        },
-        {
-            "id": "8",
-            "name": "Refined Steel Shoes22",
-            "priceMin": "8491",
-            "priceMax": "8491",
-            "image1": "826",
-            "image2": "826",
-            "image3": "826"
-        }
-    ],
-
-    "user": [
-        {
-            "id": "1",
-            "username": "1",
-            "password": "1",
-            "vaitro": "1"
-        },
-        {
-            "id": "2",
-            "username": "2",
-            "password": "2",
-            "vaitro": "0"
-        }
-        
-    ]
+  "aokhoac": [
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 1",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 2",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 3",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 4",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 5",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 6",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 7",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 8",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 9",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 10",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 11",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 12",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 13",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 14",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 15",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 16",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 17",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 18",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 19",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 20",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 21",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 22",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 23",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "name": "Refined Steel Shoes 24",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 25",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 26",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 27",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 28",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 29",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 30",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 31",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 32",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 33",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 34",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 35",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 36",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 37",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 38",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 39",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "id": "1",
+      "name": "Refined Steel Shoes 40",
+      "priceMin": "100000",
+      "priceMax": "200000",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "100"
+    },
+    {
+      "name": "35234",
+      "priceMin": "235324",
+      "priceMax": "2345234",
+      "image1": "2352",
+      "image2": "345",
+      "image3": "2345",
+      "soLuong": "345",
+      "id": "H2JIiyy"
+    }
+  ],
+  "user": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "1",
+      "vaitro": "1"
+    },
+    {
+      "id": "2",
+      "username": "2",
+      "password": "2",
+      "vaitro": "0"
+    }
+  ]
 }

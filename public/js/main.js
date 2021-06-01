@@ -1,6 +1,10 @@
 function scrollWin() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+document.getElementsByClassName('prev')[0].onclick = preOrNexts.bind(this,-1)
+document.getElementsByClassName('next')[0].onclick = preOrNexts.bind(this,1)
+document.getElementsByClassName('prev')[1].onclick = preOrNext.bind(this,-1)
+document.getElementsByClassName('next')[1].onclick = preOrNext.bind(this,1)
 function sub() {
     document.getElementById('submit').click();
 }
@@ -29,24 +33,6 @@ setTimeout(preOrNexts.bind(this, 1),3000)
 // slider[4].onclick = "slideN(5)";
 // slider[5].onclick = "slideN(6)";
 // slider[6].onclick = "slideN(7)";
-
-function showSlidess(n) {
-  var i;
-  var slideHead = document.getElementsByClassName("sliderr");
-  if (n > slideHead.length) {
-    slideGocs = 1
-  }
-  if (n < 1) {
-    slideGocs = slideHead.length
-  }
-  for (i = 0; i < slideHead.length; i++) {
-    slideHead[i].style.display = "none";
-    document.getElementsByClassName('dotin')[i].style.backgroundColor = '';
-  }
-  // slideHead[slideGocs].style.display = "none";
-  slideHead[slideGocs - 1].style.display = "unset";
-  document.getElementsByClassName('dotin')[slideGocs - 1].style.backgroundColor = '#555251';
-}
 function scrv(contentScroll) {
   document.getElementById(contentScroll).scrollIntoView({
     block: 'center',
@@ -64,21 +50,6 @@ function preOrNext(n) {
   setTimeout(preOrNext.bind(this, 1),5000)
 }
 setTimeout(preOrNext.bind(this, 1),5000)
-function showSlides(n) {
-  var i;
-  var slideWear = document.getElementsByClassName("slide_wear");
-  if (n > slideWear.length) {
-    slideGoc = 1
-  }
-  if (n < 1) {
-    slideGoc = slideWear.length
-  }
-  for (i = 0; i < slideWear.length; i++) {
-    slideWear[i].style.display = "none";
-  }
-  // slideWear[slideGoc].style.display = "none";
-  slideWear[slideGoc - 1].style.display = "flex";
-}
 function scrollWin() {
   // window.scrollTo(0, 0);
   window.scrollTo({
@@ -130,11 +101,40 @@ function scrollFunction_ct() {
     document.getElementById("sct").style.left = "-100px";
   }
 }
+function showSlidess(n) {
+  var i;
+  var slideHead = document.getElementsByClassName("sliderr");
+  if (n > slideHead.length) {
+    slideGocs = 1
+  }
+  if (n < 1) {
+    slideGocs = slideHead.length
+  }
+  for (i = 0; i < slideHead.length; i++) {
+    slideHead[i].style.display = "none";
+    document.getElementsByClassName('dotin')[i].style.backgroundColor = '';
+  }
+  // slideHead[slideGocs].style.display = "none";
+  slideHead[slideGocs - 1].style.display = "unset";
+  document.getElementsByClassName('dotin')[slideGocs - 1].style.backgroundColor = '#555251';
+}
 
-document.getElementsByClassName('prev')[0].onclick = preOrNexts.bind(this,-1)
-document.getElementsByClassName('next')[0].onclick = preOrNexts.bind(this,1)
-document.getElementsByClassName('prev')[1].onclick = preOrNext.bind(this,-1)
-document.getElementsByClassName('next')[1].onclick = preOrNext.bind(this,1)
+function showSlides(n) {
+  var i;
+  var slideWear = document.getElementsByClassName("slide_wear");
+  if (n > slideWear.length) {
+    slideGoc = 1
+  }
+  if (n < 1) {
+    slideGoc = slideWear.length
+  }
+  for (i = 0; i < slideWear.length; i++) {
+    slideWear[i].style.display = "none";
+  }
+  // slideWear[slideGoc].style.display = "none";
+  slideWear[slideGoc - 1].style.display = "flex";
+}
+
 document.getElementsByClassName('scrolltop')[0].onclick = scrollWin
 document.getElementsByClassName('fa fa-angle-double-up')[0].onclick = scrollWin
 document.getElementsByClassName('btS')[0].onclick = sub

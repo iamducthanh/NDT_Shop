@@ -6,7 +6,7 @@ class SanPham extends Component {
             <div className="card">
                 <a href="">
                     <div className="img">
-                        <img id="A1" src="https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893" alt />
+                        <img id="A1" src={this.props.data.image1} alt />
                     </div>
                 </a>
                 <div className="action">
@@ -15,12 +15,10 @@ class SanPham extends Component {
                     </div>
                 </div>
                 <div className="type">
-                    <img src="img/img_ao/0432A001-0.jpg" alt />
-                    <img src="img/img_ao/1620A001-1.jpg" alt />
-                    <img src="img/img_ao/2834a001-2.jpg" alt />
-                    <img src="img/img_ao/3136a001-3.jpg" alt />
+                    <img src={this.props.data.image2} alt />
+                    <img src={this.props.data.image3} alt />
                 </div>
-                <div className="text"><span className="dcs" name="dsc">Có áo nào đâu</span>
+                <div className="text"><span className="dcs" name="dsc">{this.props.data.name}</span>
                     <p name="id">A1</p>
                     <div className="star">
                         <i className="fa fa-star" />
@@ -30,7 +28,7 @@ class SanPham extends Component {
                         <i className="fa fa-star" />
                     </div>
                     <div className="price">
-                        <span name="price">200,000 - 350,000</span> VND
+                        <span name="price">{this.props.data.priceMin} - {this.props.data.priceMax}</span> VND
                 </div>
                     <div className="buy">
                         <a href="" name="buy">Mua ngay</a>

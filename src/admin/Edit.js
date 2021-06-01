@@ -22,13 +22,17 @@ const EditProduct = (props) => {
         getProduct()
     },[])
 
+    const quayLai = () => {
+        history.push('/admin/product/ao-khoac')
+    }
+
     const submit = (data) => {
         const dataNew = {
             id,
             ...data
         }
         props.onEdit(dataNew)
-        history.push('/admin/products')
+        history.push('/admin/product')
     }
     return (
         <form onSubmit={handleSubmit(submit)}>
@@ -36,7 +40,7 @@ const EditProduct = (props) => {
                 <h1 className="h2">Sửa sản phẩm</h1>
                 <div className="btn-toolbar mb-2 mb-md-0">
                     <div className="btn-group me-2">
-                        <Link to="/admin/products/" className="btn btn-primary">Quay lại</Link>
+                        <Link to="" onClick={quayLai} className="btn btn-primary">Quay lại</Link>
                     </div>
                 </div>
             </div>

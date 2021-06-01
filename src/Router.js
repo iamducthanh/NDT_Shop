@@ -1,23 +1,20 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route, useHistory } from 'react-router-dom'
-import HomePage from './component/web/homePage/Content/HomePage/HomePage';
 import AdminLayout from './layout/AdminLayout';
 import WebLayout from './layout/WebLayout';
-import GianHang from './web/GianHang';
 import TrangChu from './web/TrangChu';
 import EditProduct from './admin/Edit'
 import AddProduct from './admin/Add'
-import AdminHome from './admin/AdminHome'
+import ProductAoKhoac from './admin/ProductAoKhoac'
 import Login from './web/Login';
-import AdminLayout1 from './layout/AdminLayout1';
+import ProductRouter from './web/ProductRouter'
+import AdminProducRouter from './admin/AdminProducRouter'
 
 class Router extends Component {
     constructor(props) {
         super(props);
-
     }
     render() {
-        console.log(this.props);
         return (
             <BrowserRouter>
                 <Switch>
@@ -27,19 +24,19 @@ class Router extends Component {
                         </WebLayout>
                     </Route>
 
-                    <Route exact path={['/admin/*', '/admin']} render={() => (
+                    <Route exact path={['/admin/*']} render={() => (
                         localStorage.getItem("accessToken") ?
                             <AdminLayout>
                                 <Switch>
-                                    <Route exact path="/admin/products">
-                                        <AdminHome {...this.props} />
+                                    <Route exact path="/admin/product/*">
+                                        <AdminProducRouter {...this.props}/>
                                     </Route>
-                                    <Route exact path="/admin/products/add">
+                                    {/* <Route exact path="/admin/product/add">
                                         <AddProduct {...this.props} />
                                     </Route>
-                                    <Route exact path="/admin/products/:id">
+                                    <Route exact path="/admin/product/:id">
                                         <EditProduct {...this.props} />
-                                    </Route>
+                                    </Route> */}
                                 </Switch>
                             </AdminLayout>
                             :
@@ -49,19 +46,19 @@ class Router extends Component {
                     )}>
                     </Route>
 
-                    <Route exact path="/product">
-                        <WebLayout>
-                            <GianHang {...this.props} />
-                        </WebLayout>
-                    </Route>
-
-                    <Route exact path="/">
-                        <WebLayout>
-                            <TrangChu />
-                        </WebLayout>
-                    </Route>
-                    <Route exact path="/test">
-                        <AdminLayout1/>
+                    <Route exact path="/*">
+                        <Switch>
+                            <Route exact path="/">
+                                <WebLayout>
+                                    <TrangChu />
+                                </WebLayout>
+                            </Route>
+                            <Route exact path="/product/*">
+                                <WebLayout>
+                                    <ProductRouter {...this.props} />
+                                </WebLayout>
+                            </Route>
+                        </Switch>
                     </Route>
                 </Switch>
             </BrowserRouter >

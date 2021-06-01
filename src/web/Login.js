@@ -16,7 +16,7 @@ const Login = () => {
           user.push(listUser[i])
           if (user[0].vaitro == 1) {
             localStorage.setItem('accessToken', true)
-            history.push("/admin")
+            history.push("/")
             break;
           } else {
             alert('Đăng nhập thành công')

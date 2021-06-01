@@ -4,7 +4,7 @@ class Slider extends Component {
     render() {
         return (
             <div className="slide">
-                <a target="_blank" className="sliderr" href=""><img className="slide_head" src="img/indexx/829banner_1.jpg" alt="x" /></a>
+                <a target="_blank" className="sliderr" href=""><img name="slideKey" className="slide_head" src="img/indexx/829banner_1.jpg" alt="x" /></a>
                 <a target="_blank" className="sliderr" href=""><img className="slide_head" src="img/indexx/109banner_4.png" alt="x" /></a>
                 <a target="_blank" className="sliderr" href=""><img className="slide_head" src="img/indexx/567banner_6.png" alt="x" /></a>
                 <a target="_blank" className="sliderr" href=""><img className="slide_head" src="img/indexx/864banner_3.png" alt="x" /></a>

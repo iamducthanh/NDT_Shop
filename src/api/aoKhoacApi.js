@@ -5,16 +5,16 @@ const aoKhoacApi = {
         const url = `/aokhoac`;
         return axiosClient.get(url);
     },
-    get(id) {
-        const url = `/posts/${id}`;
+    getToPage(page) {
+        const url = `/aokhoac?_page=${page}&_limit=8`;
         return axiosClient.get(url);
     },
-    add(post) {
-        const url = `/posts/create`;
-        return axiosClient.post(url, post);
+    add(aoKhoac) {
+        const url = `/aokhoac`;
+        return axiosClient.post(url, aoKhoac);
     },
     remove(id) {
-        const url = `/posts/${id}`;
+        const url = `/aokhoac/${id}`;
         return axiosClient.delete(url);
     },
     update(id, data) {
