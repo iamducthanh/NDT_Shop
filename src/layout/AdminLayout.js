@@ -1,4 +1,3 @@
-import React, { Component } from 'react'
 import Header from '../component/admin/Header'
 import Nav from '../component/admin/Nav'
 import Footer from '../component/admin/Footer'
@@ -6,25 +5,26 @@ import Footer from '../component/admin/Footer'
 import './sb-admin-2.css'
 import './admin2.css'
 
-export default class AdminLayout extends Component {
-    render() {
-        return (
-            <div id="wrapper">
-                <Nav/>
-                <div id="content-wrapper" className="d-flex flex-column">
-                    <div id="content">
-                        <Header {...this.props}/>
-                        <div className="container-fluid" style={{marginLeft: 30}}>
-                            {this.props.children}
-                        </div>
-                    </div>
-                    <Footer/>
-                    {/* End of Footer */}
+import React from 'react'
+
+const AdminLayout = (props) => {
+    return (
+        <div id="wrapper">
+        <Nav/>
+        <div id="content-wrapper" className="d-flex flex-column">
+            <div id="content">
+                <Header {...props}/>
+                <div className="container-fluid" style={{marginLeft: 30}}>
+                    {props.children}
                 </div>
-                {/* End of Content Wrapper */}
             </div>
-
-
-        )
-    }
+            <Footer/>
+            {/* End of Footer */}
+        </div>
+        {/* End of Content Wrapper */}
+    </div>
+    )
 }
+
+export default AdminLayout
+
