@@ -391,6 +391,12 @@
       "username": "2",
       "password": "2",
       "vaitro": "0"
+    },
+    {
+      "username": "thanh",
+      "password": "123",
+      "passwordComfirm": "123",
+      "id": "7FhrqHZ"
     }
   ]
 }

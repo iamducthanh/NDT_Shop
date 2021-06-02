@@ -2,10 +2,13 @@ import { Link, useHistory } from 'react-router-dom'
 
 import React from 'react'
 
-const Header = () => {
+const Header = (props) => {
     let history = useHistory()
     const logOut = () => {
         localStorage.removeItem('accessToken')
+        localStorage.removeItem('username')
+        localStorage.removeItem('password')
+        props.setUserLogin(null,null)
         history.push('/')
     }
     return (

@@ -5,7 +5,7 @@ import { Link, useHistory } from 'react-router-dom'
 
 import { get, useForm } from 'react-hook-form'
 
-const Login = () => {
+const Login = (props) => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   let history = useHistory()
   const login = async (userLogin) => {
@@ -16,11 +16,17 @@ const Login = () => {
           user.push(listUser[i])
           if (user[0].vaitro == 1) {
             localStorage.setItem('accessToken', true)
+            localStorage.setItem('username', userLogin.username)
+            localStorage.setItem('password', userLogin.password)
+            props.setUserLogin(userLogin.username, userLogin.password)
             history.push("/")
             break;
           } else {
             alert('Đăng nhập thành công')
             localStorage.removeItem('accessToken')
+            localStorage.setItem('username', userLogin.username)
+            localStorage.setItem('password', userLogin.password)
+            props.setUserLogin(userLogin.username, userLogin.password)
             history.push("/")
             break;
           }
@@ -61,6 +67,7 @@ const Login = () => {
             className="fadeIn fourth"
             defaultValue="Log In" />
         </form>
+        <Link id="aLogin" className="underlineHover" to="/signup">Sign up</Link>
 
         <div id="formFooter">
           <a id="aLogin" className="underlineHover" href="#">Forgot Password?</a>

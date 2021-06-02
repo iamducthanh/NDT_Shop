@@ -10,6 +10,7 @@ import Login from './web/Login';
 import ProductRouter from './web/ProductRouter'
 import AdminProducRouter from './admin/AdminProducRouter'
 import Slider from './component/web/homePage/Content/HomePage/Slider';
+import Signup from './web/Signup';
 
 class Router extends Component {
     constructor(props) {
@@ -20,14 +21,19 @@ class Router extends Component {
             <BrowserRouter>
                 <Switch>
                     <Route exact path='/login'>
-                        <WebLayout>
+                        <WebLayout {...this.props}>
                             <Login {...this.props} />
+                        </WebLayout>
+                    </Route>
+                    <Route exact path='/signup'>
+                        <WebLayout {...this.props}>
+                            <Signup/>
                         </WebLayout>
                     </Route>
 
                     <Route exact path={['/admin/*']} render={() => (
                         localStorage.getItem("accessToken") ?
-                            <AdminLayout>
+                            <AdminLayout {...this.props}>
                                 <Switch>
                                     <Route exact path="/admin/product/*">
                                         <AdminProducRouter {...this.props}/>
@@ -41,8 +47,7 @@ class Router extends Component {
                                 </Switch>
                             </AdminLayout>
                             :
-                            <WebLayout>
-                                <Slider/>
+                            <WebLayout {...this.props}>
                                 <Login {...this.props} />
                             </WebLayout>
                     )}>
@@ -51,12 +56,12 @@ class Router extends Component {
                     <Route exact path="/*">
                         <Switch>
                             <Route exact path="/">
-                                <WebLayout>
-                                    <TrangChu />
+                                <WebLayout {...this.props}>
+                                    <TrangChu/>
                                 </WebLayout>
                             </Route>
                             <Route exact path="/product/*">
-                                <WebLayout>
+                                <WebLayout {...this.props}>
                                     <ProductRouter {...this.props} />
                                 </WebLayout>
                             </Route>

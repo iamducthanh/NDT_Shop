@@ -13,7 +13,7 @@ export default class AdminLayout extends Component {
                 <Nav/>
                 <div id="content-wrapper" className="d-flex flex-column">
                     <div id="content">
-                        <Header/>
+                        <Header {...this.props}/>
                         <div className="container-fluid" style={{marginLeft: 30}}>
                             {this.props.children}
                         </div>
