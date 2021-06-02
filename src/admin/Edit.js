@@ -2,37 +2,32 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useHistory, useParams } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
+import spAPI from '../api/sanPhamApi';
 
 
 const EditProduct = (props) => {
     let history = useHistory()
-    let { id } = useParams()
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    let { id, sp } = useParams()
+    console.log(id);
+    console.log(sp);
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [product, setProduct] = useState([])
     useEffect(() => {
-        const getProduct = async () => {
-            try {
-                const response = await fetch(`http://localhost:3005/products/${id}`)
-                const data = await response.json();
-                setProduct(data)
-            } catch (error) {
-                console.log(error);
-            }
+        const getSanPham = async () => {
+            const { data } = await spAPI.getSPById(id, sp)
+            reset(data)
+            setProduct(data)
         }
-        getProduct()
-    },[])
-
-    const quayLai = () => {
-        history.push('/admin/product/ao-khoac')
-    }
+        getSanPham();
+    }, [])  
 
     const submit = (data) => {
         const dataNew = {
             id,
             ...data
         }
-        props.onEdit(dataNew)
-        history.push('/admin/product')
+        props.onUpdate(dataNew)
+        history.push(`/admin/product/${sp}`)
     }
     return (
         <form onSubmit={handleSubmit(submit)}>
@@ -40,45 +35,82 @@ const EditProduct = (props) => {
                 <h1 className="h2">Sửa sản phẩm</h1>
                 <div className="btn-toolbar mb-2 mb-md-0">
                     <div className="btn-group me-2">
-                        <Link to="" onClick={quayLai} className="btn btn-primary">Quay lại</Link>
+                        <Link to="/admin/product/ao-khoac" className="btn btn-primary">Quay lại</Link>
                     </div>
                 </div>
             </div>
             <div className="mb-3">
                 <label htmlFor="productName" className="form-label">Tên sản phẩm</label>
                 <input
-                    defaultValue={product.name}
                     type="text"
                     className="form-control"
+                    defaultValue= {product.name}
+                    style={{width: 700}}
                     id="productName"
                     {...register('name', { required: true })} />
-                {errors.name && <div id="emailHelp" className="form-text text-danger">Bạn không được để trống tên sản phẩm.</div>}
+                {errors.name && <div id="emailHelp" className="form-text text-danger">Không được để trống tên sản phẩm.</div>}
             </div>
+
             <div className="mb-3">
                 <label htmlFor="price" className="form-label">Giá</label>
                 <input
-                    defaultValue={product.price}
                     type="number"
                     className="form-control"
+                    defaultValue= {product.priceMin}
+                    style={{width: 700}}
                     id="price"
                     {...register('price', { required: true })} />
-                {errors.price && <div id="emailHelp" className="form-text text-danger">Bạn không được để trống giá sản phẩm.</div>}
+                {errors.price && <div id="emailHelp" className="form-text text-danger">Không được để trống giá sản phẩm.</div>}
             </div>
+
+            <div className="mb-3">
+                <label htmlFor="quantity" className="form-label">Hình ảnh 1</label>
+                <input
+                    type="text"
+                    style={{width: 700}}
+                    className="form-control"
+                    defaultValue= {product.image1}
+                    id="quantity"
+                    {...register('image1', { required: true })} />
+                {errors.image1 && <div id="emailHelp" className="form-text text-danger">Không được để trống hình ảnh.</div>}
+            </div>
+
+            <div className="mb-3">
+                <label htmlFor="quantity" className="form-label">Hình ảnh 2</label>
+                <input
+                    type="text"
+                    style={{width: 700}}
+                    defaultValue= {product.image2}
+                    className="form-control"
+                    id="quantity"
+                    {...register('image2', { required: true })} />
+                {errors.image2 && <div id="emailHelp" className="form-text text-danger">Không được để trống hình ảnh.</div>}
+            </div>
+
+            <div className="mb-3">
+                <label htmlFor="quantity" className="form-label">Hình ảnh 3</label>
+                <input
+                    type="text"
+                    className="form-control"
+                    defaultValue= {product.image3}
+                    style={{width: 700}}
+                    id="quantity"
+                    {...register('image3', { required: true })} />
+                {errors.image3 && <div id="emailHelp" className="form-text text-danger">Không được để trống hình ảnh.</div>}
+            </div>
+
             <div className="mb-3">
                 <label htmlFor="quantity" className="form-label">Số lượng</label>
                 <input
-                    defaultValue={product.quantity}
                     type="number"
                     className="form-control"
+                    defaultValue= {product.soLuong}
+                    style={{width: 700}}
                     id="quantity"
-                    {...register('quantity', { required: true })} />
-                {errors.quantity && <div id="emailHelp" className="form-text text-danger">Bạn không được để trống số lượng sản phẩm.</div>}
+                    {...register('soLuong', { required: true })} />
+                {errors.soLuong && <div id="emailHelp" className="form-text text-danger">Không được để trống số lượng sản phẩm.</div>}
             </div>
-            <div className="mb-3 form-check">
-                <input type="checkbox" defaultChecked={product.status} className="form-check-input" id="trangThai" {...register('status')} />
-                <label className="form-check-label" htmlFor="trangThai">Còn hàng</label>
-            </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
+            <button type="submit" className="btn btn-primary" style={{marginBottom: 50}}>Cập nhật</button>
         </form>
     )
 }

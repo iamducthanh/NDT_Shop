@@ -6,6 +6,7 @@ import React from 'react'
 import Product from './Product';
 import AddProduct from './Add';
 import axios from 'axios';
+import EditProduct from './Edit'
 
 
 const ProductAoKhoac = (props) => {
@@ -48,21 +49,23 @@ const ProductAoKhoac = (props) => {
             console.log(error)
             alert('lỗi cmnr')
         }
-        // await fetch('http://localhost:3005/aokhoac', {
-        //   method: 'POST',
-        //   headers: {
-        //     'Content-Type': 'application/json'
-        //   },
-        //   body: JSON.stringify(product)
-        // });
-        // setAoKhoac([
-        //   ...aoKhoac,
-        //   product
-        // ]);
+    }
+
+    const onUpdate = async (dataNew) => {
+        console.log(dataNew);
+        try {
+            if(window.confirm('Bạn có chắc muốn thay đổi?')){
+                let res = await newsAPI.update(dataNew.id, dataNew)
+                prePage()
+            }
+        } catch (error) {
+            console.log(error)
+            alert('lỗi cmnr')
+        }
     }
 
     const onDelete = async (index) => {
-        if(window.confirm('Bạn có chắc muốn xóa không?')){
+        if (window.confirm('Bạn có chắc muốn xóa không?')) {
             try {
                 let res = await newsAPI.remove(index);
                 const { data } = await newsAPI.getToPage(page)
@@ -77,10 +80,13 @@ const ProductAoKhoac = (props) => {
         <BrowserRouter>
             <Switch>
                 <Route exact path="/admin/product/ao-khoac">
-                    <Product product={aoKhoac} prePage={prePage} nextPage={nextPage} page={page} urlP="ao-khoac" onDelete = {onDelete}/>
+                    <Product product={aoKhoac} prePage={prePage} nextPage={nextPage} page={page} urlP="ao-khoac" onDelete={onDelete} />
                 </Route>
                 <Route exact path="/admin/product/ao-khoac/add">
                     <AddProduct urlP="ao-khoac" loai={"Áo khoác"} onAdd={onAdd} />
+                </Route>
+                <Route exact path="/admin/product/:sp/:id">
+                    <EditProduct onUpdate={onUpdate}/>
                 </Route>
             </Switch>
         </BrowserRouter>

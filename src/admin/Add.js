@@ -35,27 +35,15 @@ const AddProduct = (props) => {
             </div>
 
             <div className="mb-3">
-                <label htmlFor="price" className="form-label">Giá nhỏ nhất</label>
+                <label htmlFor="price" className="form-label">Giá</label>
                 <input
                     type="number"
                     className="form-control"
                     placeholder="Giá nhỏ nhất"
                     style={{width: 700}}
                     id="price"
-                    {...register('priceMin', { required: true })} />
-                {errors.priceMin && <div id="emailHelp" className="form-text text-danger">Không được để trống giá sản phẩm.</div>}
-            </div>
-
-            <div className="mb-3">
-                <label htmlFor="price" className="form-label">Giá lớn nhất</label>
-                <input
-                    type="number"
-                    style={{width: 700}}
-                    placeholder="Giá lớn nhất"
-                    className="form-control"
-                    id="price"
-                    {...register('priceMax', { required: true })} />
-                {errors.priceMax && <div id="emailHelp" className="form-text text-danger">Không được để trống giá sản phẩm.</div>}
+                    {...register('price', { required: true })} />
+                {errors.price && <div id="emailHelp" className="form-text text-danger">Không được để trống giá sản phẩm.</div>}
             </div>
 
             <div className="mb-3">

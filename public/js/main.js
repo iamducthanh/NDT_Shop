@@ -1,10 +1,6 @@
 function scrollWin() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-document.getElementsByClassName('prev')[0].onclick = preOrNexts.bind(this,-1)
-document.getElementsByClassName('next')[0].onclick = preOrNexts.bind(this,1)
-document.getElementsByClassName('prev')[1].onclick = preOrNext.bind(this,-1)
-document.getElementsByClassName('next')[1].onclick = preOrNext.bind(this,1)
 function sub() {
     document.getElementById('submit').click();
 }
@@ -134,7 +130,10 @@ function showSlides(n) {
   // slideWear[slideGoc].style.display = "none";
   slideWear[slideGoc - 1].style.display = "flex";
 }
-
+document.getElementsByClassName('prev')[0].onclick = preOrNexts.bind(this,-1)
+document.getElementsByClassName('next')[0].onclick = preOrNexts.bind(this,1)
+document.getElementsByClassName('prev')[1].onclick = preOrNext.bind(this,-1)
+document.getElementsByClassName('next')[1].onclick = preOrNext.bind(this,1)
 document.getElementsByClassName('scrolltop')[0].onclick = scrollWin
 document.getElementsByClassName('fa fa-angle-double-up')[0].onclick = scrollWin
 document.getElementsByClassName('btS')[0].onclick = sub

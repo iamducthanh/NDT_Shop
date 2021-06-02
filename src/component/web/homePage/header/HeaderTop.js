@@ -12,11 +12,11 @@ class HeaderTop extends Component {
                     <div className="search">
                         <form action="" method="get" className="hihi">
                             <div className="line" id="line">
-                                <input type="text" name="searchGlobal" id="searchGlobal" className="searchGlobal" defaultValue />
-                                <a className="btS" id="btS"><i className="fa fa-search" aria-hidden="true" /></a>
+                                <input type="text" name="searchGlobal" id="searchGlobal" className="searchGlobal" />
+                                <a className="btS" id="btS"><img style={{ width: 25 }} src="https://th.bing.com/th/id/R84c5838c77a1551893053b07a1c6d0c4?rik=waDkySiELkHF0w&pid=ImgRaw" alt /></a>
                                 <button type="submit" id="submit" style={{ display: 'none' }} />
                             </div>
-                            <span id="btShow"><i className="fa fa-search" aria-hidden="true" /></span>
+                            <span><img id="btShow" style={{ width: 25 }} src="https://th.bing.com/th/id/R84c5838c77a1551893053b07a1c6d0c4?rik=waDkySiELkHF0w&pid=ImgRaw" alt /></span>
                         </form>
                     </div>
                     <a href="" className="shopCard"><i className="fa fa-shopping-cart" aria-hidden="true" />

@@ -6,12 +6,12 @@ export default class Nav extends Component {
     render() {
         return (
             <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-                <a className="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <Link className="sidebar-brand d-flex align-items-center justify-content-center" to="/">
                     <div className="sidebar-brand-icon ">
                         <img src={logo} style={{width: 60},{height: 60}} alt />
                     </div>
                     <div className="sidebar-brand-text mx-3">NDT Shop <sup></sup></div>
-                </a>
+                </Link>
                 {/* Divider */}
                 <hr className="sidebar-divider my-0" />
                 {/* Nav Item - Dashboard */}

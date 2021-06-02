@@ -2,24 +2,35 @@ import { axiosClient } from './axiosClient';
 
 const aoKhoacApi = {
     getAllAo() {
-        const url = `/aokhoac`;
+        const url = `/ao-khoac`;
+        return axiosClient.get(url);
+    },
+    // getToPageAndDESC(page){
+    //     const url = `/ao-khoac?_sort=price&_order=desc&_page=${page}&_limit=8`;
+    //     return axiosClient.get(url);
+    // },
+    getToPageAndSoft(page, order){
+        const url = `/ao-khoac?_sort=price&_order=${order}&_page=${page}&_limit=8`;
+        return axiosClient.get(url);
+    },
+    getById(id){
+        const url = `/ao-khoac/${id}`;
         return axiosClient.get(url);
     },
     getToPage(page) {
-        const url = `/aokhoac?_page=${page}&_limit=8`;
+        const url = `/ao-khoac?_page=${page}&_limit=8`;
         return axiosClient.get(url);
     },
     add(aoKhoac) {
-        const url = `/aokhoac`;
+        const url = `/ao-khoac`;
         return axiosClient.post(url, aoKhoac);
     },
     remove(id) {
-        const url = `/aokhoac/${id}`;
+        const url = `/ao-khoac/${id}`;
         return axiosClient.delete(url);
     },
     update(id, data) {
-        const url = `/posts/${id}`;
-        // console.log(data);
+        const url = `/ao-khoac/${id}`;
         return axiosClient.put(url, data);
     },
     fullTextSearch({ keyword }) {

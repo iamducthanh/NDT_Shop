@@ -9,6 +9,7 @@ import ProductAoKhoac from './admin/ProductAoKhoac'
 import Login from './web/Login';
 import ProductRouter from './web/ProductRouter'
 import AdminProducRouter from './admin/AdminProducRouter'
+import Slider from './component/web/homePage/Content/HomePage/Slider';
 
 class Router extends Component {
     constructor(props) {
@@ -41,6 +42,7 @@ class Router extends Component {
                             </AdminLayout>
                             :
                             <WebLayout>
+                                <Slider/>
                                 <Login {...this.props} />
                             </WebLayout>
                     )}>

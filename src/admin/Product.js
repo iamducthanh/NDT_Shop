@@ -15,8 +15,7 @@ export default class Product extends Component {
                             <tr>
                                 <th>STT</th>
                                 <th>Tên</th>
-                                <th>Giá min</th>
-                                <th>Giá max</th>
+                                <th>Giá</th>
                                 <th>Ảnh</th>
                                 <th>Số lượng</th>
                                 <th></th>
@@ -27,8 +26,7 @@ export default class Product extends Component {
                                 <tr>
                                     <td>{index + 1 + (8 * (this.props.page - 1))}</td>
                                     <td>{sanPham.name}</td>
-                                    <td>{sanPham.priceMin}</td>
-                                    <td>{sanPham.priceMax}</td>
+                                    <td>{sanPham.price}</td>
                                     <td>
                                         <img src={sanPham.image1} style={{ with: 50 }, { height: 50 }}></img>
                                         <img src={sanPham.image2} style={{ with: 50 }, { height: 50 }}></img>
@@ -37,7 +35,7 @@ export default class Product extends Component {
 
                                     <td>{sanPham.soLuong}</td>
                                     <th>
-                                        <Link to={`/admin/products/${index + 1 + (8 * (this.props.page - 1))}`} className="btn btn-primary">Edit</Link>
+                                        <Link to={`/admin/product/ao-khoac/${sanPham.id}`} className="btn btn-primary">Edit</Link>
                                         <button className="btn btn-danger" onClick = {this.props.onDelete.bind(this, sanPham.id)}>Xóa</button>
                                     </th>
                                 </tr>
