@@ -11,6 +11,8 @@ import ProductRouter from './web/ProductRouter'
 import AdminProducRouter from './admin/AdminProducRouter'
 import Slider from './component/web/homePage/Content/HomePage/Slider';
 import Signup from './web/Signup';
+import AoKhoacProduct from './web/AoKhoacProduct'
+import AoThunProduct from './web/AoThunProduct'
 
 class Router extends Component {
     constructor(props) {
@@ -27,16 +29,16 @@ class Router extends Component {
                     </Route>
                     <Route exact path='/signup'>
                         <WebLayout {...this.props}>
-                            <Signup/>
+                            <Signup />
                         </WebLayout>
                     </Route>
 
-                    <Route exact path={['/admin/*']} render={() => (
+                    <Route exact path={['/admin*']} render={() => (
                         localStorage.getItem("accessToken") ?
                             <AdminLayout {...this.props}>
                                 <Switch>
                                     <Route exact path="/admin/product/*">
-                                        <AdminProducRouter {...this.props}/>
+                                        <AdminProducRouter {...this.props} />
                                     </Route>
                                     {/* <Route exact path="/admin/product/add">
                                         <AddProduct {...this.props} />
@@ -57,12 +59,19 @@ class Router extends Component {
                         <Switch>
                             <Route exact path="/">
                                 <WebLayout {...this.props}>
-                                    <TrangChu/>
+                                    <TrangChu />
                                 </WebLayout>
                             </Route>
-                            <Route exact path="/product/*">
+                            <Route exact path="/*">
                                 <WebLayout {...this.props}>
-                                    <ProductRouter {...this.props} />
+                                    <Switch>
+                                        <Route exact path="/ao-khoac">
+                                            <AoKhoacProduct {...this.props} />
+                                        </Route>
+                                        <Route exact path="/ao-thun">
+                                            <AoThunProduct {...this.props} />
+                                        </Route>
+                                    </Switch>
                                 </WebLayout>
                             </Route>
                         </Switch>

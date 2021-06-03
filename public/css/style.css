@@ -1102,3 +1102,8 @@ ul {
   margin: auto;
 }
 
+#khoangGia {
+  height: 35px;
+  font-size: 18px;
+  font-family: "Amiri", serif;
+}

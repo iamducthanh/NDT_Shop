@@ -1,20 +1,20 @@
 import React from 'react'
 import GianHang from '../component/web/Product/GianHang'
 import { useEffect, useState } from 'react';
-import aoKhoacApi from '../api/aoKhoacApi';
+import aoThunApi from '../api/aoThunApi';
 
-const AoKhoacProduct = (props) => {
-    const [aoKhoac, setAoKhoac] = useState([]);
+const AoThunProduct = (props) => {
+    const [aoThun, setAoThun] = useState([]);
     const [page, setPage] = useState([]);
     const [filter, setFilter] = useState([0, 0]);
 
     useEffect(() => {
-        const getAoKhoac = async () => {
+        const getAoThun = async () => {
             setPage(1)
-            const { data } = await aoKhoacApi.getToPage(page)
-            setAoKhoac(data);
+            const { data } = await aoThunApi.getToPage(page)
+            setAoThun(data);
         }
-        getAoKhoac();
+        getAoThun();
     }, [])
 
     const resertPage = (key) => {
@@ -56,22 +56,22 @@ const AoKhoacProduct = (props) => {
     }
 
     const nextPageAndFill = async () => {
-        if (page + 1 > props.maxPage) {
+        if (page + 1 > props.maxPageAoThun) {
         } else {
             console.log(filter[0], filter[1]);
-            const { data } = await aoKhoacApi.getByKhoangGiaAndPage(filter[0], filter[1], page + 1);
-            setAoKhoac(data)
+            const { data } = await aoThunApi.getByKhoangGiaAndPage(filter[0], filter[1], page + 1);
+            setAoThun(data)
         }
-        if (page >= props.maxPage - 1) {
-            setPage(props.maxPage)
+        if (page >= props.maxPageAoThun - 1) {
+            setPage(props.maxPageAoThun)
         } else {
             setPage(page + 1)
         }
     }
 
     const prePageAndFill = async () => {
-        const { data } = await aoKhoacApi.getByKhoangGiaAndPage(filter[0], filter[1],page - 1)
-        setAoKhoac(data)
+        const { data } = await aoThunApi.getByKhoangGiaAndPage(filter[0], filter[1],page - 1)
+        setAoThun(data)
         if (page == 1) {
             setPage(1)
         } else {
@@ -80,20 +80,20 @@ const AoKhoacProduct = (props) => {
     }
 
     const nextPageOrSoft = async (key) => {
-        if (page + 1 > props.maxPage) {
+        if (page + 1 > props.maxPageAoThun) {
         } else {
-            const { data } = await aoKhoacApi.getToPageAndSoft(page + 1, key)
-            setAoKhoac(data)
+            const { data } = await aoThunApi.getToPageAndSoft(page + 1, key)
+            setAoThun(data)
         }
-        if (page >= props.maxPage - 1) {
-            setPage(props.maxPage)
+        if (page >= props.maxPageAoThun - 1) {
+            setPage(props.maxPageAoThun)
         } else {
             setPage(page + 1)
         }
     }
     const prePageOrSoft = async (key) => {
-        const { data } = await aoKhoacApi.getToPageAndSoft(page - 1, key)
-        setAoKhoac(data)
+        const { data } = await aoThunApi.getToPageAndSoft(page - 1, key)
+        setAoThun(data)
         if (page == 1) {
             setPage(1)
         } else {
@@ -102,20 +102,20 @@ const AoKhoacProduct = (props) => {
     }
 
     const nextPage = async () => {
-        if (page + 1 > props.maxPage) {
+        if (page + 1 > props.maxPageAoThun) {
         } else {
-            const { data } = await aoKhoacApi.getToPage(page + 1)
-            setAoKhoac(data)
+            const { data } = await aoThunApi.getToPage(page + 1)
+            setAoThun(data)
         }
-        if (page >= props.maxPage - 1) {
-            setPage(props.maxPage)
+        if (page >= props.maxPageAoThun - 1) {
+            setPage(props.maxPageAoThun)
         } else {
             setPage(page + 1)
         }
     }
     const prePage = async () => {
-        const { data } = await aoKhoacApi.getToPage(page - 1)
-        setAoKhoac(data)
+        const { data } = await aoThunApi.getToPage(page - 1)
+        setAoThun(data)
         if (page == 1) {
             setPage(1)
         } else {
@@ -127,38 +127,38 @@ const AoKhoacProduct = (props) => {
         setPage(1)
         if (event.target.value == 0) {
             setFilter([0, 0])
-            const { data } = await aoKhoacApi.getToPage(1)
-            setAoKhoac(data)
+            const { data } = await aoThunApi.getToPage(1)
+            setAoThun(data)
         } else if (event.target.value == 1) {
             setFilter([0, 500000])
-            const { data } = await aoKhoacApi.getByKhoangGiaAndPage(0, 500000, 1)
-            setAoKhoac(data)
+            const { data } = await aoThunApi.getByKhoangGiaAndPage(0, 500000, 1)
+            setAoThun(data)
         } else if (event.target.value == 2) {
             setFilter(500000, 1000000)
-            const { data } = await aoKhoacApi.getByKhoangGiaAndPage(500000, 1000000, 1)
-            setAoKhoac(data)
+            const { data } = await aoThunApi.getByKhoangGiaAndPage(500000, 1000000, 1)
+            setAoThun(data)
         } else if (event.target.value == 3) {
             setFilter(1000000, 1500000)
-            const { data } = await aoKhoacApi.getByKhoangGiaAndPage(1000000, 1500000, 1)
-            setAoKhoac(data)
+            const { data } = await aoThunApi.getByKhoangGiaAndPage(1000000, 1500000, 1)
+            setAoThun(data)
         } else if (event.target.value == 4) {
             setFilter(1500000, 50000000)
-            const { data } = await aoKhoacApi.getByKhoangGiaAndPage(1500000, 50000000, 1)
-            setAoKhoac(data)
+            const { data } = await aoThunApi.getByKhoangGiaAndPage(1500000, 50000000, 1)
+            setAoThun(data)
         }
     }
 
     return (
         <GianHang 
-            data={aoKhoac} 
+            data={aoThun} 
             prePage={prePage} 
             nextPage={nextPage} 
             page={page} loc={loc} 
             resertPage={resertPage} 
-            filByPrice={filByPrice} 
-            title = "ÁO KHOÁC"
+            filByPrice={filByPrice}
+            title = "ÁO THUN"
             />
     )
 }
 
-export default AoKhoacProduct
+export default AoThunProduct

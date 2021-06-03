@@ -15,7 +15,7 @@ const GianHang = (props) => {
         <div className="container">
             <div>
                 <div className="headerAo">
-                    <h1>Áo khoác</h1>
+                    <h1>{props.title}</h1>
                 </div>
                 <div className="sortAo">
                     <form>
@@ -28,7 +28,7 @@ const GianHang = (props) => {
                 </div>
                 <div className="ok">
                     <div className="bodyAo">
-                        <Filter />
+                        <Filter {...props}/>
                         <div className="hdhd">
                             <div className="midAo">
                                 {props.data.map((product) => (

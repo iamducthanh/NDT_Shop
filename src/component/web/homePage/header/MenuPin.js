@@ -12,7 +12,7 @@ class MenuPin extends Component {
                     <a href="" className="nhan">jewelry - metal</a>
                     <a href="" className="non">hat</a>
                     <a href="" className="kinh">eyes - glasses</a>
-                    <a href="https://gtl-201.github.io/" target="_blank" className="about">about me :)</a>
+                    <a href="https://iamducthanh.tk" target="_blank" className="about">about me :)</a>
                     {localStorage.getItem("accessToken") ? <Link className="bmenu" to="/admin/">Admin</Link> : null}
                 </div>
                 <div className="account-sticky">

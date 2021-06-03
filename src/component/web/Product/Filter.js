@@ -4,7 +4,7 @@ class Filter extends Component {
     render() {
         return (
             <div className="leftAo">
-                <div className="sortLeft">
+                <div className="sortLeft" >
                     <div className="color">
                         <div className="title">
                             <div>Màu</div>
@@ -31,21 +31,13 @@ class Filter extends Component {
 
                         </div>
                     </div>
-                    <div className="cost">
-                        <div className="title">
-                            <div>Giá</div>
-                            <div><span><i className="fa fa-angle-down" id="kGiaAr" /></span></div>
-                        </div>
-                        <div className="checkBox" id="khoangGia" style={{ textAlign: 'left' }}>
-                            <span><input type="radio" name="khoangGia" defaultValue="(`price` <= 500000)" onchange="ChangeGia1()" /> Dưới
-                        500K</span>
-                            <span><input type="radio" name="khoangGia" defaultValue="(`price` >= 500000 and `price` <= 1000000)" onchange="ChangeGia2()" /> Từ 500k - 1.000K</span>
-                            <span><input type="radio" name="khoangGia" defaultValue="(`price` >= 10000 and `price` <= 1500000)" onchange="ChangeGia3()" /> Từ 1.000k - 1.500k</span>
-                            <span><input type="radio" name="khoangGia" defaultValue="(`price`>= 1500000 and `price`<= 2000000)" onchange="ChangeGia4()" /> Từ 1.500k - 2.000K</span>
-                            <span><input type="radio" name="khoangGia" defaultValue="(`price` >= 2000000)" onchange="ChangeGia5()" /> Trên
-                        2.000k</span>
-                        </div>
-                    </div>
+                    <select className="cost" id="khoangGia" onChange={this.props.filByPrice}>
+                        <option value="0">Khoảng giá</option>
+                        <option value="1">Từ 0 - 500k</option>
+                        <option value="2">Từ 500k - 1.000K</option>
+                        <option value="3">Từ 1.000k - 1.500k</option>
+                        <option value="4">Trên 1500k</option>
+                    </select>
                     <button type="submit" className="filter" id="filter" name="filter">Filter</button>
                     <div className="deleteSort">
                         <form action method="get"><button type="submit" name="deleteSort" id="deleteSort">Xoá tất cả lọc</button>

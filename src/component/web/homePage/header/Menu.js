@@ -17,8 +17,8 @@ const Menu = (props) => {
                     <Link className="bmenu" to="#">Áo</Link>
                     <div className="sub">
                         <ul>
-                            <li><Link style={{ paddingLeft: 40 }} className="subli" to="/product/ao-khoac">Áo khoác</Link></li>
-                            <li><Link style={{ paddingLeft: 40 }} className="subli" to="/product/ao-thun">Áo thun</Link></li>
+                            <li><Link style={{ paddingLeft: 40 }} className="subli" to="/ao-khoac">Áo khoác</Link></li>
+                            <li><Link style={{ paddingLeft: 40 }} className="subli" to="/ao-thun">Áo thun</Link></li>
                             <li><a style={{ width: '100%' }} className="subli" href="#">sweater</a></li>
                             <li><a style={{ width: '100%' }} className="subli" href="">shirt</a></li>
                         </ul>

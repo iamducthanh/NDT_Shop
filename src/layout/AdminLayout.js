@@ -13,7 +13,6 @@ const AdminLayout = (props) => {
         <Nav/>
         <div id="content-wrapper" className="d-flex flex-column">
             <div id="content">
-                <Header {...props}/>
                 <div className="container-fluid" style={{marginLeft: 30}}>
                     {props.children}
                 </div>

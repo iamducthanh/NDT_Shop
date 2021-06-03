@@ -1,4 +1,5 @@
 import { Link, useHistory } from 'react-router-dom'
+import userpng from '../img/user.png'
 
 import React from 'react'
 
@@ -20,7 +21,7 @@ const Header = (props) => {
             {/* Topbar Search */}
             <form className="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                 <div className="input-group">
-                    <input type="text" className="form-control bg-light border-0 small" placeholder="Tìm kiếm theo tên sản phẩm..." aria-label="Search" aria-describedby="basic-addon2" />
+                    <input onKeyUp={props.onSearch} type="text" className="form-control bg-light border-0 small" placeholder="Tìm kiếm theo tên sản phẩm..." aria-label="Search" aria-describedby="basic-addon2" />
                     <div className="input-group-append">
                         <button className="btn btn-primary" type="button">
                             <i className="fas fa-search fa-sm" />
@@ -56,7 +57,7 @@ const Header = (props) => {
                 <li className="nav-item dropdown no-arrow">
                     <a className="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span className="mr-2 d-none d-lg-inline text-gray-600 small">Nguyễn Đức Thành</span>
-                        <img className="img-profile rounded-circle" src="img/undraw_profile.svg" />
+                        <img className="img-profile rounded-circle" src={userpng} />
                     </a>
                     {/* Dropdown - User Information */}
                     <div className="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

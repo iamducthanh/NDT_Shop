@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../../img/logo.png'
 
 class HeaderTop extends Component {
     render() {
         return (
             <div className="top-head">
                 <Link to="/" style={{ textDecoration: 'none' }}>
-                    <div className="logo"><img style={{ width: 130 }} src="img/indexx/logo.png" alt />NDTShop</div>
+                    <div className="logo"><img style={{ width: 130 }} src={logo} alt />NDTShop</div>
                 </Link>
                 <div className="icon">
                     <div className="search">

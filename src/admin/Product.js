@@ -44,11 +44,11 @@ export default class Product extends Component {
                     </table>
                 </div>
                 <div style={{ display: 'flex' }}>
-                    <button className="ptButton" name="page" onClick={this.props.prePage}>
+                    <button className="ptButton" name="page" onClick={this.props.locPre}>
                         <i className="fa fa-angle-double-left" />
                     </button>
                     <div typeof="text" className="ptNumber" style={{ backgroundColor: 'red', borderRadius: 2, boxShadow: '0 1px 4px black' }}>{this.props.page}</div>
-                    <button className="ptButton" name="" onClick={this.props.nextPage}><i className="fa fa-angle-double-right" /></button>
+                    <button className="ptButton" name="" onClick={this.props.locNext}><i className="fa fa-angle-double-right" /></button>
                 </div>
             </div>
         )

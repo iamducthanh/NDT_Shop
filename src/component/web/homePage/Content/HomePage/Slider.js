@@ -12,7 +12,7 @@ export default class Slider extends Component {
     render() {
         return (
             <div className="slide">
-                <a target="_blank" className="sliderr" href=""><img className="slide_head" src={img1} alt="x" /></a>
+                <img className="slide_head" src={img1} alt="x" />
                 <a target="_blank" className="sliderr" href=""><img className="slide_head" src={img2} alt="x" /></a>
                 <a target="_blank" className="sliderr" href=""><img className="slide_head" src={img3} alt="x" /></a>
                 <a target="_blank" className="sliderr" href=""><img className="slide_head" src={img4} alt="x" /></a>
