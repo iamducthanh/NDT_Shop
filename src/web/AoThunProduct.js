@@ -157,6 +157,7 @@ const AoThunProduct = (props) => {
             resertPage={resertPage} 
             filByPrice={filByPrice}
             title = "ÁO THUN"
+            sp = "ao-thun"
             />
     )
 }

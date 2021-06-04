@@ -32,7 +32,7 @@ const GianHang = (props) => {
                         <div className="hdhd">
                             <div className="midAo">
                                 {props.data.map((product) => (
-                                    <SanPham data={product} />
+                                    <SanPham data={product} sp = {props.sp} />
                                 ))}
                             </div>
                             <div style={{ display: 'flex' }}>

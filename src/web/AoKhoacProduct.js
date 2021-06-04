@@ -157,6 +157,7 @@ const AoKhoacProduct = (props) => {
             resertPage={resertPage} 
             filByPrice={filByPrice} 
             title = "ÁO KHOÁC"
+            sp = "ao-khoac"
             />
     )
 }

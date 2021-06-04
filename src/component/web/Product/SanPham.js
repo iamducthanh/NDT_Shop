@@ -2,6 +2,7 @@
 import { useState } from 'react';
 
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const SanPham = (props) => {
     const [img, setImg] = useState([props.data.image1, props.data.image2, props.data.image3]);
@@ -19,7 +20,9 @@ const SanPham = (props) => {
     return (
         <div className="card">
             <div className="img" id="imgoo">
-                <img id="imgTo" src={img[0]} alt />
+                <Link to={`/${props.sp}/${props.data.id}`}>
+                    <img id="imgTo" src={img[0]} alt />
+                </Link>
             </div>
             <div className="action">
                 <div className="add">
@@ -40,10 +43,10 @@ const SanPham = (props) => {
                     <i className="fa fa-star" />
                 </div>
                 <div className="price">
-                    <span name="price">{props.data.price}</span> VND
+                    <span name="price">{Number(props.data.price).toLocaleString('vi-VN', {style: 'currency',currency: 'VND'})}</span> VND
                 </div>
                 <div className="buy">
-                    <a href="" name="buy">Mua ngay</a>
+                    <Link to={`/${props.sp}/${props.data.id}`} name="buy">Mua ngay</Link>
                 </div>
             </div>
         </div>

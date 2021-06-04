@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import logo from '../../../img/logo.png'
+
 
 class Footer extends Component {
     render() {
@@ -8,7 +10,7 @@ class Footer extends Component {
                 <div className="mainbox">
                     <div className="box-inmainbox">
                         <div className="left-box">
-                            <div className="leftHead"><img src="img/indexx/logo.png" alt />NDT Shop</div>
+                            <div className="leftHead"><img src={logo} alt />NDT Shop</div>
                             <div className="contentLeft">
                                 <h2>MUA HÀNG TRỰC TUYẾN</h2><br />
                                 <p style={{ color: 'rgb(241, 194, 133)' }}>0944485574</p><br />

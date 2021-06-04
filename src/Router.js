@@ -14,6 +14,7 @@ import Signup from './web/Signup';
 import AoKhoacProduct from './web/AoKhoacProduct'
 import AoThunProduct from './web/AoThunProduct'
 import QuanLyUser from './admin/QuanLyUser';
+import ProductDetail from './web/ProductDetail';
 
 class Router extends Component {
     constructor(props) {
@@ -26,6 +27,11 @@ class Router extends Component {
                     <Route exact path='/login'>
                         <WebLayout {...this.props}>
                             <Login {...this.props} />
+                        </WebLayout>
+                    </Route>
+                    <Route exact path='/card'>
+                        <WebLayout {...this.props}>
+                            <ProductDetail/>
                         </WebLayout>
                     </Route>
                     <Route exact path='/signup'>
@@ -71,6 +77,9 @@ class Router extends Component {
                                         </Route>
                                         <Route exact path="/ao-thun">
                                             <AoThunProduct {...this.props} />
+                                        </Route>
+                                        <Route exact path="/:sp/:id?">
+                                            <ProductDetail {...this.props} />
                                         </Route>
                                     </Switch>
                                 </WebLayout>

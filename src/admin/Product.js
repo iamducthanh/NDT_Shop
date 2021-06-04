@@ -26,7 +26,7 @@ export default class Product extends Component {
                                 <tr>
                                     <td>{index + 1 + (8 * (this.props.page - 1))}</td>
                                     <td>{sanPham.name}</td>
-                                    <td>{sanPham.price}</td>
+                                    <td>{Number(sanPham.price).toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}</td>
                                     <td>
                                         <img src={sanPham.image1} style={{ with: 50 }, { height: 50 }}></img>
                                         <img src={sanPham.image2} style={{ with: 50 }, { height: 50 }}></img>
