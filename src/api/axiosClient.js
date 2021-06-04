@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const axiosClient = axios.create({
-    baseURL: ' http://192.168.43.38:3005',
+    baseURL: 'https://my-json-server.typicode.com/iamducthanh/Jsonserver',
     headers: {
         'Content-Type': 'application/json',
     },
