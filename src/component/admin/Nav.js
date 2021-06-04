@@ -26,17 +26,18 @@ export default class Nav extends Component {
                 <div className="sidebar-heading">
                     SẢN PHẨM
             </div>
+            
                 {/* Nav Item - Pages Collapse Menu */}
                 <li className="nav-item">
                     <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                        <i className="fas fa-fw fa-cog" />
+                        <i className="fas fa-fw fa-folder" />
                         <span>Áo</span>
                     </a>
                     <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div className="bg-white py-2 collapse-inner rounded">
                             <h6 className="collapse-header">Các loại áo</h6>
                             <Link className="collapse-item" to="/admin/product/ao-khoac">Áo khoác</Link>
-                            <Link className="collapse-item" to="cards.html">Cards</Link>
+                            <Link className="collapse-item" to="cards.html">Áo thun</Link>
                         </div>
                     </div>
                 </li>
@@ -60,13 +61,14 @@ export default class Nav extends Component {
                 <hr className="sidebar-divider" />
                 {/* Heading */}
                 <div className="sidebar-heading">
-                    Addons
+                    Tài khoản
+
 </div>
                 {/* Nav Item - Pages Collapse Menu */}
-                <li className="nav-item">
+                {/* <li className="nav-item">
                     <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                         <i className="fas fa-fw fa-folder" />
-                        <span>Pages</span>
+                        <span>User</span>
                     </a>
                     <div id="collapsePages" className="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                         <div className="bg-white py-2 collapse-inner rounded">
@@ -80,12 +82,12 @@ export default class Nav extends Component {
                             <a className="collapse-item" href="blank.html">Blank Page</a>
                         </div>
                     </div>
-                </li>
+                </li> */}
                 {/* Nav Item - Charts */}
                 <li className="nav-item">
-                    <a className="nav-link" href="charts.html">
-                        <i className="fas fa-fw fa-chart-area" />
-                        <span>Charts</span></a>
+                    <Link className="nav-link" to="/admin/user">
+                        <i className="fas fa-fw fa-cog" />
+                        <span>Quản lý tài khoản</span></Link>
                 </li>
                 {/* Nav Item - Tables */}
                 <li className="nav-item">

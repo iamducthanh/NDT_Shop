@@ -13,6 +13,7 @@ import Slider from './component/web/homePage/Content/HomePage/Slider';
 import Signup from './web/Signup';
 import AoKhoacProduct from './web/AoKhoacProduct'
 import AoThunProduct from './web/AoThunProduct'
+import QuanLyUser from './admin/QuanLyUser';
 
 class Router extends Component {
     constructor(props) {
@@ -40,10 +41,10 @@ class Router extends Component {
                                     <Route exact path="/admin/product/*">
                                         <AdminProducRouter {...this.props} />
                                     </Route>
-                                    {/* <Route exact path="/admin/product/add">
-                                        <AddProduct {...this.props} />
+                                    <Route exact path="/admin/user">
+                                        <QuanLyUser/>
                                     </Route>
-                                    <Route exact path="/admin/product/:id">
+                                    {/* <Route exact path="/admin/product/:id">
                                         <EditProduct {...this.props} />
                                     </Route> */}
                                 </Switch>
