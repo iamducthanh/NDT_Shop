@@ -1,12 +1,22 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import sanPhamApi from '../api/sanPhamApi';
 import { useEffect, useState } from 'react';
-
+import ProductRelated from './ProductRelated';
+import { useForm } from 'react-hook-form'
+import gioHangApi from '../api/gioHangApi';
 
 const ProductDetail = () => {
     const [product, setProduct] = useState([]);
-    const [productDetail, setProductDetail] = useState([]);
+    const ttsp = {
+        username: "",
+        tenSP: product.name,
+        size: "L",
+        mauSac: "black",
+        gia: product.price,
+        soLuong: 1,
+        image: product.image1
+    }
 
     let { id, sp } = useParams();
     useEffect(async () => {
@@ -15,16 +25,7 @@ const ProductDetail = () => {
             setProduct(data)
         }
         getProduct();
-        getProductDetal()
     }, [])
-
-        const getProductDetal = async () => {
-            console.log(document.getElementsByName('nameProduct')[0]);
-            const { data } = await sanPhamApi.getProductRelated(sp, product.name)
-            console.log(data);
-            setProductDetail(data)
-        }
-
 
     const va = (number) => {
         return Number(number).toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })
@@ -37,9 +38,72 @@ const ProductDetail = () => {
         img.src = imgSrc
     }
 
+    const plus = () => {
+        ttsp.soLuong = ttsp.soLuong + 1
+        document.getElementById('soLuong').value = ttsp.soLuong
+
+    }
+
+    const mius = () => {
+        if (ttsp.soLuong > 1) {
+            ttsp.soLuong = ttsp.soLuong - 1
+            document.getElementById('soLuong').value = ttsp.soLuong
+        }
+    }
+
+    const colorSelect = (event) => {
+        resetColor()
+        ttsp.mauSac = event.target.innerHTML
+        event.target.style.border = '1px red solid'
+    }
+
+    const sizeSelect = (event) => {
+        resetColorSelectSize()
+        ttsp.size = event.target.innerHTML
+        event.target.style.border = '1px red solid'
+    }
+
+    const resetColor = () => {
+        document.getElementById('colorChoose_0').style.border = '1px #75757570 solid'
+        document.getElementById('colorChoose_1').style.border = '1px #75757570 solid'
+    }
+
+    const resetColorSelectSize = () => {
+        document.getElementById('sizeChoose_0').style.border = '1px #75757570 solid'
+        document.getElementById('sizeChoose_1').style.border = '1px #75757570 solid'
+        document.getElementById('sizeChoose_2').style.border = '1px #75757570 solid'
+        document.getElementById('sizeChoose_3').style.border = '1px #75757570 solid'
+    }
+
+    const submitGioHang = async () => {
+        if(localStorage.getItem('username') == null){
+            document.getElementsByClassName('alertBox')[1].style.display = 'unset';
+        } else {
+            ttsp.username = localStorage.getItem('username');
+            await gioHangApi.addGioHang(ttsp);
+            alertBox('unset')
+        }  
+        console.log(ttsp);
+    }
+
+    const alertBox = (display) => {
+        if (display == 'unset') {
+            document.getElementsByClassName('alertBox')[0].style.display = 'unset';
+        } else {
+            document.getElementsByClassName('alertBox')[0].style.display = 'none';
+        }
+    }
     return (
         <div>
             <div className="conEach">
+                <div className="alertBox" id="alertBox">
+                    Thêm giỏ hàng thành công<br />
+                    <button onClick={alertBox}> Đóng </button>
+                </div>
+                <div className="alertBox" id="alertBox">
+                    Bạn phải đăng nhập để thêm được vào giỏ hàng!<br />
+                    <button><Link to="/login" style={{color: 'wheat'}}> Đăng nhập </Link></button>
+                </div>
                 <div className="textHead" />
                 <div className="card_product">
                     <div className="left">
@@ -55,29 +119,62 @@ const ProductDetail = () => {
                         </div>
                     </div>
                     <div className="right">
-                        <form action="shoppingCard.php" method="post" onsubmit="return checkStock()">
+                        <div >
                             <input hidden type="text" name="id" defaultValue="A1" />
                             <h2 name="nameProduct">{product.name}</h2> <br /> <br />
                             <div className="price"><span id="price">{va(product.price)}</span> <span>VNĐ</span></div>
                             <div className="color">
                                 <div className="rightLeft">Color</div>
-                                <label id="colorChoose_0" name="checkColor" onclick="checkStock()">black<input onclick="colorr(this.value)" hidden onchange="changeColor(0)" id="color_0" type="radio" name="color" defaultValue="black" /></label><label id="colorChoose_1" name="checkColor" onclick="checkStock()">yellow<input onclick="colorr(this.value)" hidden onchange="changeColor(1)" id="color_1" type="radio" name="color" defaultValue="yellow" /></label>                  </div>
+                                <label onClick={colorSelect} id="colorChoose_0" name="checkColor" style={{ border: '1px red solid' }}>
+                                    black
+                                </label>
+                                <label
+                                    onClick={colorSelect}
+                                    id="colorChoose_1"
+                                    name="checkColor"
+                                >yellow
+                                </label>
+                            </div>
                             <div className="size">
                                 <div className="rightLeft">Size</div>
-                                <label id="sizeChoose_0" name="checkSize" onclick="checkStock()">l<input onclick="sizee(this.value)" hidden onchange="changeSize(0)" id="size_0" type="radio" name="size" defaultValue="l" /></label><label id="sizeChoose_1" name="checkSize" onclick="checkStock()">m<input onclick="sizee(this.value)" hidden onchange="changeSize(1)" id="size_1" type="radio" name="size" defaultValue="m" /></label><label id="sizeChoose_2" name="checkSize" onclick="checkStock()">s<input onclick="sizee(this.value)" hidden onchange="changeSize(2)" id="size_2" type="radio" name="size" defaultValue="s" /></label><label id="sizeChoose_3" name="checkSize" onclick="checkStock()">xl<input onclick="sizee(this.value)" hidden onchange="changeSize(3)" id="size_3" type="radio" name="size" defaultValue="xl" /></label>
+                                <label style={{ border: '1px red solid' }}
+                                    onClick={sizeSelect}
+                                    id="sizeChoose_0"
+                                    name="checkSize">
+                                    L
+                                </label>
+                                <label
+                                    onClick={sizeSelect}
+                                    id="sizeChoose_1"
+                                    name="checkSize"
+                                >M
+                                </label>
+                                <label
+                                    onClick={sizeSelect}
+                                    id="sizeChoose_2"
+                                    name="checkSize"
+                                >
+                                    S
+                                </label>
+                                <label
+                                    onClick={sizeSelect}
+                                    id="sizeChoose_3"
+                                    name="checkSize"
+                                >XL
+                                </label>
                             </div>
                             <input type="text" hidden name="colorChange" id="colorChange" defaultValue />
                             <input type="text" hidden name="sizeChange" id="sizeChange" defaultValue />
                             <div className="soLuong">
                                 <div className="rightLeft">Quantity</div>
                                 <div className="number">
-                                    <div id="buttonm" onclick="minus()"><i className="fa fa-minus" /></div>
-                                    <input type="number" defaultValue={1} onkeyup="if(this.value<0){this.value= this.value * -1}" onblur="if(this.value == 0){this.value = 1}if(this.value == ''){this.value=1}else if(this.value > 134){this.value=134}" id="soLuong" name="soLuong" />
-                                    <div id="buttonp" onclick="plus()"><i className="fa fa-plus" /></div>
+                                    <div id="buttonm" onClick={mius}><i className="fa fa-minus" /></div>
+                                    <input type="number" min={1} defaultValue={1} id="soLuong" name="soLuong" />
+                                    <div id="buttonp" onClick={plus}><i className="fa fa-plus" /></div>
                                 </div>
                             </div>
                             <div className="action">
-                                <button type="submit" name="them" id="them">
+                                <button type="" name="them" id="them" onClick = {submitGioHang}>
                                     <div className="addShopCard">Thêm vào giỏ hàng</div>
                                 </button>
                                 <button type="submit" id="mua">
@@ -85,7 +182,7 @@ const ProductDetail = () => {
                                 </button>
                                 <div className="out" id="out" style={{ display: 'none', textTransform: 'uppercase', color: 'red', marginLeft: 100, fontWeight: 600 }}> Unable To Buy </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
                 <div className="a">
@@ -99,30 +196,14 @@ const ProductDetail = () => {
                     </div>
                     <div className="left_card_infor" id="relatedPr">
                         <h5>Product Related</h5>
-                        <div className="boxrela">
-                            <a href="eachProduct.php?id=A1">
-                                <div className="card" style={{ textAlign: 'center' }}>
-                                    <img src={product.image1} alt />
-                                    <div className="name"><b>{productDetail.name}</b></div>
-                                    <div className="price">{va(product.price)}</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="boxrela">
-                            <a href="eachProduct.php?id=A1">
-                                <div className="card" style={{ textAlign: 'center' }}>
-                                    <img src={product.image1} alt />
-                                    <div className="name"><b>{product.name}</b></div>
-                                    <div className="price">{va(product.price)}</div>
-                                </div>
-                            </a>
-                        </div>
+                        <ProductRelated product={product} sp={sp} />
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
 
     )
 }
 
 export default ProductDetail
+

@@ -11,15 +11,27 @@ const GianHang = (props) => {
         props.resertPage(event.target.value)
     }
 
+    const alertBox = (display) => {
+        if (display == 'unset') {
+          document.getElementById('alertBox').style.display = 'unset';
+        } else {
+          document.getElementById('alertBox').style.display = 'none';
+        }
+      }
+
     return (
         <div className="container">
+            <div className="alertBox" id="alertBox">
+                Thêm giỏ hàng thành công<br />
+                <button onClick={alertBox}> Đóng </button>
+            </div>
             <div>
                 <div className="headerAo">
                     <h1>{props.title}</h1>
                 </div>
                 <div className="sortAo">
                     <form>
-                        <select name="gia11" onChange = {onChangeOption}>
+                        <select name="gia11" onChange={onChangeOption}>
                             <option value="none">Sắp xếp theo</option>
                             <option value="asc">Giá tăng dần</option>
                             <option value="desc">Giá giảm dần</option>
@@ -28,11 +40,11 @@ const GianHang = (props) => {
                 </div>
                 <div className="ok">
                     <div className="bodyAo">
-                        <Filter {...props}/>
+                        <Filter {...props} />
                         <div className="hdhd">
                             <div className="midAo">
                                 {props.data.map((product) => (
-                                    <SanPham data={product} sp = {props.sp} />
+                                    <SanPham data={product} sp={props.sp}/>
                                 ))}
                             </div>
                             <div style={{ display: 'flex' }}>

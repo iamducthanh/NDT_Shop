@@ -3,9 +3,19 @@ import Router from './Router';
 import { useEffect, useState } from 'react';
 import aoKhoacApi from './api/aoKhoacApi';
 import aoThunApi from './api/aoThunApi'
+import gioHangApi from './api/gioHangApi';
+
 function App() {
   const [aoKhoac, setAoKhoac] = useState([]);
   const [aoThun, setAoThun] = useState([]);
+  const [slHang, setSlHang] = useState();
+  useEffect(() => {
+    const getSlHang = async () => {
+      const { data } = await gioHangApi.getAllGioHangByUsername(user[0])
+      setSlHang(data.length);
+    }
+    getSlHang();
+  }, [])
 
   const maxAo = 1;
   useEffect(() => {
@@ -38,7 +48,9 @@ function App() {
         maxPage={aoKhoac.length % 8 == 0 ? aoKhoac.length / 8 : Math.round(aoKhoac.length / 8 + 1)} 
         maxPageAoThun={aoThun.length % 8 == 0 ? aoThun.length / 8 : Math.round(aoThun.length / 8 + 1)}
         setUserLogin = {setUserLogin} 
-        user = {user}/>
+        user = {user}
+        slHang = {slHang}
+        />
     </div>
   );
 }

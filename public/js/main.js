@@ -143,3 +143,5 @@ out[1].onclick = scrv.bind(this, 'bestSeller')
 out[2].onclick = scrv.bind(this, 'bottom')
 out[3].onclick = scrv.bind(this, 'menuPr')
 out[4].onclick = scrv.bind(this, 'full-fes')
+
+

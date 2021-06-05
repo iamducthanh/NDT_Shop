@@ -3,18 +3,14 @@ import { BrowserRouter, Switch, Route, useHistory } from 'react-router-dom'
 import AdminLayout from './layout/AdminLayout';
 import WebLayout from './layout/WebLayout';
 import TrangChu from './web/TrangChu';
-import EditProduct from './admin/Edit'
-import AddProduct from './admin/Add'
-import ProductAoKhoac from './admin/ProductAoKhoac'
 import Login from './web/Login';
-import ProductRouter from './web/ProductRouter'
 import AdminProducRouter from './admin/AdminProducRouter'
-import Slider from './component/web/homePage/Content/HomePage/Slider';
 import Signup from './web/Signup';
 import AoKhoacProduct from './web/AoKhoacProduct'
 import AoThunProduct from './web/AoThunProduct'
 import QuanLyUser from './admin/QuanLyUser';
 import ProductDetail from './web/ProductDetail';
+import Cart from './web/Cart';
 
 class Router extends Component {
     constructor(props) {
@@ -29,10 +25,16 @@ class Router extends Component {
                             <Login {...this.props} />
                         </WebLayout>
                     </Route>
-                    <Route exact path='/card'>
-                        <WebLayout {...this.props}>
-                            <ProductDetail/>
-                        </WebLayout>
+                    <Route exact path='/cart' render={() => (
+                        localStorage.getItem('username') == null ?
+                            <WebLayout {...this.props}>
+                                <Login {...this.props}/>
+                            </WebLayout>
+                            :
+                            <WebLayout {...this.props}>
+                                <Cart />
+                            </WebLayout>
+                    )}>
                     </Route>
                     <Route exact path='/signup'>
                         <WebLayout {...this.props}>
@@ -48,7 +50,7 @@ class Router extends Component {
                                         <AdminProducRouter {...this.props} />
                                     </Route>
                                     <Route exact path="/admin/user">
-                                        <QuanLyUser/>
+                                        <QuanLyUser />
                                     </Route>
                                     {/* <Route exact path="/admin/product/:id">
                                         <EditProduct {...this.props} />

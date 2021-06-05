@@ -19,7 +19,11 @@ const Login = (props) => {
             localStorage.setItem('username', userLogin.username)
             localStorage.setItem('password', userLogin.password)
             props.setUserLogin(userLogin.username, userLogin.password)
-            history.push("/")
+            if (history.location = '/login') {
+              history.push('/')
+            } else {
+              history.push(history.location)
+            }
             break;
           } else {
             alert('Đăng nhập thành công')
@@ -27,7 +31,11 @@ const Login = (props) => {
             localStorage.setItem('username', userLogin.username)
             localStorage.setItem('password', userLogin.password)
             props.setUserLogin(userLogin.username, userLogin.password)
-            history.push("/")
+            if (history.location = '/login') {
+              history.push('/')
+            } else {
+              history.push(history.location)
+            }
             break;
           }
         }
@@ -75,8 +83,8 @@ const Login = (props) => {
       </div>
     </div>
   )
-  
-  
+
+
 }
 
 export default Login

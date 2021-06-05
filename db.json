@@ -553,5 +553,45 @@
       "passwordComfirm": "123",
       "id": "7FhrqHZ"
     }
+  ],
+  "cart": [
+    {
+      "id": "1",
+      "username": "admin",
+      "tenSP": "1",
+      "size": "1",
+      "mauSac": "1",
+      "gia": 1,
+      "soLuong": 1
+    },
+    {
+      "id": "2",
+      "username": "admin",
+      "tenSP": "1",
+      "size": "1",
+      "mauSac": "1",
+      "gia": 1,
+      "soLuong": 1
+    },
+    {
+      "id": "3",
+      "username": "admin",
+      "tenSP": "1",
+      "size": "1",
+      "mauSac": "1",
+      "gia": 1,
+      "soLuong": 1,
+      "image": ""
+    },
+    {
+      "username": "admin",
+      "tenSP": "Refined Steel Shoes 2",
+      "size": "L",
+      "mauSac": "black",
+      "gia": 200000,
+      "soLuong": 1,
+      "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "id": "IEunDl3"
+    }
   ]
 }

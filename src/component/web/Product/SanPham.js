@@ -25,8 +25,10 @@ const SanPham = (props) => {
                 </Link>
             </div>
             <div className="action">
-                <div className="add">
+                <div className="add" >
+                    <Link to={`/${props.sp}/${props.data.id}`}>
                     <i className="fa fa-shopping-cart" />
+                    </Link>
                 </div>
             </div>
             <div className="type">
