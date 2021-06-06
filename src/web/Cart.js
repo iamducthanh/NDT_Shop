@@ -13,7 +13,7 @@ const Cart = () => {
             mauSac: "",
             gia: 0,
             soLuong: null,
-            image: ""
+            image: "http://tgo.vn/wp-content/uploads/2021/01/white-background-2.jpg"
         }
     ]);
     useEffect(() => {
@@ -26,6 +26,18 @@ const Cart = () => {
       getGioHang();
       console.log(gioHang);
     }, [])
+
+    const formatTien = (price) => {
+        return Number(price).toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })
+    }
+
+    const getTongTien = () => {
+        var tongTien = 0;
+        gioHang.map((gioHangItem) => {
+            tongTien += (gioHangItem.gia * gioHangItem.soLuong)
+        })
+        return tongTien;
+    }
 
     return (
         <main className="page">
@@ -45,12 +57,12 @@ const Cart = () => {
                             </div>
                             <div className="col-md-12 col-lg-4">
                                 <div className="summary">
-                                    <h3>Summary</h3>
-                                    <div className="summary-item"><span className="text">Subtotal</span><span className="price">$360</span></div>
-                                    <div className="summary-item"><span className="text">Discount</span><span className="price">$0</span></div>
-                                    <div className="summary-item"><span className="text">Shipping</span><span className="price">$0</span></div>
-                                    <div className="summary-item"><span className="text">Total</span><span className="price">$360</span></div>
-                                    <button type="button" className="btn btn-primary btn-lg btn-block">Checkout</button>
+                                    <h3>Thanh toán</h3>
+                                    <div className="summary-item"><span className="text">Tổng tiền hàng</span><span className="price">{formatTien(getTongTien())}</span></div>
+                                    <div className="summary-item"><span className="text">Phí vận chuyển</span><span className="price">{formatTien(0)}</span></div>
+                                    <div className="summary-item"><span className="text">Giảm giá</span><span className="price">{formatTien(0)}</span></div>
+                                    <div className="summary-item"><span className="text">Tổng thanh toán</span><span className="price">{formatTien(getTongTien())}</span></div>
+                                    <button type="button" className="btn btn-primary btn-lg btn-block">Đặt hàng</button>
                                 </div>
                             </div>
                         </div>

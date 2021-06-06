@@ -3,6 +3,7 @@ import React from 'react'
 const CartItem = (props) => {
     return (
         <div className="product" style={{ paddingLeft: '20px' }}>
+            <div className="itemmm">
             <div className="row">
                 <div className="col-md-3">
                     <img className="img-fluid mx-auto d-block image" src={props.data.image} />
@@ -27,8 +28,11 @@ const CartItem = (props) => {
                                 <span>{Number(props.data.gia).toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}</span>
                             </div>
                         </div>
+                        
                     </div>
+                    <button id = "deleteCart">delete</button>
                 </div>
+            </div>
             </div>
         </div>
     )
