@@ -8,7 +8,7 @@ const Login = (props) => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   let history = useHistory()
   const login = async (userLogin) => {
-    fetch('https://my-json-server.typicode.com/iamducthanh/Jsonserver/user').then((response) => response.json()).then((listUser) => {
+    fetch('http://localhost:3005/user').then((response) => response.json()).then((listUser) => {
       const user = [];
       for (var i = 0; i < listUser.length; i++) {
         if ((listUser[i].username == userLogin.username) && (listUser[i].password == userLogin.password)) {
