@@ -1,20 +1,20 @@
 import React from 'react'
+import jeanApi from '../api/jeansApi';
 import GianHang from '../component/web/Product/GianHang'
 import { useEffect, useState } from 'react';
-import aoThunApi from '../api/aoThunApi';
 
-const AoThunProduct = (props) => {
-    const [aoThun, setAoThun] = useState([]);
+const JeansProduct = (props) => {
+    const [jeans, setJeans] = useState([]);
     const [page, setPage] = useState([]);
     const [filter, setFilter] = useState([0, 0]);
 
     useEffect(() => {
-        const getAoThun = async () => {
+        const getJeans = async () => {
             setPage(1)
-            const { data } = await aoThunApi.getToPage(page)
-            setAoThun(data);
+            const { data } = await jeanApi.getToPage(page)
+            setJeans(data);
         }
-        getAoThun();
+        getJeans();
     }, [])
 
     const resertPage = (key) => {
@@ -71,20 +71,20 @@ const AoThunProduct = (props) => {
         if (page + 1 > props.maxPage) {
         } else {
             console.log(filter[0], filter[1]);
-            const { data } = await aoThunApi.getToFillAndSortAnhPage(min, max, key, page + 1)
-            setAoThun(data)
+            const { data } = await jeanApi.getToFillAndSortAnhPage(min, max, key, page + 1)
+            setJeans(data)
         }
         if (page >= props.maxPage - 1) {
             setPage(props.maxPage)
         } else {
-            setPage(page + 1)
+            setJeans(page + 1)
         }
     }
 
     const prePageAndFillAndSort = async (key, min, max) => {
         console.log(filter);
-        const { data } = await aoThunApi.getToFillAndSortAnhPage(min, max, key, page - 1)
-        setAoThun(data)
+        const { data } = await jeanApi.getToFillAndSortAnhPage(min, max, key, page - 1)
+        setJeans(data)
         if (page == 1) {
             setPage(1)
         } else {
@@ -93,22 +93,21 @@ const AoThunProduct = (props) => {
     }
 
     const nextPageAndFill = async () => {
-        if (page + 1 > props.maxPageAoThun) {
+        if (page + 1 > props.maxPage) {
         } else {
-            console.log(filter[0], filter[1]);
-            const { data } = await aoThunApi.getByKhoangGiaAndPage(filter[0], filter[1], page + 1);
-            setAoThun(data)
+            const { data } = await jeanApi.getByKhoangGiaAndPage(filter[0], filter[1], page + 1);
+            setJeans(data)
         }
-        if (page >= props.maxPageAoThun - 1) {
-            setPage(props.maxPageAoThun)
+        if (page >= props.maxPage - 1) {
+            setPage(props.maxPage)
         } else {
             setPage(page + 1)
         }
     }
 
     const prePageAndFill = async () => {
-        const { data } = await aoThunApi.getByKhoangGiaAndPage(filter[0], filter[1],page - 1)
-        setAoThun(data)
+        const { data } = await jeanApi.getByKhoangGiaAndPage(filter[0], filter[1], page - 1)
+        setJeans(data)
         if (page == 1) {
             setPage(1)
         } else {
@@ -117,20 +116,20 @@ const AoThunProduct = (props) => {
     }
 
     const nextPageOrSoft = async (key) => {
-        if (page + 1 > props.maxPageAoThun) {
+        if (page + 1 > props.maxPage) {
         } else {
-            const { data } = await aoThunApi.getToPageAndSoft(page + 1, key)
-            setAoThun(data)
+            const { data } = await jeanApi.getToPageAndSoft(page + 1, key)
+            setJeans(data)
         }
-        if (page >= props.maxPageAoThun - 1) {
-            setPage(props.maxPageAoThun)
+        if (page >= props.maxPage - 1) {
+            setPage(props.maxPage)
         } else {
             setPage(page + 1)
         }
     }
     const prePageOrSoft = async (key) => {
-        const { data } = await aoThunApi.getToPageAndSoft(page - 1, key)
-        setAoThun(data)
+        const { data } = await jeanApi.getToPageAndSoft(page - 1, key)
+        setJeans(data)
         if (page == 1) {
             setPage(1)
         } else {
@@ -139,20 +138,20 @@ const AoThunProduct = (props) => {
     }
 
     const nextPage = async () => {
-        if (page + 1 > props.maxPageAoThun) {
+        if (page + 1 > props.maxPage) {
         } else {
-            const { data } = await aoThunApi.getToPage(page + 1)
-            setAoThun(data)
+            const { data } = await jeanApi.getToPage(page + 1)
+            setJeans(data)
         }
-        if (page >= props.maxPageAoThun - 1) {
-            setPage(props.maxPageAoThun)
+        if (page >= props.maxPage - 1) {
+            setPage(props.maxPage)
         } else {
             setPage(page + 1)
         }
     }
     const prePage = async () => {
-        const { data } = await aoThunApi.getToPage(page - 1)
-        setAoThun(data)
+        const { data } = await jeanApi.getToPage(page - 1)
+        setJeans(data)
         if (page == 1) {
             setPage(1)
         } else {
@@ -181,17 +180,17 @@ const AoThunProduct = (props) => {
     }
 
     return (
-        <GianHang 
-            data={aoThun} 
-            prePage={prePage} 
-            nextPage={nextPage} 
-            page={page} loc={loc} 
-            resertPage={resertPage} 
+        <GianHang
+            data={jeans}
+            prePage={prePage}
+            nextPage={nextPage}
+            page={page} loc={loc}
+            resertPage={resertPage}
             filByPrice={filByPrice}
-            title = "ÁO THUN"
-            sp = "ao-thun"
-            />
+            title="JEANS"
+            sp="jeans"
+        />
     )
 }
 
-export default AoThunProduct
+export default JeansProduct

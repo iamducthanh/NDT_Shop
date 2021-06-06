@@ -17,6 +17,11 @@ const aoThunApi = {
         const url = `/ao-thun?_sort=price&_order=${order}&_page=${page}&_limit=8`;
         return axiosClient.get(url);
     },
+    getToFillAndSortAnhPage(min, max, order, page){
+        const url = `/ao-thun?price_gte=${min}&price_lte=${max}&_sort=price&_order=${order}&_page=${page}&_limit=8`;
+        console.log(url);
+        return axiosClient.get(url);
+    },
     getById(id){
         const url = `/ao-thun/${id}`;
         return axiosClient.get(url);

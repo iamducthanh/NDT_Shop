@@ -17,15 +17,22 @@ const Cart = () => {
         }
     ]);
     useEffect(() => {
-      const getGioHang = async () => {
+        const getGioHang = async () => {
+            const { data } = await gioHangApi.getAllGioHangByUsername(localStorage.getItem('username'))
+            if (data.length > 0) {
+                setGioHang(data);
+            }
+        }
+        getGioHang();
+        console.log(gioHang);
+    }, [])
+
+    const loadGioHang = async () => {
         const { data } = await gioHangApi.getAllGioHangByUsername(localStorage.getItem('username'))
-        if(data.length > 0){
+        if (data.length > 0) {
             setGioHang(data);
         }
-      }
-      getGioHang();
-      console.log(gioHang);
-    }, [])
+    }
 
     const formatTien = (price) => {
         return Number(price).toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })
@@ -44,7 +51,7 @@ const Cart = () => {
             try {
                 let res = await gioHangApi.removeGioHang(id)
                 const { data } = await gioHangApi.getAllGioHangByUsername(localStorage.getItem('username'))
-                if(data.length > 0){
+                if (data.length > 0) {
                     setGioHang(data);
                 }
             } catch (error) {
@@ -54,8 +61,12 @@ const Cart = () => {
     }
 
     const updateCart = async (value, id) => {
-        const soLuong = value
-        await gioHangApi.updateGioHang(id, value)
+        const soLuongNew = value
+        const { data } = await gioHangApi.getGioHangById(id)
+        data.soLuong = soLuongNew
+        console.log(data);
+        await gioHangApi.updateGioHang(id, data)
+        loadGioHang()
     }
 
     return (
@@ -63,14 +74,14 @@ const Cart = () => {
             <section className="shopping-cart dark">
                 <div className="container">
                     <div className="headerAo">
-                        <h1 style={{fontFamily: 'serif'}}>Giỏ hàng</h1>
+                        <h1 style={{ fontFamily: 'serif' }}>Giỏ hàng</h1>
                     </div>
                     <div className="content">
                         <div className="row">
                             <div className="col-md-12 col-lg-8">
                                 <div className="items">
                                     {gioHang.map((gioHangItem) => (
-                                        <CartItem data = {gioHangItem} removeCart = {removeCart} updateCart = {updateCart}/>
+                                        <CartItem data={gioHangItem} removeCart={removeCart} updateCart={updateCart} />
                                     ))}
                                 </div>
                             </div>
@@ -81,7 +92,7 @@ const Cart = () => {
                                     <div className="summary-item"><span className="text">Phí vận chuyển</span><span className="price">{formatTien(0)}</span></div>
                                     <div className="summary-item"><span className="text">Giảm giá</span><span className="price">{formatTien(0)}</span></div>
                                     <div className="summary-item"><span className="text">Tổng thanh toán</span><span className="price">{formatTien(getTongTien())}</span></div>
-                                    <button type="button" className="btn btn-primary btn-lg btn-block">Đặt hàng</button>
+                                    <button type="button" className="btn btn-primary btn-lg btn-block" onClick={()=>{alert('Shop này chưa có đặt hàng, quay lại sau')}}>Đặt hàng</button>
                                 </div>
                             </div>
                         </div>

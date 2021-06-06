@@ -8,7 +8,7 @@ const Menu = (props) => {
         localStorage.removeItem('accessToken')
         localStorage.removeItem('username')
         localStorage.removeItem('password')
-        props.setUserLogin(null,null)
+        props.setUserLogin(null, null)
     }
     return (
         <div className="bot-head">
@@ -28,7 +28,7 @@ const Menu = (props) => {
                     <a className="bmenu" href="">bottom - jeans,.</a>
                     <div className="sub">
                         <ul>
-                            <li><a className="subli" href="">jeans</a></li>
+                            <li><Link style={{ paddingLeft: 40 }} className="subli" to="/jeans">Jeans</Link></li>
                             <li><a className="subli" href="">pant</a></li>
                             <li><a className="subli" href="">short</a></li>
                         </ul>
@@ -70,12 +70,12 @@ const Menu = (props) => {
             </div>
             <div className="menu" id="account">
                 <div className="ao">
-                    <a to="/login" className="bmenu"><i className="fa fa-user" style={{marginRight: 5}}/><span className="text log"> 
+                    <a to="/login" className="bmenu"><i className="fa fa-user" style={{ marginRight: 5 }} /><span className="text log">
                         {localStorage.getItem('username') != null ?
                             props.user
                             :
                             'Tài khoản'
-                    }
+                        }
                     </span></a>
                     <div className="sub">
                         <ul>

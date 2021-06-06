@@ -23,7 +23,8 @@ const AoKhoacProduct = (props) => {
     }
 
     const loc = (key, loai) => {
-        if (filter[0] == 0 && filter[1] == 0) {
+        if (filter[1] == 0) {
+            console.log('loc 1');
             if (key == 'none' && loai == 'pre') {
                 prePage()
             }
@@ -42,10 +43,52 @@ const AoKhoacProduct = (props) => {
             if (key == 'desc' && loai == 'next') {
                 nextPageOrSoft(key)
             }
-        } else if (loai == 'pre') {
-            prePageAndFill();
-        } else if (loai == 'next') {
-            nextPageAndFill()
+        } else if (filter[1] != 0 && key == 'none') {
+            console.log('loc 2');
+            if (loai == 'pre') {
+                prePageAndFill();
+            } else if (loai == 'next') {
+                nextPageAndFill()
+            }
+        } else if (filter[1] != 0 && key != 'none') {
+            console.log('loc 3');
+            if (key == 'asc' && loai == 'pre') {
+                prePageAndFillAndSort(key, filter[0], filter[1])
+            }
+            if (key == 'asc' && loai == 'next') {
+                nextPageAndFillAndSort(key, filter[0], filter[1])
+            }
+            if (key == 'desc' && loai == 'pre') {
+                prePageAndFillAndSort(key, filter[0], filter[1])
+            }
+            if (key == 'desc' && loai == 'next') {
+                nextPageAndFillAndSort(key, filter[0], filter[1])
+            }
+        }
+    }
+
+    const nextPageAndFillAndSort = async (key, min, max) => {
+        if (page + 1 > props.maxPage) {
+        } else {
+            console.log(filter[0], filter[1]);
+            const { data } = await aoKhoacApi.getToFillAndSortAnhPage(min, max, key, page + 1)
+            setAoKhoac(data)
+        }
+        if (page >= props.maxPage - 1) {
+            setPage(props.maxPage)
+        } else {
+            setPage(page + 1)
+        }
+    }
+
+    const prePageAndFillAndSort = async (key, min, max) => {
+        console.log(filter);
+        const { data } = await aoKhoacApi.getToFillAndSortAnhPage(min, max, key, page - 1)
+        setAoKhoac(data)
+        if (page == 1) {
+            setPage(1)
+        } else {
+            setPage(page - 1)
         }
     }
 
@@ -64,7 +107,7 @@ const AoKhoacProduct = (props) => {
     }
 
     const prePageAndFill = async () => {
-        const { data } = await aoKhoacApi.getByKhoangGiaAndPage(filter[0], filter[1],page - 1)
+        const { data } = await aoKhoacApi.getByKhoangGiaAndPage(filter[0], filter[1], page - 1)
         setAoKhoac(data)
         if (page == 1) {
             setPage(1)
@@ -117,42 +160,37 @@ const AoKhoacProduct = (props) => {
         }
     }
 
-    const filByPrice = async (event) => {
+    const filByPrice = async (event, key) => {
         setPage(1)
         if (event.target.value == 0) {
             setFilter([0, 0])
-            const { data } = await aoKhoacApi.getToPage(1)
-            setAoKhoac(data)
+            prePageAndFillAndSort(key, 0,50000000)
         } else if (event.target.value == 1) {
             setFilter([0, 500000])
-            const { data } = await aoKhoacApi.getByKhoangGiaAndPage(0, 500000, 1)
-            setAoKhoac(data)
+            prePageAndFillAndSort(key, 0,500000)
         } else if (event.target.value == 2) {
-            setFilter(500000, 1000000)
-            const { data } = await aoKhoacApi.getByKhoangGiaAndPage(500000, 1000000, 1)
-            setAoKhoac(data)
+            setFilter([500000, 1000000])
+            prePageAndFillAndSort(key, 500000,1000000)
         } else if (event.target.value == 3) {
-            setFilter(1000000, 1500000)
-            const { data } = await aoKhoacApi.getByKhoangGiaAndPage(1000000, 1500000, 1)
-            setAoKhoac(data)
+            setFilter([1000000, 1500000])
+            prePageAndFillAndSort(key, 1000000,1500000)
         } else if (event.target.value == 4) {
-            setFilter(1500000, 50000000)
-            const { data } = await aoKhoacApi.getByKhoangGiaAndPage(1500000, 50000000, 1)
-            setAoKhoac(data)
+            setFilter([1500000, 50000000])
+            prePageAndFillAndSort(key, 1500000,50000000)
         }
     }
 
     return (
-        <GianHang 
-            data={aoKhoac} 
-            prePage={prePage} 
-            nextPage={nextPage} 
-            page={page} loc={loc} 
-            resertPage={resertPage} 
-            filByPrice={filByPrice} 
-            title = "ÁO KHOÁC"
-            sp = "ao-khoac"
-            />
+        <GianHang
+            data={aoKhoac}
+            prePage={prePage}
+            nextPage={nextPage}
+            page={page} loc={loc}
+            resertPage={resertPage}
+            filByPrice={filByPrice}
+            title="ÁO KHOÁC"
+            sp="ao-khoac"
+        />
     )
 }
 

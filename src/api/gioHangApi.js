@@ -6,6 +6,11 @@ const gioHangApi = {
         return axiosClient.get(url);
     },
 
+    getGioHangById(id) {
+        const url = `/cart/${id}`;
+        return axiosClient.get(url);
+    },
+
     addGioHang(gioHang) {
         const url = `/cart`;
         return axiosClient.post(url, gioHang);

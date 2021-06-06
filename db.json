@@ -1,4 +1,105 @@
 {
+  "jeans": [
+    {
+      "id": "1",
+      "name": "Jeans 1",
+      "price": 200000,
+      "image1": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
+      "image2": "https://martinvalen.com/5978/men-s-light-blue-jeans-with-rips.jpg",
+      "image3": "https://cdn.shopify.com/s/files/1/0271/7450/2538/products/product-image-1149374943.jpg?v=1587091989",
+      "soLuong": "100"
+    },
+    {
+      "id": "2",
+      "name": "Jeans 2",
+      "price": 3000000,
+      "image1": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
+      "image2": "https://martinvalen.com/5978/men-s-light-blue-jeans-with-rips.jpg",
+      "image3": "https://cdn.shopify.com/s/files/1/0271/7450/2538/products/product-image-1149374943.jpg?v=1587091989",
+      "soLuong": "100"
+    },
+    {
+      "id": "2",
+      "name": "Jeans 2",
+      "price": 400000,
+      "image1": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
+      "image2": "https://martinvalen.com/5978/men-s-light-blue-jeans-with-rips.jpg",
+      "image3": "https://cdn.shopify.com/s/files/1/0271/7450/2538/products/product-image-1149374943.jpg?v=1587091989",
+      "soLuong": "100"
+    },
+    {
+      "id": "3",
+      "name": "Jeans 3",
+      "price": 500000,
+      "image1": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
+      "image2": "https://martinvalen.com/5978/men-s-light-blue-jeans-with-rips.jpg",
+      "image3": "https://cdn.shopify.com/s/files/1/0271/7450/2538/products/product-image-1149374943.jpg?v=1587091989",
+      "soLuong": "100"
+    },
+    {
+      "id": "4",
+      "name": "Jeans 4",
+      "price": 600000,
+      "image1": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
+      "image2": "https://martinvalen.com/5978/men-s-light-blue-jeans-with-rips.jpg",
+      "image3": "https://cdn.shopify.com/s/files/1/0271/7450/2538/products/product-image-1149374943.jpg?v=1587091989",
+      "soLuong": "100"
+    },
+    {
+      "id": "5",
+      "name": "Jeans 5",
+      "price": 700000,
+      "image1": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
+      "image2": "https://martinvalen.com/5978/men-s-light-blue-jeans-with-rips.jpg",
+      "image3": "https://cdn.shopify.com/s/files/1/0271/7450/2538/products/product-image-1149374943.jpg?v=1587091989",
+      "soLuong": "100"
+    },
+    {
+      "id": "5",
+      "name": "Jeans 5",
+      "price": 800000,
+      "image1": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
+      "image2": "https://martinvalen.com/5978/men-s-light-blue-jeans-with-rips.jpg",
+      "image3": "https://cdn.shopify.com/s/files/1/0271/7450/2538/products/product-image-1149374943.jpg?v=1587091989",
+      "soLuong": "100"
+    },
+    {
+      "id": "6",
+      "name": "Jeans 6",
+      "price": 900000,
+      "image1": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
+      "image2": "https://martinvalen.com/5978/men-s-light-blue-jeans-with-rips.jpg",
+      "image3": "https://cdn.shopify.com/s/files/1/0271/7450/2538/products/product-image-1149374943.jpg?v=1587091989",
+      "soLuong": "100"
+    },
+    {
+      "id": "7",
+      "name": "Jeans 7",
+      "price": 1200000,
+      "image1": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
+      "image2": "https://martinvalen.com/5978/men-s-light-blue-jeans-with-rips.jpg",
+      "image3": "https://cdn.shopify.com/s/files/1/0271/7450/2538/products/product-image-1149374943.jpg?v=1587091989",
+      "soLuong": "100"
+    },
+    {
+      "id": "8",
+      "name": "Jeans 8",
+      "price": 2100000,
+      "image1": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
+      "image2": "https://martinvalen.com/5978/men-s-light-blue-jeans-with-rips.jpg",
+      "image3": "https://cdn.shopify.com/s/files/1/0271/7450/2538/products/product-image-1149374943.jpg?v=1587091989",
+      "soLuong": "100"
+    },
+    {
+      "id": "9",
+      "name": "Jeans 9",
+      "price": 2600000,
+      "image1": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
+      "image2": "https://martinvalen.com/5978/men-s-light-blue-jeans-with-rips.jpg",
+      "image3": "https://cdn.shopify.com/s/files/1/0271/7450/2538/products/product-image-1149374943.jpg?v=1587091989",
+      "soLuong": "100"
+    }
+  ],
   "ao-thun": [
     {
       "id": "1",
@@ -526,7 +627,7 @@
     },
     {
       "name": "test",
-      "price": "2300000",
+      "price": 2300000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
       "image2": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQji_FF_G-eag9aYLdQ1d678RE8u8S2GbCLw&usqp=CAU",
       "image3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQji_FF_G-eag9aYLdQ1d678RE8u8S2GbCLw&usqp=CAU",
@@ -556,13 +657,6 @@
   ],
   "cart": [
     {
-      "username": "admin",
-      "tenSP": "Áo thun 2",
-      "size": "M",
-      "mauSac": "yellow",
-      "gia": 300000,
-      "soLuong": 1,
-      "image": "https://product.hstatic.net/1000026602/product/118071394_671482550387997_8296446070533145704_o_9bd939fe54504b829e3f932999dfee30.jpg",
       "id": "y00ykqw"
     },
     {
@@ -571,7 +665,7 @@
       "size": "S",
       "mauSac": "black",
       "gia": 200000,
-      "soLuong": 1,
+      "soLuong": "10",
       "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
       "id": "0T_7ckC"
     },
@@ -644,6 +738,46 @@
       "soLuong": 1,
       "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
       "id": "p0Cjglt"
+    },
+    {
+      "username": "admin",
+      "tenSP": "Jeans 9",
+      "size": "L",
+      "mauSac": "black",
+      "gia": 2600000,
+      "soLuong": 1,
+      "image": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
+      "id": "1TOcx-_"
+    },
+    {
+      "username": "admin",
+      "tenSP": "Jeans 5",
+      "size": "S",
+      "mauSac": "black",
+      "gia": 700000,
+      "soLuong": 3,
+      "image": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
+      "id": "2jhc2Hg"
+    },
+    {
+      "username": "admin",
+      "tenSP": "Jeans 2",
+      "size": "L",
+      "mauSac": "black",
+      "gia": 3000000,
+      "soLuong": 1,
+      "image": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
+      "id": "wvfGggr"
+    },
+    {
+      "username": "thanh",
+      "tenSP": "Jeans 5",
+      "size": "L",
+      "mauSac": "black",
+      "gia": 700000,
+      "soLuong": 3,
+      "image": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
+      "id": "7IrHEeh"
     }
   ]
 }

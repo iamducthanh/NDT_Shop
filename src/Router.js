@@ -11,6 +11,7 @@ import AoThunProduct from './web/AoThunProduct'
 import QuanLyUser from './admin/QuanLyUser';
 import ProductDetail from './web/ProductDetail';
 import Cart from './web/Cart';
+import JeansProduct from './web/JeansProduct';
 
 class Router extends Component {
     constructor(props) {
@@ -79,6 +80,9 @@ class Router extends Component {
                                         </Route>
                                         <Route exact path="/ao-thun">
                                             <AoThunProduct {...this.props} />
+                                        </Route>
+                                        <Route exact path="/jeans">
+                                            <JeansProduct {...this.props} />
                                         </Route>
                                         <Route exact path="/:sp/:id?">
                                             <ProductDetail {...this.props} />
