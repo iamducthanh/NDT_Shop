@@ -39,6 +39,25 @@ const Cart = () => {
         return tongTien;
     }
 
+    const removeCart = async (id) => {
+        if (window.confirm('Bạn có chắc muốn xóa không?')) {
+            try {
+                let res = await gioHangApi.removeGioHang(id)
+                const { data } = await gioHangApi.getAllGioHangByUsername(localStorage.getItem('username'))
+                if(data.length > 0){
+                    setGioHang(data);
+                }
+            } catch (error) {
+                alert('Lỗi cmnr')
+            }
+        }
+    }
+
+    const updateCart = async (value, id) => {
+        const soLuong = value
+        await gioHangApi.updateGioHang(id, value)
+    }
+
     return (
         <main className="page">
             <section className="shopping-cart dark">
@@ -51,7 +70,7 @@ const Cart = () => {
                             <div className="col-md-12 col-lg-8">
                                 <div className="items">
                                     {gioHang.map((gioHangItem) => (
-                                        <CartItem data = {gioHangItem}/>
+                                        <CartItem data = {gioHangItem} removeCart = {removeCart} updateCart = {updateCart}/>
                                     ))}
                                 </div>
                             </div>

@@ -1,6 +1,10 @@
 import React from 'react'
 
 const CartItem = (props) => {
+    const updateCart = (event) => {
+        props.updateCart(event.target.value, props.data.id)
+    }
+
     return (
         <div className="product" style={{ paddingLeft: '20px' }}>
             <div className="itemmm">
@@ -22,7 +26,7 @@ const CartItem = (props) => {
                             </div>
                             <div className="col-md-4 quantity">
                                 <label htmlFor="quantity">Quantity:</label>
-                                <input id="" type="number" defaultValue={props.data.soLuong} className="form-control quantity-input" />
+                                <input control id="soLuongCart" onKeyUp={updateCart} type="number" defaultValue={props.data.soLuong} className="form-control quantity-input" />
                             </div>
                             <div className="col-md-3 price">
                                 <span>{Number(props.data.gia).toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}</span>
@@ -30,7 +34,7 @@ const CartItem = (props) => {
                         </div>
                         
                     </div>
-                    <button id = "deleteCart">delete</button>
+                    <button id="deleteCart" onClick={props.removeCart.bind(this, props.data.id)}>delete</button>
                 </div>
             </div>
             </div>

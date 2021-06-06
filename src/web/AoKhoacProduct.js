@@ -25,27 +25,21 @@ const AoKhoacProduct = (props) => {
     const loc = (key, loai) => {
         if (filter[0] == 0 && filter[1] == 0) {
             if (key == 'none' && loai == 'pre') {
-                console.log('pre non');
                 prePage()
             }
             if (key == 'none' && loai == 'next') {
-                console.log('next non');
                 nextPage()
             }
             if (key == 'asc' && loai == 'pre') {
-                console.log('pre asc');
                 prePageOrSoft(key)
             }
             if (key == 'asc' && loai == 'next') {
-                console.log('next asc');
                 nextPageOrSoft(key)
             }
             if (key == 'desc' && loai == 'pre') {
-                console.log('pre desc');
                 prePageOrSoft(key)
             }
             if (key == 'desc' && loai == 'next') {
-                console.log('next desc');
                 nextPageOrSoft(key)
             }
         } else if (loai == 'pre') {

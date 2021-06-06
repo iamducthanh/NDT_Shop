@@ -9,6 +9,18 @@ const gioHangApi = {
     addGioHang(gioHang) {
         const url = `/cart`;
         return axiosClient.post(url, gioHang);
+    },
+    
+    removeGioHang(id){
+        const url = `/cart/${id}`;
+        return axiosClient.delete(url);
+    },
+
+    updateGioHang(id, data) {
+        const url = `/cart/${id}`;
+        return axiosClient.put(url, data);
     }
+
+
 }
 export default gioHangApi;
