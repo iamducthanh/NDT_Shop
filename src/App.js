@@ -9,6 +9,8 @@ function App() {
   const [aoKhoac, setAoKhoac] = useState([]);
   const [aoThun, setAoThun] = useState([]);
   const [slHang, setSlHang] = useState();
+  const [user, setUser] = useState([username, password]);
+
   useEffect(() => {
     const getSlHang = async () => {
       const { data } = await gioHangApi.getAllGioHangByUsername(user[0])
@@ -16,6 +18,11 @@ function App() {
     }
     getSlHang();
   }, [])
+
+  const getSlHang = async () => {
+    const { data } = await gioHangApi.getAllGioHangByUsername(localStorage.getItem('username'))
+    setSlHang(data.length);
+  }
 
   const maxAo = 1;
   useEffect(() => {
@@ -36,10 +43,9 @@ function App() {
 
   var username = localStorage.getItem('username');
   var password = localStorage.getItem('password');
-  const [user, setUser] = useState([username, password]);
-
   const setUserLogin = (username, password) => {
       setUser(username, password)
+      getSlHang()
   }
 
   return (
@@ -50,6 +56,7 @@ function App() {
         setUserLogin = {setUserLogin} 
         user = {user}
         slHang = {slHang}
+        getSlHang = {getSlHang}
         />
     </div>
   );

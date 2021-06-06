@@ -556,42 +556,74 @@
   ],
   "cart": [
     {
-      "id": "1",
-      "username": "admin",
-      "tenSP": "1",
-      "size": "1",
-      "mauSac": "1",
-      "gia": 1,
-      "soLuong": 1
-    },
-    {
-      "id": "2",
-      "username": "admin",
-      "tenSP": "1",
-      "size": "1",
-      "mauSac": "1",
-      "gia": 1,
-      "soLuong": 1
-    },
-    {
-      "id": "3",
-      "username": "admin",
-      "tenSP": "1",
-      "size": "1",
-      "mauSac": "1",
-      "gia": 1,
-      "soLuong": 1,
-      "image": ""
-    },
-    {
       "username": "admin",
       "tenSP": "Refined Steel Shoes 2",
       "size": "L",
       "mauSac": "black",
       "gia": 200000,
-      "soLuong": 1,
+      "soLuong": 3,
       "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
       "id": "IEunDl3"
+    },
+    {
+      "username": "admin",
+      "tenSP": "Refined Steel Shoes 1",
+      "size": "XL",
+      "mauSac": "black",
+      "gia": 200000,
+      "soLuong": 3,
+      "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "id": "JwDi12y"
+    },
+    {
+      "username": "admin",
+      "tenSP": "Áo thun 2",
+      "size": "M",
+      "mauSac": "yellow",
+      "gia": 300000,
+      "soLuong": 1,
+      "image": "https://product.hstatic.net/1000026602/product/118071394_671482550387997_8296446070533145704_o_9bd939fe54504b829e3f932999dfee30.jpg",
+      "id": "y00ykqw"
+    },
+    {
+      "username": "admin",
+      "tenSP": "Refined Steel Shoes 2",
+      "size": "S",
+      "mauSac": "black",
+      "gia": 200000,
+      "soLuong": 1,
+      "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "id": "0T_7ckC"
+    },
+    {
+      "username": "admin",
+      "tenSP": "Áo thun 1",
+      "size": "L",
+      "mauSac": "black",
+      "gia": 200000,
+      "soLuong": 10,
+      "image": "https://product.hstatic.net/1000026602/product/118071394_671482550387997_8296446070533145704_o_9bd939fe54504b829e3f932999dfee30.jpg",
+      "id": "ubF2Auc"
+    },
+    {
+      "username": "admin",
+      "tenSP": "Áo thun 2",
+      "size": "L",
+      "mauSac": "black",
+      "gia": 300000,
+      "soLuong": 5,
+      "image": "https://product.hstatic.net/1000026602/product/118071394_671482550387997_8296446070533145704_o_9bd939fe54504b829e3f932999dfee30.jpg",
+      "id": "HMYY2I2"
+    },
+    {
+      "username": "admin",
+      "tenSP": "Refined Steel Shoes 3",
+      "size": "L",
+      "mauSac": "black",
+      "gia": 200000,
+      "soLuong": 7,
+      "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "id": "an9FQDg"
     }
   ]
 }

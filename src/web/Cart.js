@@ -11,17 +11,20 @@ const Cart = () => {
             tenSP: "",
             size: "",
             mauSac: "",
-            gia: "0",
-            soLuong: 0,
+            gia: 0,
+            soLuong: null,
             image: ""
         }
     ]);
     useEffect(() => {
       const getGioHang = async () => {
         const { data } = await gioHangApi.getAllGioHangByUsername(localStorage.getItem('username'))
-        setGioHang(data);
+        if(data.length > 0){
+            setGioHang(data);
+        }
       }
       getGioHang();
+      console.log(gioHang);
     }, [])
 
     return (
@@ -36,7 +39,7 @@ const Cart = () => {
                             <div className="col-md-12 col-lg-8">
                                 <div className="items">
                                     {gioHang.map((gioHangItem) => (
-                                        <CartItem/>
+                                        <CartItem data = {gioHangItem}/>
                                     ))}
                                 </div>
                             </div>

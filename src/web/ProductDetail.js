@@ -6,7 +6,7 @@ import ProductRelated from './ProductRelated';
 import { useForm } from 'react-hook-form'
 import gioHangApi from '../api/gioHangApi';
 
-const ProductDetail = () => {
+const ProductDetail = (props) => {
     const [product, setProduct] = useState([]);
     const ttsp = {
         username: "",
@@ -81,6 +81,7 @@ const ProductDetail = () => {
         } else {
             ttsp.username = localStorage.getItem('username');
             await gioHangApi.addGioHang(ttsp);
+            props.getSlHang()
             alertBox('unset')
         }  
         console.log(ttsp);
