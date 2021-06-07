@@ -7,9 +7,9 @@ const HeaderTop = (props) => {
 
     return (
         <div className="top-head">
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            <a href="http://ndtshop.herokuapp.com/" style={{ textDecoration: 'none' }}>
                 <div className="logo"><img style={{ width: 130 }} src={logo} alt />NDTShop</div>
-            </Link>
+            </a>
             <div className="icon">
                 <div className="search">
                     <form action="" method="get" className="hihi">
