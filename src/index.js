@@ -3,18 +3,26 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './css/aos.css'
+import './css/style.css'
 import './css/bestseller.css'
-import './css/bottom.css'
+
+import './css/aos.css'
 import './css/keyframe.css'
 import './css/multicircle.css'
-import './css/nav-Sticky.css'
-import './css/respondIndex.css'
-import './css/responShop.css'
-import './css/scrollBar.css'
-// import './css/shop.css'
 import './css/stickyContact.css'
-import './css/style.css'
+import './css/nav-Sticky.css'
+import './css/scrollBar.css'
+import './css/respondIndex.css'
+
+
+import './css/bottom.css'
+import './css/shop.css'
+import './css/responShop.css'
+
+
+
+
+
 
 ReactDOM.render(
   <React.StrictMode>
