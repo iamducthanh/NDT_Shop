@@ -14,7 +14,6 @@ const Login = (props) => {
         if ((listUser[i].username == userLogin.username) && (listUser[i].password == userLogin.password)) {
           user.push(listUser[i])
           if (user[0].vaitro == 1) {
-            alertBox('unset')
             localStorage.setItem('accessToken', true)
             localStorage.setItem('username', userLogin.username)
             localStorage.setItem('password', userLogin.password)

@@ -76,14 +76,14 @@ const ProductDetail = (props) => {
     }
 
     const submitGioHang = async () => {
-        if(localStorage.getItem('username') == null){
+        if (localStorage.getItem('username') == null) {
             document.getElementsByClassName('alertBox')[1].style.display = 'unset';
         } else {
             ttsp.username = localStorage.getItem('username');
             await gioHangApi.addGioHang(ttsp);
             props.getSlHang()
             alertBox('unset')
-        }  
+        }
         console.log(ttsp);
     }
 
@@ -103,7 +103,7 @@ const ProductDetail = (props) => {
                 </div>
                 <div className="alertBox" id="alertBox">
                     Bạn phải đăng nhập để thêm được vào giỏ hàng!<br />
-                    <button><Link to="/login" style={{color: 'wheat'}}> Đăng nhập </Link></button>
+                    <button><Link to="/login" style={{ color: 'wheat' }}> Đăng nhập </Link></button>
                 </div>
                 <div className="textHead" />
                 <div className="card_product">
@@ -175,12 +175,15 @@ const ProductDetail = (props) => {
                                 </div>
                             </div>
                             <div className="action">
-                                <button type="" name="them" id="them" onClick = {submitGioHang}>
+                                <div id="themGioHang" className="custom-btnnn" onClick = {submitGioHang}>
+                                <span>Mua ngay đi</span><span>Thêm giỏ hàng</span>
+                                </div>
+                                {/* <button type="" name="them" id="them" onClick = {submitGioHang}>
                                     <div className="addShopCard">Thêm vào giỏ hàng</div>
-                                </button>
-                                <button type="submit" id="mua">
-                                    <div className="buy">Mua ngay</div>
-                                </button>
+                                </button> */}
+                                <div type="submit" id="muaaa" className="custom-btnnn">
+                                    <span>Mua ngay</span>
+                                </div>
                                 <div className="out" id="out" style={{ display: 'none', textTransform: 'uppercase', color: 'red', marginLeft: 100, fontWeight: 600 }}> Unable To Buy </div>
                             </div>
                         </div>
