@@ -19,11 +19,6 @@ import './css/bottom.css'
 import './css/shop.css'
 import './css/responShop.css'
 
-
-
-
-
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
