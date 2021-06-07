@@ -161,13 +161,13 @@ a {
   margin-bottom: 10px;
 }
 .midAo .card .text .buy a {
-  font-size: 1.1vw;
+  font-size: 1vw;
   text-transform: uppercase;
-  color: red;
+  color: rgb(247, 244, 244);
   border: 1px black solid;
-  padding: 3px 6px;
-  background-color: #9ae1ff;
-  border-radius: 2px;
+  padding: 6px 9px;
+  background-color: #020405;
+  border-radius: 3px;
   transition: 0.3s;
 }
 
@@ -181,11 +181,18 @@ a {
 }
 
 .midAo .card:hover {
-  background-color: rgba(0, 0, 0, 0.897);
-  color: white;
   transform: translateY(-10px);
-  box-shadow: 1px 2px 5px rgba(170, 170, 170, 0.74);
-  border-radius: 3px;
+  box-shadow: 0 0 30px rgb(100, 97, 97);
+  background-color: #413a3a;
+  border-radius: 20px;
+  color: white;
+}
+.midAo .card:hover .buy a{
+  background-color: white;
+  color: black;
+}
+.midAo .card:hover img{
+  border-radius: 15px;
 }
 .midAo .card:hover .type img {
   border: 1px white solid;
@@ -203,15 +210,27 @@ a {
   background-color: red;
   color: white;
 }
-.midAo .card:hover .text .buy a {
-  color: black;
-  border: 1px white solid;
-  background-color: white;
-}
+/* .midAo .card:hover .text .buy a {
+  color: #fff;
+  border-radius: 5px;
+  padding: 0px 0px;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  background: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+} */
 .midAo .card .text .buy a:hover {
   color: white;
   border: 1px white solid;
   background-color: red;
+  border-radius: 3px;
 }
 /* EndBody Mid */
 

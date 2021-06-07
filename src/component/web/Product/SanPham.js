@@ -48,7 +48,7 @@ const SanPham = (props) => {
                     <span name="price">{Number(props.data.price).toLocaleString('vi-VN', {style: 'currency',currency: 'VND'})}</span> VND
                 </div>
                 <div className="buy">
-                    <Link to={`/${props.sp}/${props.data.id}`} name="buy">Mua ngay</Link>
+                    <Link to={`/${props.sp}/${props.data.id}`} style={{fontFamily: 'fies'}}>Mua ngay</Link>
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@ export default class Product extends Component {
         return (
             <div>
                 <div className="d-flex justify-content-between flex-md-nowrap align-items-center mb-3">
-                    <h2 className="h2">Quản lý sản phẩm</h2>
+                    <h2 className="h2">{this.props.tenSp}</h2>
                     <Link to={`/admin/product/${this.props.urlP}/add`} className="btn btn-primary">Thêm sản phẩm</Link>
                 </div>
                 <div className="table-responsive">

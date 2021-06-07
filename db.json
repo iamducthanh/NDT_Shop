@@ -633,6 +633,15 @@
       "image3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQji_FF_G-eag9aYLdQ1d678RE8u8S2GbCLw&usqp=CAU",
       "soLuong": "123",
       "id": "ogwr_x5"
+    },
+    {
+      "name": "thanh test",
+      "price": "222222",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/z2246085465152-3c835ca1badb93791259c2875a4a3b64.jpg",
+      "image3": "https://bizweb.dktcdn.net/thumb/1024x1024/100/345/647/products/f2b86876a95a54040d4b.jpg?v=1592298202893",
+      "soLuong": "12",
+      "id": "ToSaodS"
     }
   ],
   "user": [
@@ -658,36 +667,6 @@
   "cart": [
     {
       "id": "y00ykqw"
-    },
-    {
-      "username": "admin",
-      "tenSP": "Refined Steel Shoes 2",
-      "size": "S",
-      "mauSac": "black",
-      "gia": 200000,
-      "soLuong": "10",
-      "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
-      "id": "0T_7ckC"
-    },
-    {
-      "username": "admin",
-      "tenSP": "Áo thun 1",
-      "size": "L",
-      "mauSac": "black",
-      "gia": 200000,
-      "soLuong": 10,
-      "image": "https://product.hstatic.net/1000026602/product/118071394_671482550387997_8296446070533145704_o_9bd939fe54504b829e3f932999dfee30.jpg",
-      "id": "ubF2Auc"
-    },
-    {
-      "username": "admin",
-      "tenSP": "Áo thun 2",
-      "size": "L",
-      "mauSac": "black",
-      "gia": 300000,
-      "soLuong": 5,
-      "image": "https://product.hstatic.net/1000026602/product/118071394_671482550387997_8296446070533145704_o_9bd939fe54504b829e3f932999dfee30.jpg",
-      "id": "HMYY2I2"
     },
     {
       "username": "admin",

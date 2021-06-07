@@ -1,34 +1,33 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import newsAPI from '../api/aoKhoacApi';
+import aoThunApi from '../api/aoThunApi';
 import { BrowserRouter, Switch, Route, useHistory } from 'react-router-dom'
 import React from 'react'
 import Product from './Product';
 import AddProduct from './Add';
-import axios from 'axios';
 import EditProduct from './Edit'
 import Header from '../component/admin/Header';
 
 
-const ProductAoKhoac = (props) => {
-    const [aoKhoac, setAoKhoac] = useState([]);
+const ProductAoThun = (props) => {
+    const [aoThun, setAoThun] = useState([]);
     const [page, setPage] = useState([]);
     const [search, setSearch] = useState('');
 
 
     useEffect(() => {
-        const getAoKhoac = async () => {
+        const getAoThun = async () => {
             setPage(1)
-            const { data } = await newsAPI.getToPage(page)
-            setAoKhoac(data);
+            const { data } = await aoThunApi.getToPage(page)
+            setAoThun(data);
         }
-        getAoKhoac();
+        getAoThun();
     }, [])
     const nextPage = async () => {
         if (page + 1 > props.maxPage) {
         } else {
-            const { data } = await newsAPI.getToPage(page + 1)
-            setAoKhoac(data)
+            const { data } = await aoThunApi.getToPage(page + 1)
+            setAoThun(data)
         }
         if (page >= props.maxPage - 1) {
             setPage(props.maxPage)
@@ -40,8 +39,8 @@ const ProductAoKhoac = (props) => {
     const nextPageAndSearch = async () => {
         if (page + 1 > props.maxPage) {
         } else {
-            const { data } = await newsAPI.getToSearchAndPage(search, page + 1)
-            setAoKhoac(data)
+            const { data } = await aoThunApi.getToSearchAndPage(search, page + 1)
+            setAoThun(data)
         }
         if (page >= props.maxPage - 1) {
             setPage(props.maxPage)
@@ -50,8 +49,8 @@ const ProductAoKhoac = (props) => {
         }
     }
     const prePage = async () => {
-        const { data } = await newsAPI.getToPage(page - 1)
-        setAoKhoac(data)
+        const { data } = await aoThunApi.getToPage(page - 1)
+        setAoThun(data)
         if (page == 1) {
             setPage(1)
         } else {
@@ -60,8 +59,8 @@ const ProductAoKhoac = (props) => {
     }
 
     const prePageAndSearch = async () => {
-        const { data } = await newsAPI.getToSearchAndPage(search, page - 1)
-        setAoKhoac(data)
+        const { data } = await aoThunApi.getToSearchAndPage(search, page - 1)
+        setAoThun(data)
         if (page == 1) {
             setPage(1)
         } else {
@@ -71,7 +70,7 @@ const ProductAoKhoac = (props) => {
 
     const onAdd = async (product) => {
         try {
-            let res = await newsAPI.add(product)
+            let res = await aoThunApi.add(product)
         } catch (error) {
             console.log(error)
             alert('lỗi cmnr')
@@ -82,7 +81,7 @@ const ProductAoKhoac = (props) => {
         console.log(dataNew);
         try {
             if (window.confirm('Bạn có chắc muốn thay đổi?')) {
-                let res = await newsAPI.update(dataNew.id, dataNew)
+                let res = await aoThunApi.update(dataNew.id, dataNew)
                 prePage()
             }
         } catch (error) {
@@ -94,9 +93,9 @@ const ProductAoKhoac = (props) => {
     const onDelete = async (index) => {
         if (window.confirm('Bạn có chắc muốn xóa không?')) {
             try {
-                let res = await newsAPI.remove(index);
-                const { data } = await newsAPI.getToPage(page)
-                setAoKhoac(data);
+                let res = await aoThunApi.remove(index);
+                const { data } = await aoThunApi.getToPage(page)
+                setAoThun(data);
             } catch (error) {
                 alert('Lỗi cmnr')
             }
@@ -104,7 +103,6 @@ const ProductAoKhoac = (props) => {
     }
 
     const locPre = () => {
-        console.log(search);
         if (search.trim().length == 0) {
             prePage()
         } else {
@@ -113,7 +111,6 @@ const ProductAoKhoac = (props) => {
     }
 
     const locNext = () => {
-        console.log(search);
         if (search.trim().length == 0) {
             nextPage()
         } else {
@@ -128,8 +125,8 @@ const ProductAoKhoac = (props) => {
         } else {
             setSearch(event.target.value)
             setPage(1)
-            const { data } = await newsAPI.getToSearchAndPage(event.target.value, 1)
-            setAoKhoac(data)
+            const { data } = await aoThunApi.getToSearchAndPage(event.target.value, 1)
+            setAoThun(data)
         }
     }
 
@@ -137,11 +134,11 @@ const ProductAoKhoac = (props) => {
         <BrowserRouter>
             <Header onSearch={onSearch} {...props}/>
             <Switch>
-                <Route exact path="/admin/product/ao-khoac">
-                    <Product tenSp = {'Áo khoác'} product={aoKhoac} prePage={prePage} nextPage={nextPage} page={page} urlP="ao-khoac" onDelete={onDelete} locPre={locPre} locNext={locNext} />
+                <Route exact path="/admin/product/ao-thun">
+                    <Product tenSp = {'Áo thun'} product={aoThun} prePage={prePage} nextPage={nextPage} page={page} urlP="ao-thun" onDelete={onDelete} locPre={locPre} locNext={locNext} />
                 </Route>
-                <Route exact path="/admin/product/ao-khoac/add">
-                    <AddProduct urlP="ao-khoac" loai={"Áo khoác"} onAdd={onAdd} />
+                <Route exact path="/admin/product/ao-thun/add">
+                    <AddProduct urlP="ao-thun" loai={"Áo thun"} onAdd={onAdd} />
                 </Route>
                 <Route exact path="/admin/product/:sp/:id">
                     <EditProduct onUpdate={onUpdate} />
@@ -151,7 +148,7 @@ const ProductAoKhoac = (props) => {
     )
 }
 
-export default ProductAoKhoac
+export default ProductAoThun
 
 
 

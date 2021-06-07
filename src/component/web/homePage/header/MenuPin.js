@@ -8,11 +8,11 @@ class MenuPin extends Component {
             <div className="bot-head-sticky">
                 <div className="menu-sticky">
                     <a href="" className="ao">Áo</a>
-                    <a href="" className="quan">bottom - jeans,.</a>
-                    <a href="" className="nhan">jewelry - metal</a>
-                    <a href="" className="non">hat</a>
-                    <a href="" className="kinh">eyes - glasses</a>
-                    <a href="https://iamducthanh.tk" target="_blank" className="about">about me :)</a>
+                    <a href="" className="quan">Quần</a>
+                    <a href="" className="nhan">Trang sức</a>
+                    <a href="" className="non">Giày</a>
+                    <a href="" className="kinh">Gia dụng</a>
+                    <a href="https://iamducthanh.tk" target="_blank" className="about">about me</a>
                     {localStorage.getItem("accessToken") ? <Link className="bmenu" to="/admin/">Admin</Link> : null}
                 </div>
                 <div className="account-sticky">

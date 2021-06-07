@@ -4,7 +4,6 @@ import AdminLayout from './layout/AdminLayout';
 import WebLayout from './layout/WebLayout';
 import TrangChu from './web/TrangChu';
 import Login from './web/Login';
-import AdminProducRouter from './admin/AdminProducRouter'
 import Signup from './web/Signup';
 import AoKhoacProduct from './web/AoKhoacProduct'
 import AoThunProduct from './web/AoThunProduct'
@@ -12,6 +11,9 @@ import QuanLyUser from './admin/QuanLyUser';
 import ProductDetail from './web/ProductDetail';
 import Cart from './web/Cart';
 import JeansProduct from './web/JeansProduct';
+import ProductAoKhoac from './admin/ProductAoKhoac'
+import ProductAoThun from './admin/ProductAoThun';
+import ProductJeans from './admin/ProductJeans';
 
 class Router extends Component {
     constructor(props) {
@@ -29,7 +31,7 @@ class Router extends Component {
                     <Route exact path='/cart' render={() => (
                         localStorage.getItem('username') == null ?
                             <WebLayout {...this.props}>
-                                <Login {...this.props}/>
+                                <Login {...this.props} />
                             </WebLayout>
                             :
                             <WebLayout {...this.props}>
@@ -47,8 +49,14 @@ class Router extends Component {
                         localStorage.getItem("accessToken") ?
                             <AdminLayout {...this.props}>
                                 <Switch>
-                                    <Route exact path="/admin/product/*">
-                                        <AdminProducRouter {...this.props} />
+                                    <Route exact path="/admin/product/ao-khoac">
+                                        <ProductAoKhoac {...this.props} />
+                                    </Route>
+                                    <Route exact path="/admin/product/ao-thun">
+                                        <ProductAoThun {...this.props} />
+                                    </Route>
+                                    <Route exact path="/admin/product/jeans">
+                                        <ProductJeans {...this.props} />
                                     </Route>
                                     <Route exact path="/admin/user">
                                         <QuanLyUser />

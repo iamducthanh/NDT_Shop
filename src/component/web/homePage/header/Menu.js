@@ -25,7 +25,7 @@ const Menu = (props) => {
                     </div>
                 </div>
                 <div className="quan">
-                    <a className="bmenu" href="">bottom - jeans,.</a>
+                    <a className="bmenu" href="">Quần</a>
                     <div className="sub">
                         <ul>
                             <li><Link style={{ paddingLeft: 40 }} className="subli" to="/jeans">Jeans</Link></li>
@@ -35,30 +35,31 @@ const Menu = (props) => {
                     </div>
                 </div>
                 <div className="nhan">
-                    <a className="bmenu" href="">jewelry - metal</a>
+                    <a className="bmenu" href="">Trang sức</a>
                     <div className="sub">
                         <ul>
-                            <li><a className="subli" href="">ring</a></li>
-                            <li><a className="subli" href="">bracelet</a></li>
-                            <li><a className="subli" href="">necklace</a></li>
+                            <li><a className="subli" href="">Nhẫn</a></li>
+                            <li><a className="subli" href="">Vòng</a></li>
                         </ul>
                     </div>
                 </div>
                 <div className="non">
-                    <a className="bmenu" href="">hat</a>
+                    <a className="bmenu" href="">Giày</a>
                     <div className="sub">
                         <ul>
-                            <li><a className="subli" href="">camouflage</a></li>
-                            <li><a className="subli" href="">cap</a></li>
+                            <li><a className="subli" href="">Sneaker</a></li>
+                            <li><a className="subli" href="">Adidas</a></li>
+                            <li><a className="subli" href="">Jordan</a></li>
+
                         </ul>
                     </div>
                 </div>
                 <div className="kinh">
-                    <a className="bmenu" href="">glasses - eyes</a>
+                    <a className="bmenu" href="">Gia dụng</a>
                     <div className="sub">
                         <ul>
-                            <li><a className="subli" href="">Hello</a></li>
-                            <li><a className="subli" href="">sun</a></li>
+                            <li><a className="subli" href="">Phớ</a></li>
+                            <li><a className="subli" href="">Quắm</a></li>
                         </ul>
                     </div>
                 </div>

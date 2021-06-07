@@ -37,19 +37,32 @@ export default class Nav extends Component {
                         <div className="bg-white py-2 collapse-inner rounded">
                             <h6 className="collapse-header">Các loại áo</h6>
                             <Link className="collapse-item" to="/admin/product/ao-khoac">Áo khoác</Link>
-                            <Link className="collapse-item" to="cards.html">Áo thun</Link>
+                            <Link className="collapse-item" to="/admin/product/ao-thun">Áo thun</Link>
                         </div>
                     </div>
                 </li>
+                
                 {/* Nav Item - Utilities Collapse Menu */}
                 <li className="nav-item">
                     <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-                        <i className="fas fa-fw fa-wrench" />
-                        <span>Utilities</span>
+                    <i className="fas fa-fw fa-folder" />
+                        <span>QUẦN</span>
                     </a>
                     <div id="collapseUtilities" className="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                         <div className="bg-white py-2 collapse-inner rounded">
-                            <h6 className="collapse-header">Custom Utilities:</h6>
+                            <h6 className="collapse-header">CÁC LOẠI QUẦN</h6>
+                            <Link className="collapse-item" to="/admin/product/jeans">Jeans</Link>
+                        </div>
+                    </div>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                        <i className="fas fa-fw fa-folder" />
+                        <span>TRANG SỨC</span>
+                    </a>
+                    <div id="collapseUtilities" className="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                        <div className="bg-white py-2 collapse-inner rounded">
+                            <h6 className="collapse-header">CÁC LOẠI TRANG SỨC</h6>
                             <a className="collapse-item" href="utilities-color.html">Colors</a>
                             <a className="collapse-item" href="utilities-border.html">Borders</a>
                             <a className="collapse-item" href="utilities-animation.html">Animations</a>
