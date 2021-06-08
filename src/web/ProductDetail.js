@@ -10,7 +10,8 @@ import commentApi from '../api/commentApi';
 
 const ProductDetail = (props) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-
+    const [page, setPage] = useState(1);
+    const [maxPage, setMaxPage] = useState();
     const [product, setProduct] = useState([]);
     const [comment, setComment] = useState([]);
     const ttsp = {
@@ -36,7 +37,16 @@ const ProductDetail = (props) => {
         getComment();
     }, [])
 
+    useEffect(async () => {
+        const getMaxCmt = async () => {
+            const { data } = await commentApi.getAllComment(id, sp)
+            setMaxPage(data.length % 8 == 0 ? data.length / 8 : Math.round(data.length / 8 + 1))
+        }
+        getMaxCmt();
+    }, [])
+
     const getComment = async () => {
+        setPage(1)
         const { data } = await commentApi.getCommentByIdSP(id, sp, 1)
         console.log(data);
         setComment(data)
@@ -118,7 +128,7 @@ const ProductDetail = (props) => {
             var username = localStorage.getItem('username');
             var timeCmt = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()} ${now.getDate()}-${(now.getMonth() + 1)}-${now.getFullYear()}`
             const newCmt = {
-                username: `${username.substring(0,1).toUpperCase()}${username.substring(1,username.length)}`,
+                username: `${username.substring(0, 1).toUpperCase()}${username.substring(1, username.length)}`,
                 loaiSP: sp,
                 idProduct: id,
                 noiDung: noidung.noidung,
@@ -127,6 +137,32 @@ const ProductDetail = (props) => {
             await commentApi.addComment(newCmt)
             getComment()
         }
+    }
+
+    const nextCmt = async () => {
+        console.log(page);
+        console.log(maxPage);
+        if (page + 1 > maxPage) {
+        } else {
+            const { data } = await commentApi.getCommentByIdSP(id, sp, page + 1)
+            setComment(data)
+        }
+        if (page >= maxPage - 1) {
+            setPage(maxPage)
+        } else {
+            setPage(page + 1)
+        }
+
+    }
+    const preCmt = async () => {
+        const { data } = await commentApi.getCommentByIdSP(id, sp, page - 1)
+        setComment(data)
+        if (page == 1) {
+            setPage(1)
+        } else {
+            setPage(page - 1)
+        }
+
     }
     return (
         <div>
@@ -258,9 +294,12 @@ const ProductDetail = (props) => {
                                         <Comment comment={comment} />
                                     ))}
                                     <div className="limit" style={{ display: 'flex', marginTop: 10 }}>
-                                        <div className="buttonArrow"><a href="eachProduct.php?id=A1&page=0"><i className="fa fa-angle-double-left" /></a></div>
-                                        <span className="ptNumber" style={{ backgroundColor: 'red', boxShadow: '0 1px 4px black' }}>1</span>
-                                        <a className="buttonArrow" href="eachProduct.php?id=A1&page=2"><i className="fa fa-angle-double-right" /></a>
+                                        <button className="buttonArrow" onClick={preCmt}>
+                                            <i className="fa fa-angle-double-left" />
+                                        </button>
+                                        <span className="ptNumber" style={{ backgroundColor: 'red', boxShadow: '0 1px 4px black' }}>{page}</span>
+                                        <button className="buttonArrow" onClick={nextCmt}>
+                                            <i className="fa fa-angle-double-right" /></button>
                                     </div>
                                 </div>
                             </div>

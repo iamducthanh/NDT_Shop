@@ -11,5 +11,10 @@ const commentApi = {
         return axiosClient.post(url, comment);
     },
 
+    getAllComment(id, sp){
+        const url = `/comment?idProduct=${id}&loaiSP=${sp}`;
+        return axiosClient.get(url);
+    }
+
 }
 export default commentApi;
