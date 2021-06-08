@@ -5,9 +5,14 @@ import { useEffect, useState } from 'react';
 import ProductRelated from './ProductRelated';
 import { useForm } from 'react-hook-form'
 import gioHangApi from '../api/gioHangApi';
+import Comment from '../component/web/Product/Comment';
+import commentApi from '../api/commentApi';
 
 const ProductDetail = (props) => {
+    const { register, handleSubmit, formState: { errors } } = useForm();
+
     const [product, setProduct] = useState([]);
+    const [comment, setComment] = useState([]);
     const ttsp = {
         username: "",
         tenSP: product.name,
@@ -26,6 +31,16 @@ const ProductDetail = (props) => {
         }
         getProduct();
     }, [])
+
+    useEffect(async () => {
+        getComment();
+    }, [])
+
+    const getComment = async () => {
+        const { data } = await commentApi.getCommentByIdSP(id, sp, 1)
+        console.log(data);
+        setComment(data)
+    }
 
     const va = (number) => {
         return Number(number).toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })
@@ -94,6 +109,25 @@ const ProductDetail = (props) => {
             document.getElementsByClassName('alertBox')[0].style.display = 'none';
         }
     }
+
+    const addCmt = async (noidung) => {
+        if (localStorage.getItem('username') == null) {
+            document.getElementsByClassName('alertBox')[2].style.display = 'unset';
+        } else {
+            var now = new Date();
+            var username = localStorage.getItem('username');
+            var timeCmt = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()} ${now.getDate()}-${(now.getMonth() + 1)}-${now.getFullYear()}`
+            const newCmt = {
+                username: `${username.substring(0,1).toUpperCase()}${username.substring(1,username.length)}`,
+                loaiSP: sp,
+                idProduct: id,
+                noiDung: noidung.noidung,
+                ngayThang: timeCmt
+            }
+            await commentApi.addComment(newCmt)
+            getComment()
+        }
+    }
     return (
         <div>
             <div className="conEach">
@@ -103,6 +137,10 @@ const ProductDetail = (props) => {
                 </div>
                 <div className="alertBox" id="alertBox">
                     Bạn phải đăng nhập để thêm được vào giỏ hàng!<br />
+                    <button><Link to="/login" style={{ color: 'wheat' }}> Đăng nhập </Link></button>
+                </div>
+                <div className="alertBox" id="alertBox">
+                    Bạn phải đăng nhập để có thể bình luận!<br />
                     <button><Link to="/login" style={{ color: 'wheat' }}> Đăng nhập </Link></button>
                 </div>
                 <div className="textHead" />
@@ -175,8 +213,8 @@ const ProductDetail = (props) => {
                                 </div>
                             </div>
                             <div className="action">
-                                <div id="themGioHang" className="custom-btnnn" onClick = {submitGioHang}>
-                                <span>Mua ngay đi</span><span>Thêm giỏ hàng</span>
+                                <div id="themGioHang" className="custom-btnnn" onClick={submitGioHang}>
+                                    <span>Mua ngay đi</span><span>Thêm giỏ hàng</span>
                                 </div>
                                 {/* <button type="" name="them" id="them" onClick = {submitGioHang}>
                                     <div className="addShopCard">Thêm vào giỏ hàng</div>
@@ -197,6 +235,37 @@ const ProductDetail = (props) => {
                                 <p>Làm gì có mô tả đâu</p>
                             </div>
                         </div>
+                        <div className="card_cmt" id="card_cmt">
+                            <div className="comment">
+                                <div className="boxxx">
+                                    <h4>Bình luận</h4>
+                                    <div className="InputComment">
+                                        <div className="userComment">
+                                            <img src="https://avatars.githubusercontent.com/u/65590543?s=400&u=37d70704bd532ae67344cd97489cbd0b81d76135&v=4g" alt />
+                                            <form onSubmit={handleSubmit(addCmt)}>
+                                                <input
+                                                    className="commentI"
+                                                    placeholder="Nhập bình luận mới...."
+                                                    {...register('noidung', { required: true })}
+                                                ></input>
+                                                <button type="submit" className="btnCmt">Bình luận</button>
+                                            </form>
+                                        </div>
+                                        <br />
+                                        <br />
+                                    </div>
+                                    {comment.map((comment) => (
+                                        <Comment comment={comment} />
+                                    ))}
+                                    <div className="limit" style={{ display: 'flex', marginTop: 10 }}>
+                                        <div className="buttonArrow"><a href="eachProduct.php?id=A1&page=0"><i className="fa fa-angle-double-left" /></a></div>
+                                        <span className="ptNumber" style={{ backgroundColor: 'red', boxShadow: '0 1px 4px black' }}>1</span>
+                                        <a className="buttonArrow" href="eachProduct.php?id=A1&page=2"><i className="fa fa-angle-double-right" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                     <div className="left_card_infor" id="relatedPr">
                         <h5>Product Related</h5>

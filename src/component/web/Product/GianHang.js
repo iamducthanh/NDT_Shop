@@ -12,7 +12,7 @@ const GianHang = (props) => {
     }
 
     const onChangeFillter = (event) => {
-        props.filByPrice(event,sapXep)
+        props.filByPrice(event, sapXep)
     }
 
     const alertBox = (display) => {
@@ -32,16 +32,72 @@ const GianHang = (props) => {
             <div>
                 <div className="headerAo">
                     <h1>{props.title}</h1>
+                    
                 </div>
-                <div className="sortAo">
-                    <form>
+
+                <form id="app-cover" style={{ zIndex: '1000000' }}>
+                    <div id="select-box">
+                        <input type="checkbox" id="options-view-button" />
+                        <div id="select-button" className="brd">
+                            <div id="selected-value" style={{marginBottom: '20px'}}>
+                                <span>Select a platform</span>
+                            </div>
+                        </div>
+                        <div id="options">
+                            <div className="option" onclick="closeCheck()">
+                                <input className="s-c top" type="radio" name="platform" defaultValue="codepen" />
+                                <input className="s-c bottom" type="radio" name="platform" defaultValue="codepen" />
+                                <i className="fab fa-codepen" />
+                                <span className="label">CodePen</span>
+                                <span className="opt-val">CodePen</span>
+                            </div>
+                            <div className="option">
+                                <input className="s-c top" type="radio" name="platform" defaultValue="dribbble" />
+                                <input className="s-c bottom" type="radio" name="platform" defaultValue="dribbble" />
+                                <i className="fab fa-dribbble" />
+                                <span className="label">Dribbble</span>
+                                <span className="opt-val">Dribbble</span>
+                            </div>
+                            <div className="option">
+                                <input className="s-c top" type="radio" name="platform" defaultValue="behance" />
+                                <input className="s-c bottom" type="radio" name="platform" defaultValue="behance" />
+                                <i className="fab fa-behance" />
+                                <span className="label">Behance</span>
+                                <span className="opt-val">Behance</span>
+                            </div>
+                            <div className="option">
+                                <input className="s-c top" type="radio" name="platform" defaultValue="hackerrank" />
+                                <input className="s-c bottom" type="radio" name="platform" defaultValue="hackerrank" />
+                                <i className="fab fa-hackerrank" />
+                                <span className="label">HackerRank</span>
+                                <span className="opt-val">HackerRank</span>
+                            </div>
+                            <div className="option">
+                                <input className="s-c top" type="radio" name="platform" defaultValue="stackoverflow" />
+                                <input className="s-c bottom" type="radio" name="platform" defaultValue="stackoverflow" />
+                                <i className="fab fa-stack-overflow" />
+                                <span className="label">StackOverflow</span>
+                                <span className="opt-val">StackOverflow</span>
+                            </div>
+                            <div className="option">
+                                <input className="s-c top" type="radio" name="platform" defaultValue="freecodecamp" />
+                                <input className="s-c bottom" type="radio" name="platform" defaultValue="freecodecamp" />
+                                <i className="fab fa-free-code-camp" />
+                                <span className="label">FreeCodeCamp</span>
+                                <span className="opt-val">FreeCodeCamp</span>
+                            </div>
+                            <div id="option-bg" />
+                        </div>
+                    </div>
+                </form>
+                {/* <form>
                         <select name="gia11" onChange={onChangeOption}>
                             <option value="none">Sắp xếp theo</option>
                             <option value="asc">Giá tăng dần</option>
                             <option value="desc">Giá giảm dần</option>
                         </select>
-\                    </form>
-                </div>
+\                    </form> */}
+
                 <div className="ok">
                     <div className="bodyAo">
                         <div className="leftAo">

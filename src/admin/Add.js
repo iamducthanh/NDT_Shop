@@ -39,6 +39,7 @@ const AddProduct = (props) => {
                 <input
                     type="number"
                     className="form-control"
+                    min='1'
                     placeholder="Giá nhỏ nhất"
                     style={{width: 700}}
                     id="price"
@@ -87,6 +88,7 @@ const AddProduct = (props) => {
                 <input
                     type="number"
                     className="form-control"
+                    min='1'
                     style={{width: 700}}
                     placeholder="Số lượng"
                     id="quantity"

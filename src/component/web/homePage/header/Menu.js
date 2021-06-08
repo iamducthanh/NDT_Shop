@@ -55,7 +55,7 @@ const Menu = (props) => {
                     </div>
                 </div>
                 <div className="kinh">
-                    <a className="bmenu" href="">Gia dụng</a>
+                    <a className="bmenu" href="">Flash sale</a>
                     <div className="sub">
                         <ul>
                             <li><a className="subli" href="">Phớ</a></li>

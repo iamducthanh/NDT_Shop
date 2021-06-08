@@ -3,37 +3,65 @@ import { Link, useHistory } from 'react-router-dom'
 
 
 import { useForm } from 'react-hook-form'
+import userApi from '../api/userApi';
 
 const Login = (props) => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   let history = useHistory()
   const login = async (userLogin) => {
-    fetch('https://1tp4z.sse.codesandbox.io/user').then((response) => response.json()).then((listUser) => {
-      const user = [];
-      for (var i = 0; i < listUser.length; i++) {
-        if ((listUser[i].username == userLogin.username) && (listUser[i].password == userLogin.password)) {
-          user.push(listUser[i])
-          if (user[0].vaitro == 1) {
-            localStorage.setItem('accessToken', true)
-            localStorage.setItem('username', userLogin.username)
-            localStorage.setItem('password', userLogin.password)
-            props.setUserLogin(userLogin.username, userLogin.password)
-            alertBox('unset')
-            break;
-          } else {
-            localStorage.removeItem('accessToken')
-            localStorage.setItem('username', userLogin.username)
-            localStorage.setItem('password', userLogin.password)
-            props.setUserLogin(userLogin.username, userLogin.password)
-            alertBox('unset')
-            break;
-          }
+    console.log(userLogin);
+    const user = await userApi.getUserByUsername(userLogin.username)
+    console.log(user);
+    if (user.data.length == 0) {
+      alert('Thông tin đăng nhập không chính xác!')
+    } else {
+      if (user.data[0].username == userLogin.username && user.data[0].password == userLogin.password) {
+        if (user.data[0].vaitro == 1) {
+          localStorage.setItem('accessToken', true)
+          localStorage.setItem('username', user.data[0].username)
+          localStorage.setItem('password', user.data[0].password)
+          props.setUserLogin(user.data[0].username, user.data[0].password)
+          alertBox('unset')
+        } else {
+          localStorage.removeItem('accessToken')
+          localStorage.setItem('username', user.data[0].username)
+          localStorage.setItem('password', user.data[0].password)
+          props.setUserLogin(user.data[0].username, user.data[0].password)
+          alertBox('unset')
         }
-      }
-      if (user.length == 0) {
+      } else {
         alert('Thông tin đăng nhập không chính xác!')
       }
-    })
+    }
+
+
+
+    // fetch('https://1tp4z.sse.codesandbox.io/user').then((response) => response.json()).then((listUser) => {
+    //   const user = [];
+    //   for (var i = 0; i < listUser.length; i++) {
+    //     if ((listUser[i].username == userLogin.username) && (listUser[i].password == userLogin.password)) {
+    //       user.push(listUser[i])
+    //       if (user[0].vaitro == 1) {
+    //         localStorage.setItem('accessToken', true)
+    //         localStorage.setItem('username', userLogin.username)
+    //         localStorage.setItem('password', userLogin.password)
+    //         props.setUserLogin(userLogin.username, userLogin.password)
+    //         alertBox('unset')
+    //         break;
+    //       } else {
+    //         localStorage.removeItem('accessToken')
+    //         localStorage.setItem('username', userLogin.username)
+    //         localStorage.setItem('password', userLogin.password)
+    //         props.setUserLogin(userLogin.username, userLogin.password)
+    //         alertBox('unset')
+    //         break;
+    //       }
+    //     }
+    //   }
+    //   if (user.length == 0) {
+    //     alert('Thông tin đăng nhập không chính xác!')
+    //   }
+    // })
   }
   const alertBox = (display) => {
     if (display == 'unset') {

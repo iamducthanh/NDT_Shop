@@ -13,11 +13,12 @@ import './css/stickyContact.css'
 import './css/nav-Sticky.css'
 import './css/scrollBar.css'
 import './css/respondIndex.css'
-
+import './css/comment.css'
 
 import './css/bottom.css'
 import './css/shop.css'
 import './css/responShop.css'
+import './css/gianhang.css'
 
 ReactDOM.render(
   <React.StrictMode>

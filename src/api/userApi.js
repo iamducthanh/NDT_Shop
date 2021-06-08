@@ -1,8 +1,14 @@
 import { axiosClient } from './axiosClient';
 
 const userApi = {
+    getAllUser() {
+        const url = `/user`;
+        return axiosClient.get(url);
+    },
+
     getUserByUsername(username) {
         const url = `/user?username=${username}`;
+        console.log(url);
         return axiosClient.get(url);
     },
 
