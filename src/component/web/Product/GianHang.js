@@ -57,21 +57,21 @@ const GianHang = (props) => {
                             <div className="option" onClick={onChangeOption.bind(this, 'none')}>
                                 <input className="s-c top" type="radio" name="platform" defaultValue="codepen" />
                                 <input className="s-c bottom" type="radio" name="platform" defaultValue="codepen" />
-                                <i className="fab fa-codepen" />
+                                {/* <i className="fab fa-codepen" /> */}
                                 <span className="label" >Sắp xếp theo</span>
                                 <span className="opt-val">Sắp xếp theo</span>
                             </div>
                             <div className="option" onClick={onChangeOption.bind(this, 'asc')}>
                                 <input className="s-c top" type="radio" name="platform" defaultValue="dribbble" />
                                 <input className="s-c bottom" type="radio" name="platform" defaultValue="dribbble" />
-                                <i className="fab fa-dribbble" />
+                                {/* <i className="fab fa-dribbble" /> */}
                                 <span className="label">Giá tăng dần</span>
                                 <span className="opt-val">Giá tăng dần</span>
                             </div>
                             <div className="option" onClick={onChangeOption.bind(this, 'desc')}>
                                 <input className="s-c top" type="radio" name="platform" defaultValue="behance" />
                                 <input className="s-c bottom" type="radio" name="platform" defaultValue="behance" />
-                                <i className="fab fa-behance" />
+                                {/* <i className="fab fa-behance" /> */}
                                 <span className="label">Giá giảm dần</span>
                                 <span className="opt-val">Giá giảm dần</span>
                             </div>
