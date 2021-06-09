@@ -45,7 +45,7 @@ const GianHang = (props) => {
                         <option value="desc">Giá giảm dần</option>
                     </select>
                 </form> */}
-                <form id="app-cover" style={{ zIndex: '1000000' }}>
+                <form id="app-cover" style={{ zIndex: '1' }}>
                     <div id="select-box">
                         <input type="checkbox" id="options-view-button" />
                         <div id="select-button" className="brd" >

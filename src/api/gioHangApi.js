@@ -21,6 +21,11 @@ const gioHangApi = {
         return axiosClient.delete(url);
     },
 
+    removeGioHangByUsername(username){
+        const url = `/cart?username=${username}`;
+        return axiosClient.delete(url);
+    },
+
     updateGioHang(id, data) {
         const url = `/cart/${id}`;
         return axiosClient.put(url, data);

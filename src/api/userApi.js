@@ -8,7 +8,6 @@ const userApi = {
 
     getUserByUsername(username) {
         const url = `/user?username=${username}`;
-        console.log(url);
         return axiosClient.get(url);
     },
 

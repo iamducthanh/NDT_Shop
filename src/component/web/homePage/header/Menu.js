@@ -1,5 +1,6 @@
 import { Link, useHistory } from 'react-router-dom'
 import React from 'react'
+import hoaDonApi from '../../../../api/hoaDonApi';
 
 const Menu = (props) => {
     console.log(props);
@@ -10,14 +11,32 @@ const Menu = (props) => {
         localStorage.removeItem('password')
         props.setUserLogin(null, null)
     }
+    const openHoaDon = async () => {
+        const { data } = await hoaDonApi.getHoaDonByUsername(localStorage.getItem('username'))
+        if (data.length == 0) {
+            document.getElementById('alertBox1').style.display = 'unset'
+        } else {
+            document.getElementById('nextHoaDon').click()
+        }
+
+    }
+
+    const closeAlert = () => {
+        document.getElementById('alertBox1').style.display = 'none'
+    }
     return (
         <div className="bot-head">
+            <Link to="/don-hang" style={{ display: 'none' }} id="nextHoaDon"></Link>
+            <div className="alertBox" id="alertBox1">
+                Bạn chưa có bất kì hóa đơn nào<br />
+                <button onClick={closeAlert}> Đóng </button>
+            </div>
             <div className="menu" id="menu">
                 <div className="ao">
                     <Link className="bmenu" to="#">Áo</Link>
                     <div className="sub">
                         <ul>
-                            <li><Link style={{ paddingLeft: 40 }} className="subli" to="/ao-khoac">Áo khoác</Link></li>
+                            <li><Link style={{ paddingLeft: 40, zIndex: '1000000000' }} className="subli" to="/ao-khoac">Áo khoác</Link></li>
                             <li><Link style={{ paddingLeft: 40 }} className="subli" to="/ao-thun">Áo thun</Link></li>
                             <li><a style={{ width: '100%' }} className="subli" href="#">sweater</a></li>
                             <li><a style={{ width: '100%' }} className="subli" href="">shirt</a></li>
@@ -78,17 +97,24 @@ const Menu = (props) => {
                             'Tài khoản'
                         }
                     </span></a>
-                    <div className="sub">
-                        <ul>
-                            <li>
-                                {localStorage.getItem("username") != null ?
+                    {localStorage.getItem("username") != null ?
+                        <div className="sub" id="subAcc">
+                            <ul>
+                                <li>
+                                    <div style={{ textAlign: 'center', marginLeft: '-11px' }} className="subli" onClick={openHoaDon}>Đơn mua</div>
                                     <div style={{ textAlign: 'center' }} className="subli" onClick={logOut}>Logout</div>
-                                    :
+                                </li>
+                            </ul>
+                        </div>
+                        :
+                        <div className="sub" id="">
+                            <ul>
+                                <li>
                                     <Link style={{ textAlign: 'center' }} className="subli" to="/login">Login</Link>
-                                }
-                            </li>
-                        </ul>
-                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    }
                 </div>
             </div>
         </div>

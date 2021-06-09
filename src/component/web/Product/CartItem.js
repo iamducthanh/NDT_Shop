@@ -10,7 +10,7 @@ const CartItem = (props) => {
             <div className="itemmm">
             <div className="row">
                 <div className="col-md-3">
-                    <img className="img-fluid mx-auto d-block image" src={props.data.image} />
+                    <img className="img-fluid mx-auto d-block image" style={{paddingLeft: '10px'}} src={props.data.image} />
                 </div>
                 <div className="col-md-8">
                     <div className="info">

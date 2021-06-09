@@ -14,6 +14,7 @@ import JeansProduct from './web/JeansProduct';
 import ProductAoKhoac from './admin/ProductAoKhoac'
 import ProductAoThun from './admin/ProductAoThun';
 import ProductJeans from './admin/ProductJeans';
+import DonMua from './web/DonMua';
 
 class Router extends Component {
     constructor(props) {
@@ -26,6 +27,11 @@ class Router extends Component {
                     <Route exact path='/login'>
                         <WebLayout {...this.props}>
                             <Login {...this.props} />
+                        </WebLayout>
+                    </Route>
+                    <Route exact path='/don-hang'>
+                        <WebLayout {...this.props}>
+                            <DonMua/>
                         </WebLayout>
                     </Route>
                     <Route exact path='/cart' render={() => (

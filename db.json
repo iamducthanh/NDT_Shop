@@ -681,124 +681,14 @@
       "id": "y00ykqw"
     },
     {
-      "username": "admin",
-      "tenSP": "Refined Steel Shoes 3",
-      "size": "L",
-      "mauSac": "black",
-      "gia": 200000,
-      "soLuong": 7,
-      "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
-      "id": "an9FQDg"
-    },
-    {
-      "username": "thanh",
-      "tenSP": "Refined Steel Shoes 2",
-      "size": "S",
-      "mauSac": "black",
-      "gia": 200000,
-      "soLuong": 2,
-      "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
-      "id": "jHr5HvQ"
-    },
-    {
-      "username": "admin",
-      "tenSP": "Refined Steel Shoes 2",
-      "size": "L",
-      "mauSac": "black",
-      "gia": 200000,
-      "soLuong": 1,
-      "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
-      "id": "p0Cjglt"
-    },
-    {
-      "username": "admin",
-      "tenSP": "Jeans 9",
-      "size": "L",
-      "mauSac": "black",
-      "gia": 2600000,
-      "soLuong": 1,
-      "image": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
-      "id": "1TOcx-_"
-    },
-    {
-      "username": "admin",
-      "tenSP": "Jeans 5",
-      "size": "S",
-      "mauSac": "black",
-      "gia": 700000,
-      "soLuong": 3,
-      "image": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
-      "id": "2jhc2Hg"
-    },
-    {
-      "username": "admin",
-      "tenSP": "Jeans 2",
-      "size": "L",
-      "mauSac": "black",
-      "gia": 3000000,
-      "soLuong": 1,
-      "image": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
-      "id": "wvfGggr"
-    },
-    {
       "username": "thanh",
       "tenSP": "Jeans 5",
       "size": "L",
       "mauSac": "black",
       "gia": 700000,
-      "soLuong": 3,
-      "image": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
-      "id": "7IrHEeh"
-    },
-    {
-      "username": "thanh",
-      "tenSP": "Refined Steel Shoes 7",
-      "size": "S",
-      "mauSac": "yellow",
-      "gia": 200000,
-      "soLuong": 15,
-      "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
-      "id": "GA3o4SK"
-    },
-    {
-      "username": "thanh",
-      "tenSP": "Jeans 2",
-      "size": "L",
-      "mauSac": "black",
-      "gia": 3000000,
       "soLuong": 1,
       "image": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
-      "id": "B4f4lA_"
-    },
-    {
-      "username": "thanh",
-      "tenSP": "Refined Steel Shoes 7",
-      "size": "S",
-      "mauSac": "black",
-      "gia": 200000,
-      "soLuong": 3,
-      "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
-      "id": "NBY6osw"
-    },
-    {
-      "username": "admin",
-      "tenSP": "Refined Steel Shoes 2",
-      "size": "L",
-      "mauSac": "black",
-      "gia": 200000,
-      "soLuong": 1,
-      "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
-      "id": "B11-i64"
-    },
-    {
-      "username": "iamducthanh",
-      "tenSP": "Refined Steel Shoes 8",
-      "size": "L",
-      "mauSac": "black",
-      "gia": 200000,
-      "soLuong": 7,
-      "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
-      "id": "m6wOuur"
+      "id": "Pjch8pv"
     }
   ],
   "comment": [
@@ -1185,6 +1075,129 @@
       "noiDung": "chào các bro",
       "ngayThang": "11:6:43 9-6-2021",
       "id": "Vin_vay"
+    },
+    {
+      "username": "Thanh",
+      "loaiSP": "jeans",
+      "idProduct": "2",
+      "noiDung": "dd",
+      "ngayThang": "15:57:40 9-6-2021",
+      "id": "u0qQtE9"
+    },
+    {
+      "username": "Thanh",
+      "loaiSP": "ao-khoac",
+      "idProduct": "2",
+      "noiDung": "e",
+      "ngayThang": "21:33:28 9-6-2021",
+      "id": "hAudm1T"
+    }
+  ],
+  "hoa-don": [
+    {
+      "id": "1",
+      "username": "thanh",
+      "product": [
+        {
+          "idsp": "2",
+          "tensp": "Refined Steel Shoes 2",
+          "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+          "price": 200000,
+          "soluong": "1",
+          "size": "L",
+          "color": "red"
+        },
+        {
+          "idsp": "2",
+          "tensp": "Refined Steel Shoes 3",
+          "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+          "price": 200000,
+          "soluong": "2",
+          "size": "L",
+          "color": "red"
+        }
+      ],
+      "thoigian": "16:25 12-04-2021",
+      "trangThai": "1"
+    },
+    {
+      "username": "thanh",
+      "product": [
+        {
+          "idsp": "3bMD-rI",
+          "tensp": "Refined Steel Shoes 7",
+          "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+          "price": 200000,
+          "soluong": 1,
+          "size": "L",
+          "color": "black"
+        },
+        {
+          "idsp": "aDSrg9X",
+          "tensp": "Refined Steel Shoes 7",
+          "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+          "price": 200000,
+          "soluong": 3,
+          "size": "S",
+          "color": "black"
+        }
+      ],
+      "thoigian": "21:29:22 9-6-2021",
+      "trangThai": "0",
+      "id": "6UTgazR"
+    },
+    {
+      "username": "admin",
+      "product": [
+        {
+          "idsp": "_u9GUe2",
+          "tensp": "Jeans 2",
+          "image": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
+          "price": 3000000,
+          "soluong": 1,
+          "size": "L",
+          "color": "black"
+        },
+        {
+          "idsp": "XScqVQO",
+          "tensp": "Jeans 2",
+          "image": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
+          "price": 3000000,
+          "soluong": 3,
+          "size": "L",
+          "color": "black"
+        },
+        {
+          "idsp": "Sp_PYeq",
+          "tensp": "Jeans 2",
+          "image": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
+          "price": 3000000,
+          "soluong": 2,
+          "size": "L",
+          "color": "black"
+        },
+        {
+          "idsp": "31x-QsV",
+          "tensp": "Jeans 2",
+          "image": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
+          "price": 3000000,
+          "soluong": 1,
+          "size": "L",
+          "color": "black"
+        },
+        {
+          "idsp": "iurkriE",
+          "tensp": "Jeans 2",
+          "image": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
+          "price": 3000000,
+          "soluong": 5,
+          "size": "L",
+          "color": "black"
+        }
+      ],
+      "thoigian": "22:21:8 9-6-2021",
+      "trangThai": "0",
+      "id": "QRntXih"
     }
   ]
 }

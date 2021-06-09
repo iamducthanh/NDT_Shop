@@ -1945,7 +1945,7 @@ input[type="number"] {
   top: 35vh;
   left: 30vw;
   text-align: center;
-  z-index: 100000000;
+  z-index: 100000000000000;
   font-size: 25pt;
   color: wheat;
   background: black;
@@ -2100,6 +2100,10 @@ input[type="number"] {
 		padding: 4px 10px;
 		text-align: center; 
 	}
+}
+
+#subAcc:hover ul li .subli{
+  color: black;
 }
 
 

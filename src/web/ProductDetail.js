@@ -102,7 +102,7 @@ const ProductDetail = (props) => {
 
     const submitGioHang = async () => {
         if (localStorage.getItem('username') == null) {
-            document.getElementsByClassName('alertBox')[1].style.display = 'unset';
+            document.getElementById('alertBox3').style.display = 'unset';
         } else {
             ttsp.username = localStorage.getItem('username');
             await gioHangApi.addGioHang(ttsp);
@@ -114,15 +114,15 @@ const ProductDetail = (props) => {
 
     const alertBox = (display) => {
         if (display == 'unset') {
-            document.getElementsByClassName('alertBox')[0].style.display = 'unset';
+            document.getElementById('alertBox2').style.display = 'unset';
         } else {
-            document.getElementsByClassName('alertBox')[0].style.display = 'none';
+            document.getElementById('alertBox2').style.display = 'none';
         }
     }
 
     const addCmt = async (noidung) => {
         if (localStorage.getItem('username') == null) {
-            document.getElementsByClassName('alertBox')[2].style.display = 'unset';
+            document.getElementById('alertBox4').style.display = 'unset';
         } else {
             var now = new Date();
             var username = localStorage.getItem('username');
@@ -175,15 +175,15 @@ const ProductDetail = (props) => {
     return (
         <div>
             <div className="conEach">
-                <div className="alertBox" id="alertBox">
+                <div className="alertBox" id="alertBox2">
                     Thêm giỏ hàng thành công<br />
                     <button onClick={alertBox}> Đóng </button>
                 </div>
-                <div className="alertBox" id="alertBox">
+                <div className="alertBox" id="alertBox3">
                     Bạn phải đăng nhập để thêm được vào giỏ hàng!<br />
                     <button><Link to="/login" style={{ color: 'wheat' }}> Đăng nhập </Link></button>
                 </div>
-                <div className="alertBox" id="alertBox">
+                <div className="alertBox" id="alertBox4">
                     Bạn phải đăng nhập để có thể bình luận!<br />
                     <button><Link to="/login" style={{ color: 'wheat' }}> Đăng nhập </Link></button>
                 </div>

@@ -22,7 +22,6 @@ function App() {
   }, [])
   useEffect(() => {
     const getSlHang = async () => {
-      console.log(user);
       const { data } = await gioHangApi.getAllGioHangByUsername(localStorage.getItem('username'))
       setSlHang(data.length);
     }
@@ -31,7 +30,6 @@ function App() {
 
   const getSlHang = async () => {
     const { data } = await gioHangApi.getAllGioHangByUsername(localStorage.getItem('username'))
-    console.log(data);
     setSlHang(data.length);
   }
 
