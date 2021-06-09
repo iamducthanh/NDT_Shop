@@ -662,6 +662,12 @@
       "password": "123",
       "passwordComfirm": "123",
       "id": "7FhrqHZ"
+    },
+    {
+      "username": "iamducthanh",
+      "password": "321",
+      "passwordComfirm": "321",
+      "id": "hPJpgfm"
     }
   ],
   "cart": [
@@ -767,6 +773,16 @@
       "soLuong": 3,
       "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
       "id": "NBY6osw"
+    },
+    {
+      "username": "admin",
+      "tenSP": "Refined Steel Shoes 2",
+      "size": "L",
+      "mauSac": "black",
+      "gia": 200000,
+      "soLuong": 1,
+      "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "id": "B11-i64"
     }
   ],
   "comment": [
@@ -985,6 +1001,14 @@
       "noiDung": "chào các bro",
       "ngayThang": "18:46:30 8-6-2021",
       "id": "flSrgWe"
+    },
+    {
+      "username": "Iamducthanh",
+      "loaiSP": "ao-khoac",
+      "idProduct": "3",
+      "noiDung": "hàng còn không shop",
+      "ngayThang": "10:6:8 9-6-2021",
+      "id": "GNZZYOo"
     }
   ]
 }

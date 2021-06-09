@@ -164,6 +164,14 @@ const ProductDetail = (props) => {
         }
 
     }
+    const muaNgay = () => {
+        submitGioHang()
+        setTimeout(()=>{
+            alertBox()
+            document.getElementsByClassName('shopCard')[0].click();
+        }, 1000)
+    }
+
     return (
         <div>
             <div className="conEach">
@@ -255,7 +263,7 @@ const ProductDetail = (props) => {
                                 {/* <button type="" name="them" id="them" onClick = {submitGioHang}>
                                     <div className="addShopCard">Thêm vào giỏ hàng</div>
                                 </button> */}
-                                <div type="submit" id="muaaa" className="custom-btnnn">
+                                <div type="submit" id="muaaa" className="custom-btnnn" onClick={muaNgay}>
                                     <span>Mua ngay</span>
                                 </div>
                                 <div className="out" id="out" style={{ display: 'none', textTransform: 'uppercase', color: 'red', marginLeft: 100, fontWeight: 600 }}> Unable To Buy </div>

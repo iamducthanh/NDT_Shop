@@ -1940,8 +1940,9 @@ input[type="number"] {
 
 .alertBox {
   position: fixed;
+  transform: scale();
   width: 40vw;
-  top: 37vh;
+  top: 35vh;
   left: 30vw;
   text-align: center;
   z-index: 100000000;

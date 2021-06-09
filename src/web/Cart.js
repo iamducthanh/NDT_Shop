@@ -3,7 +3,7 @@ import gioHangApi from '../api/gioHangApi';
 import CartItem from '../component/web/Product/CartItem'
 import { useEffect, useState } from 'react';
 
-const Cart = () => {
+const Cart = (props) => {
     const [gioHang, setGioHang] = useState([
         {
             id: "",
@@ -52,9 +52,24 @@ const Cart = () => {
                 let res = await gioHangApi.removeGioHang(id)
                 const { data } = await gioHangApi.getAllGioHangByUsername(localStorage.getItem('username'))
                 if (data.length > 0) {
-                    setGioHang(data);
+                    setGioHang(data)
+                    loadGioHang()
+                } else {
+                    const dataG = [{
+                        id: "",
+                        username: "",
+                        tenSP: "",
+                        size: "",
+                        mauSac: "",
+                        gia: 0,
+                        soLuong: null,
+                        image: "http://tgo.vn/wp-content/uploads/2021/01/white-background-2.jpg"
+                    }]
+                    setGioHang(dataG)
                 }
+                props.getSlHang()
             } catch (error) {
+                console.log(error);
                 alert('Lỗi cmnr')
             }
         }
@@ -92,7 +107,7 @@ const Cart = () => {
                                     <div className="summary-item"><span className="text">Phí vận chuyển</span><span className="price">{formatTien(0)}</span></div>
                                     <div className="summary-item"><span className="text">Giảm giá</span><span className="price">{formatTien(0)}</span></div>
                                     <div className="summary-item"><span className="text">Tổng thanh toán</span><span className="price">{formatTien(getTongTien())}</span></div>
-                                    <button type="button" className="btn btn-primary btn-lg btn-block" onClick={()=>{alert('Shop này chưa có đặt hàng, quay lại sau')}}>Đặt hàng</button>
+                                    <button type="button" className="btn btn-primary btn-lg btn-block" onClick={() => { alert('Shop này chưa có đặt hàng, quay lại sau') }}>Đặt hàng</button>
                                 </div>
                             </div>
                         </div>

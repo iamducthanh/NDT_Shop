@@ -6,9 +6,10 @@ import { useEffect, useState } from 'react';
 const GianHang = (props) => {
     const [sapXep, setSapXep] = useState('none');
 
-    const onChangeOption = (event) => {
-        setSapXep(event.target.value)
-        props.resertPage(event.target.value)
+    const onChangeOption = (key) => {
+        setSapXep(key)
+        props.resertPage(key)
+        closeCbb()
     }
 
     const onChangeFillter = (event) => {
@@ -23,6 +24,10 @@ const GianHang = (props) => {
         }
     }
 
+    const closeCbb = () => {
+        document.getElementById('options-view-button').checked = false
+    } 
+
     return (
         <div className="container">
             <div className="alertBox" id="alertBox">
@@ -32,40 +37,45 @@ const GianHang = (props) => {
             <div>
                 <div className="headerAo">
                     <h1>{props.title}</h1>
-                    
                 </div>
-
+                {/* <form>
+                    <select name="gia11" onChange={onChangeOption}>
+                        <option value="none">Sắp xếp theo</option>
+                        <option value="asc">Giá tăng dần</option>
+                        <option value="desc">Giá giảm dần</option>
+                    </select>
+                </form> */}
                 <form id="app-cover" style={{ zIndex: '1000000' }}>
                     <div id="select-box">
                         <input type="checkbox" id="options-view-button" />
-                        <div id="select-button" className="brd">
+                        <div id="select-button" className="brd" >
                             <div id="selected-value" style={{marginBottom: '20px'}}>
-                                <span>Select a platform</span>
+                                <span className="sortCbb">Sắp xếp theo</span>
                             </div>
                         </div>
                         <div id="options">
-                            <div className="option" onclick="closeCheck()">
+                            <div className="option" onClick={onChangeOption.bind(this, 'none')}>
                                 <input className="s-c top" type="radio" name="platform" defaultValue="codepen" />
                                 <input className="s-c bottom" type="radio" name="platform" defaultValue="codepen" />
                                 <i className="fab fa-codepen" />
-                                <span className="label">CodePen</span>
-                                <span className="opt-val">CodePen</span>
+                                <span className="label" >Sắp xếp theo</span>
+                                <span className="opt-val">Sắp xếp theo</span>
                             </div>
-                            <div className="option">
+                            <div className="option" onClick={onChangeOption.bind(this, 'asc')}>
                                 <input className="s-c top" type="radio" name="platform" defaultValue="dribbble" />
                                 <input className="s-c bottom" type="radio" name="platform" defaultValue="dribbble" />
                                 <i className="fab fa-dribbble" />
-                                <span className="label">Dribbble</span>
-                                <span className="opt-val">Dribbble</span>
+                                <span className="label">Giá tăng dần</span>
+                                <span className="opt-val">Giá tăng dần</span>
                             </div>
-                            <div className="option">
+                            <div className="option" onClick={onChangeOption.bind(this, 'desc')}>
                                 <input className="s-c top" type="radio" name="platform" defaultValue="behance" />
                                 <input className="s-c bottom" type="radio" name="platform" defaultValue="behance" />
                                 <i className="fab fa-behance" />
-                                <span className="label">Behance</span>
-                                <span className="opt-val">Behance</span>
+                                <span className="label">Giá giảm dần</span>
+                                <span className="opt-val">Giá giảm dần</span>
                             </div>
-                            <div className="option">
+                            {/* <div className="option">
                                 <input className="s-c top" type="radio" name="platform" defaultValue="hackerrank" />
                                 <input className="s-c bottom" type="radio" name="platform" defaultValue="hackerrank" />
                                 <i className="fab fa-hackerrank" />
@@ -85,18 +95,11 @@ const GianHang = (props) => {
                                 <i className="fab fa-free-code-camp" />
                                 <span className="label">FreeCodeCamp</span>
                                 <span className="opt-val">FreeCodeCamp</span>
-                            </div>
+                            </div> */}
                             <div id="option-bg" />
                         </div>
                     </div>
                 </form>
-                {/* <form>
-                        <select name="gia11" onChange={onChangeOption}>
-                            <option value="none">Sắp xếp theo</option>
-                            <option value="asc">Giá tăng dần</option>
-                            <option value="desc">Giá giảm dần</option>
-                        </select>
-\                    </form> */}
 
                 <div className="ok">
                     <div className="bodyAo">

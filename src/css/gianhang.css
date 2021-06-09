@@ -397,13 +397,14 @@ input[type="radio"]
 .option:nth-child(2):hover ~ #option-bg
 {
     top: 40px;
-    background-color: #ea4c89;
+    background-color: #f32626;
 }
 
 .option:nth-child(3):hover ~ #option-bg
 {
     top: 80px;
-    background-color: #0057ff;
+    background-color: #046123;
+    color: black;
 }
 
 .option:nth-child(4):hover ~ #option-bg
@@ -438,4 +439,42 @@ input[type="radio"]
   background-color: #143240;
   border-radius: 4px;
   box-shadow: 0 10px 20px -5px rgba(20, 50, 64, 0.76);
+}
+
+/* .options-view-button{
+    margin-top: 200px;
+} */
+
+#app-cover{
+    margin-top: 230px;
+    margin-left: 900px;
+}
+.sortCbb{
+    padding: 8px 140px 8px 10px;
+    border-radius: 10px;
+    border: 1px black solid;
+    z-index: 100000;
+}
+
+.brd{
+    border: none;
+    padding-left: 020px;
+}
+
+#options-view-button{
+    padding-left: 20px;
+}
+
+.opt-val{
+    padding-left: 10px;
+    z-index: 1;
+}
+
+.label{
+    padding-left: 10px;
+    z-index: 1;
+}
+
+.imgIconSort{
+    width: 20px;
 }

@@ -35,7 +35,7 @@ class Router extends Component {
                             </WebLayout>
                             :
                             <WebLayout {...this.props}>
-                                <Cart />
+                                <Cart {...this.props}/>
                             </WebLayout>
                     )}>
                     </Route>
