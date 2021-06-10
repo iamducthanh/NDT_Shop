@@ -135,7 +135,7 @@ const ProductAoKhoac = (props) => {
 
     return (
         <BrowserRouter>
-            <Header onSearch={onSearch} {...props}/>
+            <Header onSearch={onSearch} {...props} pla ={'Tìm theo tên sản phẩm...'}/>
             <Switch>
                 <Route exact path="/admin/product/ao-khoac">
                     <Product tenSp = {'Áo khoác'} product={aoKhoac} prePage={prePage} nextPage={nextPage} page={page} urlP="ao-khoac" onDelete={onDelete} locPre={locPre} locNext={locNext} />

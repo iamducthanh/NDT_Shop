@@ -11,6 +11,9 @@ function App() {
   const [aoThun, setAoThun] = useState([]);
   const [slHang, setSlHang] = useState();
   const [user, setUser] = useState([username, password]);
+  const [sp, setSp] = useState();
+
+
   useEffect(() => {
     const getUserLogin = async () => {
       if (localStorage.getItem('username') != null) {
@@ -56,6 +59,9 @@ function App() {
     setUser(username, password)
     getSlHang()
   }
+
+
+  //test
 
   return (
     <div>

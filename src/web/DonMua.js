@@ -33,8 +33,8 @@ const DonMua = () => {
     }
     return (
         <div>
-            {donMua.map((donMua) => (
-                <DonMuaItem huyDonHang={huyDonHang} idDonHang = {donMua.id} listProduct={donMua.product} trangthai={donMua.trangThai} />
+            {donMua.map((donMua, index) => (
+                <DonMuaItem thanhToan = {donMua.thanhToan} huyDonHang={huyDonHang} idDonHang = {donMua.id} listProduct={donMua.product} trangthai={donMua.trangThai} />
             ))}
         </div>
     )

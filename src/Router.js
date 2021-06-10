@@ -15,6 +15,10 @@ import ProductAoKhoac from './admin/ProductAoKhoac'
 import ProductAoThun from './admin/ProductAoThun';
 import ProductJeans from './admin/ProductJeans';
 import DonMua from './web/DonMua';
+import DonHang from './admin/DonHang';
+import Product from './web/Product';
+import PhanLoaiSP from './web/phanLoaiSP';
+import LocProduct from './web/LocProduct';
 
 class Router extends Component {
     constructor(props) {
@@ -24,6 +28,13 @@ class Router extends Component {
         return (
             <BrowserRouter>
                 <Switch>
+                    {/* <Route exact path="/:sp?" render={() => (
+                        <WebLayout {...this.props}>
+                            <Product {...this.props} />
+                        </WebLayout>
+                        )
+                    }>
+                    </Route> */}
                     <Route exact path='/login'>
                         <WebLayout {...this.props}>
                             <Login {...this.props} />
@@ -31,7 +42,7 @@ class Router extends Component {
                     </Route>
                     <Route exact path='/don-hang'>
                         <WebLayout {...this.props}>
-                            <DonMua/>
+                            <DonMua />
                         </WebLayout>
                     </Route>
                     <Route exact path='/cart' render={() => (
@@ -41,7 +52,7 @@ class Router extends Component {
                             </WebLayout>
                             :
                             <WebLayout {...this.props}>
-                                <Cart {...this.props}/>
+                                <Cart {...this.props} />
                             </WebLayout>
                     )}>
                     </Route>
@@ -66,6 +77,9 @@ class Router extends Component {
                                     </Route>
                                     <Route exact path="/admin/user">
                                         <QuanLyUser />
+                                    </Route>
+                                    <Route exact path="/admin/don-hang">
+                                        <DonHang />
                                     </Route>
                                     {/* <Route exact path="/admin/product/:id">
                                         <EditProduct {...this.props} />

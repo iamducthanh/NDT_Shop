@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 
 const GianHang = (props) => {
     const [sapXep, setSapXep] = useState('none');
-
     const onChangeOption = (key) => {
         setSapXep(key)
         props.resertPage(key)
@@ -152,7 +151,7 @@ const GianHang = (props) => {
                                 ))}
                             </div>
                             <div style={{ display: 'flex' }}>
-                                <button className="ptButton" name="page" onClick={props.loc.bind(this, sapXep, 'pre')}>
+                                <button className="ptButton" name="page" id="preT" onClick={props.loc.bind(this, sapXep, 'pre')}>
                                     <i className="fa fa-angle-double-left" />
                                 </button>
                                 <div className="ptNumber" style={{ backgroundColor: 'red', borderRadius: 2, boxShadow: '0 1px 4px black' }}>{props.page}</div>

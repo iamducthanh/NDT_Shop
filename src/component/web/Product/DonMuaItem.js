@@ -37,12 +37,13 @@ const DonMuaItem = (props) => {
                                     <div className="summary-item"><span className="text">Phí vận chuyển</span><span className="price">{formatTien(0)}</span></div>
                                     <div className="summary-item"><span className="text">Giảm giá</span><span className="price">{formatTien(0)}</span></div>
                                     <div className="summary-item"><span className="text">Tổng thanh toán</span><span className="price">{formatTien(getTongTien())}</span></div>
+                                    <div className="summary-item"><span className="text">Hình thức</span><span className="price">{props.thanhToan}</span></div>
                                     <div style={{ marginTop: '10px' }} className="summary-item"><span className="text">Trạng thái</span><span className="price">{props.trangthai == 1 ? 'Đã xác nhận' : 'Chưa xác nhận'}</span></div>
+                                    
                                     {props.trangthai == 0 ?
-                                        <button type="button" className="btn btn-oranger btn-lg btn-block" style={{backgroundColor: 'red', color: 'white'}} onClick={props.huyDonHang.bind(this, props.idDonHang)}>Hủy đơn hàng</button>
-                                    :null
+                                        <button type="button" className="btn btn-oranger btn-lg btn-block" style={{ backgroundColor: 'red', color: 'white' }} onClick={props.huyDonHang.bind(this, props.idDonHang)}>Hủy đơn hàng</button>
+                                        : null
                                     }
-
                                 </div>
                             </div>
                         </div>

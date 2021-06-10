@@ -1,12 +1,26 @@
 import { Link } from 'react-router-dom';
 import logo from '../../../img/logo.png'
 import React from 'react'
+import gioHangApi from '../../../../api/gioHangApi';
 
 
 const HeaderTop = (props) => {
 
+    const getGioHang = async () => {
+        const { data } = await gioHangApi.getAllGioHangByUsername(localStorage.getItem('username'))
+        if (data.length > 0) {
+            document.getElementById('gioHangIcon').click()
+        } else {
+            document.getElementById('alertBox6').style.display = 'unset'
+        }
+    }
+
     return (
         <div className="top-head">
+            <div className="alertBox" id="alertBox6">
+                Giỏ hàng của bạn không có sản phẩm nào<br />
+                <button onClick = {()=>{document.getElementById('alertBox6').style.display = 'none'}}> Đóng </button>
+            </div>
             <a href="http://ndtshop.herokuapp.com/" style={{ textDecoration: 'none' }}>
                 <div className="logo"><img style={{ width: 130 }} src={logo} alt />NDTShop</div>
             </a>
@@ -21,9 +35,10 @@ const HeaderTop = (props) => {
                         <span><img id="btShow" style={{ width: 25 }} src="https://th.bing.com/th/id/R84c5838c77a1551893053b07a1c6d0c4?rik=waDkySiELkHF0w&pid=ImgRaw" alt /></span>
                     </form>
                 </div>
-                <Link to="/cart" className="shopCard"><i className="fa fa-shopping-cart" aria-hidden="true" />
+                <div onClick={getGioHang} className="shopCard"><i className="fa fa-shopping-cart" aria-hidden="true" />
                     <div className="circle">{props.slHang}</div>
-                </Link>
+                </div>
+                <Link to="/cart" id="gioHangIcon" style={{ display: 'none' }}></Link>
                 <ul className="convert">
                     <li className="default">
                         <ul className="listLang1" style={{ marginTop: 3, marginLeft: 20, fontSize: 20 }}>

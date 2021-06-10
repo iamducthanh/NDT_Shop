@@ -75,7 +75,7 @@ export default class Nav extends Component {
                         <span>Pages</span>
                     </a>
                     <div id="collapsePages" className="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                        <div className="bg-white py-2 collapse-inner rounded">
+                        {/* <div className="bg-white py-2 collapse-inner rounded">
                             <h6 className="collapse-header">Login Screens:</h6>
                             <a className="collapse-item" href="login.html">Login</a>
                             <a className="collapse-item" href="register.html">Register</a>
@@ -84,32 +84,32 @@ export default class Nav extends Component {
                             <h6 className="collapse-header">Other Pages:</h6>
                             <a className="collapse-item" href="404.html">404 Page</a>
                             <a className="collapse-item" href="blank.html">Blank Page</a>
-                        </div>
+                        </div> */}
                     </div>
                 </li>
                 {/* Divider */}
                 <hr className="sidebar-divider" />
                 {/* Heading */}
                 <div className="sidebar-heading">
-                    Tài khoản
+                    bán hàng
 
 </div>
                 {/* Nav Item - Pages Collapse Menu */}
                 <li className="nav-item">
                     <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                         <i className="fas fa-fw fa-folder" />
-                        <span>User</span>
+                        <span>Đơn hàng</span>
                     </a>
                     <div id="collapsePages" className="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                         <div className="bg-white py-2 collapse-inner rounded">
-                            <h6 className="collapse-header">Login Screens:</h6>
-                            <a className="collapse-item" href="login.html">Login</a>
-                            <a className="collapse-item" href="register.html">Register</a>
+                            <h6 className="collapse-header">Các hóa đơn</h6>
+                            <Link className="collapse-item" to="/admin/don-hang">Đặt hàng</Link>
+                            {/* <a className="collapse-item" href="register.html">Register</a>
                             <a className="collapse-item" href="forgot-password.html">Forgot Password</a>
                             <div className="collapse-divider" />
                             <h6 className="collapse-header">Other Pages:</h6>
                             <a className="collapse-item" href="404.html">404 Page</a>
-                            <a className="collapse-item" href="blank.html">Blank Page</a>
+                            <a className="collapse-item" href="blank.html">Blank Page</a> */}
                         </div>
                     </div>
                 </li>

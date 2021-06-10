@@ -111,7 +111,8 @@ const Cart = (props) => {
             username: gioHang[0].username,
             product: product,
             thoigian: time,
-            trangThai: "0"
+            trangThai: "0",
+            thanhToan: document.getElementById('cbbThanhToan').value
         }
         await hoaDonApi.addHoaDon(data)
         removeFullCart()
@@ -128,6 +129,15 @@ const Cart = (props) => {
         gioHang.map((cart) => {
             gioHangApi.removeGioHang(cart.id)
         })
+    }
+
+    const getTT = (event) => {
+        console.log(event.target.value);
+        if (event.target.value == 'Thanh toán bằng momo') {
+            document.getElementById('qrThanhToan').style.display = 'unset'
+        } else {
+            document.getElementById('qrThanhToan').style.display = 'none'
+        }
     }
 
     return (
@@ -158,6 +168,12 @@ const Cart = (props) => {
                                     <div className="summary-item"><span className="text">Phí vận chuyển</span><span className="price">{formatTien(0)}</span></div>
                                     <div className="summary-item"><span className="text">Giảm giá</span><span className="price">{formatTien(0)}</span></div>
                                     <div className="summary-item"><span className="text">Tổng thanh toán</span><span className="price">{formatTien(getTongTien())}</span></div>
+                                    <select className="cbbThanhToan" id ="cbbThanhToan" onChange={getTT}>
+                                        <option value="Thanh toán khi nhận hàng" className="optionThanhToan">Thanh toán khi nhận hàng</option>
+                                        <option value="Thanh toán bằng momo" className="optionThanhToan">Thanh toán momo</option>
+                                    </select>
+                                    <iframe className="qrThanhToan" id = "qrThanhToan" src={`https://nhantien.momo.vn/JZqKOVhWyOv/${getTongTien()}`}></iframe>
+                                    
                                     <button type="button" className="btn btn-primary btn-lg btn-block" onClick={addHoaDon}>Đặt hàng</button>
                                 </div>
                             </div>
