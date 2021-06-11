@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const axiosClient = axios.create({
-    baseURL: 'https://igkow.sse.codesandbox.io/',
+    baseURL: 'https://yc8vw.sse.codesandbox.io/',
     // baseURL: 'http://localhost:3005/',
 
     headers: {
