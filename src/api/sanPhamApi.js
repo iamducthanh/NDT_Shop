@@ -2,7 +2,8 @@ import { axiosClient } from './axiosClient';
 
 const sanPhamApi = {
     getSPById(id, sp){
-        const url = `/${sp}/${id}`;
+        const url = `/product?loaisp=${sp}&id=${id}`;
+        console.log(url);
         return axiosClient.get(url);
     },
 

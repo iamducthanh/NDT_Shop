@@ -1,16 +1,26 @@
 import { useForm } from 'react-hook-form'
 import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
+import { useParams} from 'react-router-dom'
+import productApi from '../api/productApi'
 
 const AddProduct = (props) => {
+    let { sp } = useParams()
+    console.log(sp);
+
     let history = useHistory()
     const { register, handleSubmit, formState: { errors } } = useForm();
+    
     const submit = (data) => {
-        props.onAdd(data);
-        history.push(`/admin/product/${props.urlP}`)
+        const dataNew = {
+            loaisp: sp,
+            ...data
+        }
+        productApi.add(dataNew)
+        quayLai()
     }
     const quayLai = () => {
-        history.push(`/admin/product/${props.urlP}`)
+        history.push(`/admin/product/${sp}`)
     }
     return (
         <form onSubmit={handleSubmit(submit)}>

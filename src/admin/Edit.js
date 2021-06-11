@@ -3,30 +3,30 @@ import { Link } from 'react-router-dom'
 import { useHistory, useParams } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import spAPI from '../api/sanPhamApi';
+import productApi from '../api/productApi';
 
 
 const EditProduct = (props) => {
     let history = useHistory()
     let { id, sp } = useParams()
-    console.log(id);
-    console.log(sp);
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [product, setProduct] = useState([])
+
     useEffect(() => {
         const getSanPham = async () => {
-            const { data } = await spAPI.getSPById(id, sp)
+            const { data } = await productApi.getById(id)
             reset(data)
             setProduct(data)
         }
         getSanPham();
     }, [])  
 
-    const submit = (data) => {
-        const dataNew = {
-            id,
-            ...data
-        }
-        props.onUpdate(dataNew)
+    const submit = async (data) => {
+        // const dataNew = {
+        //     id,
+        //     ...data
+        // }
+        await productApi.update(data.id, data)
         history.push(`/admin/product/${sp}`)
     }
     return (

@@ -11,7 +11,7 @@ const Product = (props) => {
     const [filter, setFilter] = useState([0, 0]);
     useEffect(() => {
         getProduct();
-    }, [])
+    }, [sp])
 
     const getProduct = async () => {
         setPage(1)

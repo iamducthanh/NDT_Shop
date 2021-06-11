@@ -1,10 +1,21 @@
 import { Link, useHistory } from 'react-router-dom'
 import React from 'react'
 import hoaDonApi from '../../../../api/hoaDonApi';
+import loaiSpApi from '../../../../api/loaiSpApi';
+import { useEffect, useState } from 'react';
+
 
 const Menu = (props) => {
-    console.log(props);
-    let history = useHistory()
+    const [loaiSP, setLoaiSP] = useState([]);
+    useEffect(() => {
+        getLoaiSP();
+    }, [])
+
+    const getLoaiSP = async () => {
+        const { data } = await loaiSpApi.getAllLoaiSp();
+        console.log(data);
+        setLoaiSP(data);
+    }
     const logOut = () => {
         localStorage.removeItem('accessToken')
         localStorage.removeItem('username')
@@ -32,7 +43,19 @@ const Menu = (props) => {
                 <button onClick={closeAlert}> Đóng </button>
             </div>
             <div className="menu" id="menu">
-                <div className="ao">
+                {loaiSP.map((loaisp) => (
+                    <div className="ao">
+                        <Link className="bmenu" to="#">{loaisp.tenloai}</Link>
+                        <div className="sub">
+                            <ul>
+                                {loaisp.chitietloai.map((chitietloai) => (
+                                    <li><Link className="subli" to={`/${chitietloai.url}`}>{chitietloai.tenchitietloai}</Link></li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                ))}
+                {/* <div className="ao">
                     <Link className="bmenu" to="#">Áo</Link>
                     <div className="sub">
                         <ul>
@@ -43,7 +66,7 @@ const Menu = (props) => {
                         </ul>
                     </div>
                 </div>
-                <div className="quan">
+                <div className="ao">
                     <a className="bmenu" href="">Quần</a>
                     <div className="sub">
                         <ul>
@@ -81,7 +104,7 @@ const Menu = (props) => {
                             <li><a className="subli" href="">Quắm</a></li>
                         </ul>
                     </div>
-                </div>
+                </div> */}
                 <a className="bmenu" href="https://iamducthanh.tk" target="_blank">about me</a>
                 {localStorage.getItem("accessToken") ? <Link className="bmenu" to="/admin/">Admin</Link> : null}
             </div>
@@ -98,11 +121,14 @@ const Menu = (props) => {
                         }
                     </span></a>
                     {localStorage.getItem("username") != null ?
-                        <div className="sub" id="subAcc">
+                        <div className="sub">
                             <ul>
                                 <li>
-                                    <div style={{ textAlign: 'center', marginLeft: '-11px' }} className="subli" onClick={openHoaDon}>Đơn mua</div>
-                                    <div style={{ textAlign: 'center' }} className="subli" onClick={logOut}>Logout</div>
+                                    <a className="subli" onClick={openHoaDon}>Đơn mua</a>
+
+                                </li>
+                                <li>
+                                    <a className="subli" onClick={logOut}>Logout</a>
                                 </li>
                             </ul>
                         </div>

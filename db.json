@@ -1,4 +1,28 @@
 {
+  "loaisp": [
+    {
+      "tenloai": "Áo",
+      "chitietloai": [
+        {
+          "tenchitietloai": "Áo thun",
+          "url": "ao-thun"
+        },
+        {
+          "tenchitietloai": "Áo khoác",
+          "url": "ao-khoac"
+        }
+      ]
+    },
+    {
+      "tenloai": "Quần",
+      "chitietloai": [
+        {
+          "tenchitietloai": "Jeans",
+          "url": "jeans"
+        }
+      ]
+    }
+  ],
   "product": [
     {
       "id": "1",
@@ -21,7 +45,7 @@
       "loaisp": "jeans"
     },
     {
-      "id": "2",
+      "id": "33",
       "name": "Jeans 2",
       "price": 400000,
       "image1": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
@@ -61,7 +85,7 @@
       "loaisp": "jeans"
     },
     {
-      "id": "5",
+      "id": "44",
       "name": "Jeans 5",
       "price": 800000,
       "image1": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
@@ -111,7 +135,7 @@
       "loaisp": "jeans"
     },
     {
-      "id": "1",
+      "id": "1wetrt",
       "name": "Áo thun 1",
       "price": 200000,
       "image1": "https://product.hstatic.net/1000026602/product/118071394_671482550387997_8296446070533145704_o_9bd939fe54504b829e3f932999dfee30.jpg",
@@ -121,7 +145,7 @@
       "loaisp": "ao-thun"
     },
     {
-      "id": "2",
+      "id": "2are",
       "name": "Áo thun 2",
       "price": 300000,
       "image1": "https://product.hstatic.net/1000026602/product/118071394_671482550387997_8296446070533145704_o_9bd939fe54504b829e3f932999dfee30.jpg",
@@ -131,7 +155,7 @@
       "loaisp": "ao-thun"
     },
     {
-      "id": "3",
+      "id": "3trss",
       "name": "Áo thun 3",
       "price": 400000,
       "image1": "https://product.hstatic.net/1000026602/product/118071394_671482550387997_8296446070533145704_o_9bd939fe54504b829e3f932999dfee30.jpg",
@@ -141,7 +165,7 @@
       "loaisp": "ao-thun"
     },
     {
-      "id": "4",
+      "id": "4sgtr",
       "name": "Áo thun 4",
       "price": 2000000,
       "image1": "https://product.hstatic.net/1000026602/product/118071394_671482550387997_8296446070533145704_o_9bd939fe54504b829e3f932999dfee30.jpg",
@@ -151,7 +175,7 @@
       "loaisp": "ao-thun"
     },
     {
-      "id": "5",
+      "id": "5stre",
       "name": "Áo thun 5",
       "price": 200000,
       "image1": "https://product.hstatic.net/1000026602/product/118071394_671482550387997_8296446070533145704_o_9bd939fe54504b829e3f932999dfee30.jpg",
@@ -161,7 +185,7 @@
       "loaisp": "ao-thun"
     },
     {
-      "id": "6",
+      "id": "6segr",
       "name": "Áo thun 6",
       "price": 200000,
       "image1": "https://product.hstatic.net/1000026602/product/118071394_671482550387997_8296446070533145704_o_9bd939fe54504b829e3f932999dfee30.jpg",
@@ -171,7 +195,7 @@
       "loaisp": "ao-thun"
     },
     {
-      "id": "7",
+      "id": "7sgre",
       "name": "Áo thun 7",
       "price": 200000,
       "image1": "https://product.hstatic.net/1000026602/product/118071394_671482550387997_8296446070533145704_o_9bd939fe54504b829e3f932999dfee30.jpg",
@@ -181,7 +205,7 @@
       "loaisp": "ao-thun"
     },
     {
-      "id": "8",
+      "id": "8sgre",
       "name": "Áo thun 8",
       "price": 800000,
       "image1": "https://product.hstatic.net/1000026602/product/118071394_671482550387997_8296446070533145704_o_9bd939fe54504b829e3f932999dfee30.jpg",
@@ -191,7 +215,7 @@
       "loaisp": "ao-thun"
     },
     {
-      "id": "9",
+      "id": "9ser",
       "name": "Áo thun 9",
       "price": 1200000,
       "image1": "https://product.hstatic.net/1000026602/product/118071394_671482550387997_8296446070533145704_o_9bd939fe54504b829e3f932999dfee30.jpg",
@@ -201,7 +225,7 @@
       "loaisp": "ao-thun"
     },
     {
-      "id": "10",
+      "id": "10serv",
       "name": "Áo thun 10",
       "price": 200000,
       "image1": "https://product.hstatic.net/1000026602/product/118071394_671482550387997_8296446070533145704_o_9bd939fe54504b829e3f932999dfee30.jpg",
@@ -211,7 +235,7 @@
       "loaisp": "ao-thun"
     },
     {
-      "id": "11",
+      "id": "11awre",
       "name": "Áo thun 11",
       "price": 200000,
       "image1": "https://product.hstatic.net/1000026602/product/118071394_671482550387997_8296446070533145704_o_9bd939fe54504b829e3f932999dfee30.jpg",
@@ -221,7 +245,7 @@
       "loaisp": "ao-thun"
     },
     {
-      "id": "12",
+      "id": "12awerd",
       "name": "Áo thun 12",
       "price": 200000,
       "image1": "https://product.hstatic.net/1000026602/product/118071394_671482550387997_8296446070533145704_o_9bd939fe54504b829e3f932999dfee30.jpg",
@@ -231,7 +255,7 @@
       "loaisp": "ao-thun"
     },
     {
-      "id": "1",
+      "id": "1asfde",
       "name": "Refined Steel Shoes 1",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -241,9 +265,9 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "2",
+      "id": "2weru",
       "name": "Refined Steel Shoes 2",
-      "price": 200000,
+      "price": "2000000",
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
       "image2": "https://salt.tikicdn.com/ts/tmp/f3/07/5e/cb6c12bbe44e41958fbf880bde16f007.jpg",
       "image3": "data:image/jpeg;base64,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",
@@ -251,7 +275,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "3",
+      "id": "3dnyt",
       "name": "Refined Steel Shoes 3",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -261,7 +285,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "4",
+      "id": "4dtyj",
       "name": "Refined Steel Shoes 4",
       "price": 200000,
       "image1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQji_FF_G-eag9aYLdQ1d678RE8u8S2GbCLw&usqp=CAU",
@@ -271,7 +295,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "5",
+      "id": "5wv45",
       "name": "Refined Steel Shoes 5",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -281,7 +305,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "6",
+      "id": "6wyv54s",
       "name": "Refined Steel Shoes 6",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -291,7 +315,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "7",
+      "id": "7w45yw",
       "name": "Refined Steel Shoes 7",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -301,7 +325,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "8",
+      "id": "8w45ys",
       "name": "Refined Steel Shoes 8",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -311,7 +335,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "9",
+      "id": "9w4ttwa",
       "name": "Refined Steel Shoes 9",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -321,7 +345,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "10",
+      "id": "10w4tsde",
       "name": "Refined Steel Shoes 10",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -331,7 +355,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "11",
+      "id": "1134era",
       "name": "Refined Steel Shoes 11",
       "price": 200,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -341,7 +365,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "12",
+      "id": "1243eg",
       "name": "Refined Steel Shoes 12",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -351,7 +375,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "13",
+      "id": "1353trg",
       "name": "Refined Steel Shoes 13",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -361,7 +385,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "14",
+      "id": "14er4erh",
       "name": "Refined Steel Shoes 14",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -371,7 +395,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "15",
+      "id": "1525erw",
       "name": "Refined Steel Shoes 15",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -381,7 +405,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "16",
+      "id": "16wet4tgr5",
       "name": "Refined Steel Shoes 16",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -391,7 +415,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "17",
+      "id": "17tiurt",
       "name": "Refined Steel Shoes 17",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -401,7 +425,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "18",
+      "id": "18rtj6t",
       "name": "Refined Steel Shoes 18",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -411,7 +435,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "19",
+      "id": "1956htd5",
       "name": "Refined Steel Shoes 19",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -421,7 +445,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "20",
+      "id": "20e56rt",
       "name": "Refined Steel Shoes 20",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -431,7 +455,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "21",
+      "id": "2156er",
       "name": "Refined Steel Shoes 21",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -441,7 +465,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "22",
+      "id": "265ert2",
       "name": "Refined Steel Shoes 22",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -451,7 +475,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "23",
+      "id": "23sss54w",
       "name": "Refined Steel Shoes 23",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -461,7 +485,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "24",
+      "id": "2454yg",
       "name": "Refined Steel Shoes 24",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -471,7 +495,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "25",
+      "id": "25s5tg",
       "name": "Refined Steel Shoes 25",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -481,7 +505,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "26",
+      "id": "2645stg",
       "name": "Refined Steel Shoes 26",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -491,7 +515,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "27",
+      "id": "2754sgr",
       "name": "Refined Steel Shoes 27",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -501,7 +525,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "28",
+      "id": "284se45",
       "name": "Refined Steel Shoes 28",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -511,7 +535,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "29",
+      "id": "295tssg",
       "name": "Refined Steel Shoes 29",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -521,7 +545,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "30",
+      "id": "30s5tgr3",
       "name": "Refined Steel Shoes 30",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -531,7 +555,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "31",
+      "id": "31s43egt",
       "name": "Refined Steel Shoes 31",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -541,7 +565,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "32",
+      "id": "3245resyh",
       "name": "Refined Steel Shoes 32",
       "price": 700000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -551,7 +575,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "33",
+      "id": "33shtr5",
       "name": "Refined Steel Shoes 33",
       "price": 800000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -561,7 +585,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "34",
+      "id": "34s5tds",
       "name": "Refined Steel Shoes 34",
       "price": 900000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -571,7 +595,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "35",
+      "id": "355dsfr",
       "name": "Refined Steel Shoes 35",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -581,7 +605,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "36",
+      "id": "36ko76",
       "name": "Refined Steel Shoes 36",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -591,7 +615,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "37",
+      "id": "377r6yyt",
       "name": "Refined Steel Shoes 37",
       "price": 1300000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -601,7 +625,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "38",
+      "id": "38e65td",
       "name": "Refined Steel Shoes 38",
       "price": 1200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -611,7 +635,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "39",
+      "id": "3965dh5",
       "name": "Refined Steel Shoes 39",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -621,7 +645,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "40",
+      "id": "405srdh",
       "name": "Refined Steel Shoes 40",
       "price": 200000,
       "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
@@ -641,7 +665,7 @@
       "loaisp": "ao-khoac"
     },
     {
-      "id": "2CTHM7H",
+      "id": "2CTHM7Ht",
       "name": "Awesome Soft Fish 200",
       "price": 1400000,
       "image1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQji_FF_G-eag9aYLdQ1d678RE8u8S2GbCLw&usqp=CAU",
@@ -1387,7 +1411,18 @@
       "id": "CucQyT5"
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "username": "admin",
+      "tenSP": "Refined Steel Shoes 3",
+      "size": "L",
+      "mauSac": "black",
+      "gia": 200000,
+      "soLuong": 1,
+      "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "id": 1
+    }
+  ],
   "comment": [
     {
       "id": "1",
@@ -1970,6 +2005,42 @@
       "trangThai": "0",
       "thanhToan": "Thanh toán bằng momo",
       "id": "MqoNGXp"
+    },
+    {
+      "username": "admin",
+      "product": [
+        {
+          "idsp": 1,
+          "tensp": "Refined Steel Shoes 7",
+          "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+          "price": 200000,
+          "soluong": "2",
+          "size": "L",
+          "color": "black"
+        }
+      ],
+      "thoigian": "12:27:37 11-6-2021",
+      "trangThai": "0",
+      "thanhToan": "Thanh toán khi nhận hàng",
+      "id": "Syb1TW1"
+    },
+    {
+      "username": "admin",
+      "product": [
+        {
+          "idsp": 1,
+          "tensp": "Áo thun 3",
+          "image": "https://product.hstatic.net/1000026602/product/118071394_671482550387997_8296446070533145704_o_9bd939fe54504b829e3f932999dfee30.jpg",
+          "price": 400000,
+          "soluong": 1,
+          "size": "L",
+          "color": "black"
+        }
+      ],
+      "thoigian": "13:32:23 11-6-2021",
+      "trangThai": "0",
+      "thanhToan": "Thanh toán khi nhận hàng",
+      "id": "lvGJdvg"
     }
   ]
 }

@@ -35,7 +35,7 @@ const GianHang = (props) => {
             </div>
             <div>
                 <div className="headerAo">
-                    <h1>{props.title}</h1>
+                    <h1>Sản phẩm</h1>
                 </div>
                 {/* <form>
                     <select name="gia11" onChange={onChangeOption}>

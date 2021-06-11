@@ -180,11 +180,12 @@ body {
   position: relative;
 }
 .subli {
-  padding: 15px 50px;
+  padding: 15px 20px;
   font-size: 13px;
   font-weight: 700;
+  width: 810px;
   font-family: "Amiri", serif;
-  color: rgb(187, 185, 185);
+  color: rgb(250, 244, 244);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -194,6 +195,7 @@ body {
   padding: 0px;
   padding: 15px 4px 15px 4px;
   text-align: center;
+  width: 150px;
 }
 .sub {
   position: absolute;

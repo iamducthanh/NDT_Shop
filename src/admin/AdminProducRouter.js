@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Switch, Route, useHistory } from 'react-router-dom'
 import ProductDetail from '../web/ProductDetail'
-import ProductAoKhoac from './ProductAoKhoac'
 
 export default class AdminProducRouter extends Component {
     render() {

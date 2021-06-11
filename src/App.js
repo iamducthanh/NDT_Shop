@@ -11,8 +11,6 @@ function App() {
   const [aoThun, setAoThun] = useState([]);
   const [slHang, setSlHang] = useState();
   const [user, setUser] = useState([username, password]);
-  const [sp, setSp] = useState();
-
 
   useEffect(() => {
     const getUserLogin = async () => {
