@@ -11,6 +11,11 @@ const userApi = {
         return axiosClient.get(url);
     },
 
+    getUserByEmail(mail) {
+        const url = `/user?email=${mail}`;
+        return axiosClient.get(url);
+    },
+
     addUser(data) {
         const url = `/user`;
         return axiosClient.post(url, data);

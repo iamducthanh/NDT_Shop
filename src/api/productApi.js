@@ -1,8 +1,8 @@
 import { axiosClient } from './axiosClient';
 
 const productApi = {
-    getAllAo(sp) {
-        const url = `/${sp}`;
+    getAllAo() {
+        const url = `/product`;
         return axiosClient.get(url);
     },
     getByKhoangGiaAndPage(sp,min, max, page){

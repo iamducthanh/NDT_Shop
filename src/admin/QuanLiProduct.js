@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import aoThunApi from '../api/aoThunApi';
 import { BrowserRouter, Switch, Route, useHistory } from 'react-router-dom'
 import Product from './Product';
 import AddProduct from './Add';

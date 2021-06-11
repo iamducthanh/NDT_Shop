@@ -1384,31 +1384,44 @@
       "id": "1",
       "username": "admin",
       "password": "1",
+      "email": "ducthanh260801@gmail.com",
       "vaitro": "1"
     },
     {
       "id": "2",
       "username": "2",
       "password": "2",
+      "email": "ducthanh260801@gmail.com",
       "vaitro": "0"
     },
     {
       "username": "thanh",
       "password": "123",
       "passwordComfirm": "123",
+      "email": "ducthanh260801@gmail.com",
       "id": "7FhrqHZ"
     },
     {
       "username": "iamducthanh",
       "password": "321",
       "passwordComfirm": "321",
+      "email": "ducthanh260801@gmail.com",
       "id": "hPJpgfm"
     },
     {
       "username": "321",
       "password": "321",
       "passwordComfirm": "321",
+      "email": "ducthanh260801@gmail.com",
       "id": "CucQyT5"
+    },
+    {
+      "username": "admin123",
+      "email": "mrthanh260801@gmail.com",
+      "password": "123",
+      "passwordComfirm": "123",
+      "macode": "192751",
+      "id": "TMcHzTS"
     }
   ],
   "cart": [

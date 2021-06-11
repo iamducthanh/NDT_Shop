@@ -1,22 +1,42 @@
 import React from 'react'
 import { get, useForm } from 'react-hook-form'
 import { useHistory } from 'react-router';
-import aoKhoacApi from '../api/aoKhoacApi';
 import userApi from '../api/userApi';
+import emailjs from 'emailjs-com'
+import { useEffect, useState } from 'react';
+
 
 const Signup = () => {
     let history = useHistory();
     var checkSignup = false;
+    const [maCode, setMaCode] = useState(1);
     const { register, handleSubmit, formState: { errors }, watch } = useForm();
-    const signup = async (data) => {
-        if(checkSignup){
-            let res = await userApi.addUser(data)
-            alert('Đăng kí thành công!')
-            history.push('/login')
+    var maXacNhan = 0;
+    const signup = async (data, r) => {
+        if (data.macode == maCode) {
+            console.log(checkSignup);
+            if (checkSignup) {
+                let res = await userApi.addUser(data)
+                alert('Đăng kí thành công!')
+                history.push('/login')
+            }
+        } else {
+            alert('Mã xác nhận không đúng!')
         }
+        
     }
+
+    const sendFeedback = (serviceID, templateId, variables) => {
+        window.emailjs.send(
+            serviceID, templateId,
+            variables
+        ).then(res => {
+            console.log('Email successfully sent!')
+        })
+            .catch(err => console.error('There has been an error.  Here some thoughts on the error that occured:', err))
+    }
+
     const check = (event) => {
-        console.log(document.getElementsByClassName('passs')[0].value)
         if (event.target.value == document.getElementsByClassName('passs')[0].value) {
             document.getElementById('errorComfirm').style.display = 'none'
             checkSignup = true
@@ -24,17 +44,71 @@ const Signup = () => {
             document.getElementById('errorComfirm').style.display = 'inline-block'
             checkSignup = false
         }
+    }
 
+    const checkTrungEmail = async (event) => {
+        const { data } = await userApi.getUserByEmail(event.target.value)
+        if (data.length > 0) {
+            document.getElementById('errorEmail').style.display = 'inline-block'
+            checkSignup = false
+        } else {
+            document.getElementById('errorEmail').style.display = 'none'
+            checkSignup = true
+        }
     }
 
     const checkUser = async (event) => {
         const { data } = await userApi.getUserByUsername(event.target.value)
-        if(data.length > 0){
+        if (data.length > 0) {
             document.getElementById('errorUser').style.display = 'inline-block'
             checkSignup = false
         } else {
             document.getElementById('errorUser').style.display = 'none'
             checkSignup = true
+        }
+    }
+
+    var i = 60;
+    const seti = () => {
+        i = i - 1;
+        document.getElementById('nutSleep').innerHTML = i + 's'
+        console.log(i);
+        setTimeout(seti2, 1000)
+    }
+
+    const seti2 = () => {
+        if (i <= 0) {
+            document.getElementById('nutGuiMa').style.display = 'unset'
+            document.getElementById('nutSleep').style.display = 'none'
+        } else {
+            i = i - 1;
+            document.getElementById('nutSleep').innerHTML = i + 's'
+            console.log(i);
+            setTimeout(seti, 1000)
+        }
+    }
+
+
+    const guiMa = () => {
+        if (/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(document.getElementsByClassName('email')[0].value)) {
+            maXacNhan = Math.round(Math.random() * (999999 - 111111) + 111111);
+            alert(`Mã xác nhận đã được gửi đến ${document.getElementsByClassName('email')[0].value}`);
+            const templateId = 'template_75sb4wn';
+            const serviceID = 'ducthanh260801@gmail.com';
+            sendFeedback(serviceID, templateId, {
+                to_name: `${document.getElementById('login').value}`,
+                from_name: "Chào mừng đến với NDT Shop",
+                message: "Mã xác nhận tài khoản của bạn là: " + maXacNhan,
+                nguoi_nhan: document.getElementsByClassName('email')[0].value,
+                reply_to: "ducthanh260801@gmail.com"
+            })
+            document.getElementById('nutGuiMa').style.display = 'none'
+            document.getElementById('nutSleep').style.display = 'unset'
+            setMaCode(maXacNhan)
+            i = 10;
+            seti();
+        } else {
+            alert('Bạn nhập sai định dạng email')
         }
     }
     return (
@@ -54,7 +128,23 @@ const Signup = () => {
                         {...register('username', { required: true })}
                     />
                     {errors.username && <div className="form-text text-danger">Bạn không được để trống tài khoản.</div>}
-                   <br/> <div id="errorUser" className="form-text text-danger" style={{ display: 'none' }}>Username này đã tồn tại</div> <br/>
+                    <br /> <div id="errorUser" className="form-text text-danger" style={{ display: 'none' }}>Username này đã tồn tại</div> <br />
+                    <input
+                        type="text"
+                        id="password"
+                        className="email"
+                        name="login"
+                        onKeyUp={checkTrungEmail}
+                        placeholder="Email"
+                        {...register('email', {
+                            required: "Vui lòng nhập Email",
+                            pattern: {
+                                value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                                message: "Email không đúng định dạng"
+                            }
+                        })} />
+                    {errors.email && <div className="form-text text-danger">{errors.email.message}</div>}
+                    <br /> <div id="errorEmail" className="form-text text-danger" style={{ display: 'none' }}>Email này đã được đăng kí</div> <br />
 
                     <input
                         type="text"
@@ -79,11 +169,22 @@ const Signup = () => {
                     <div id="errorComfirm" className="form-text text-danger" style={{ display: 'none' }}>Password và Comfirmpassword phải giống nhau</div>
                     <br />
                     <input
+                        id="inputComfirm"
+                        placeholder='Mã xác nhận'
+                        {...register('macode', {
+                            required: true
+                        })}
+                    ></input>
+                    <div className="btn btn-danger" id="nutGuiMa" onClick={guiMa}>Gửi mã</div>
+                    <button className="btn btn-danger" id="nutSleep" style={{ display: 'none' }} onClick={guiMa} disabled></button>
+                    <br />
+                    <input
                         type="submit"
                         id="subbb"
                         className="fadeIn fourth"
                         defaultValue="Log In" />
                 </form>
+
 
                 <div id="formFooter">
                     <a id="aLogin" className="underlineHover" href="#">Forgot Password?</a>

@@ -1,14 +1,12 @@
 import './App.css';
 import Router from './Router';
 import { useEffect, useState } from 'react';
-import aoKhoacApi from './api/aoKhoacApi';
-import aoThunApi from './api/aoThunApi'
 import gioHangApi from './api/gioHangApi';
 import userApi from './api/userApi';
+import productApi from './api/productApi';
 
 function App() {
-  const [aoKhoac, setAoKhoac] = useState([]);
-  const [aoThun, setAoThun] = useState([]);
+  const [product, setProduct] = useState([]);
   const [slHang, setSlHang] = useState();
   const [user, setUser] = useState([username, password]);
 
@@ -34,21 +32,12 @@ function App() {
     setSlHang(data.length);
   }
 
-  const maxAo = 1;
   useEffect(() => {
-    const getAoKhoac = async () => {
-      const { data } = await aoKhoacApi.getAllAo()
-      setAoKhoac(data);
+    const getProduct = async () => {
+      const { data } = await productApi.getAllAo();
+      setProduct(data);
     }
-    getAoKhoac();
-  }, [])
-
-  useEffect(() => {
-    const getAoThun = async () => {
-      const { data } = await aoThunApi.getAllAo()
-      setAoThun(data);
-    }
-    getAoThun();
+    getProduct();
   }, [])
 
   var username = localStorage.getItem('username');
@@ -64,8 +53,7 @@ function App() {
   return (
     <div>
       <Router
-        maxPage={aoKhoac.length % 8 == 0 ? aoKhoac.length / 8 : Math.round(aoKhoac.length / 8 + 1)}
-        maxPageAoThun={aoThun.length % 8 == 0 ? aoThun.length / 8 : Math.round(aoThun.length / 8 + 1)}
+        maxPage={product.length % 8 == 0 ? product.length / 8 : Math.round(product.length / 8 + 1)}
         setUserLogin={setUserLogin}
         user={user}
         slHang={slHang}
