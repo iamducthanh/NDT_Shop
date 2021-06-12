@@ -6,16 +6,18 @@ import { useForm } from 'react-hook-form'
 import userApi from '../api/userApi';
 
 const Login = (props) => {
+  var user = []
   const { register, handleSubmit, formState: { errors } } = useForm();
   let history = useHistory()
   const login = async (userLogin) => {
-    console.log(userLogin);
-    const user = await userApi.getUserByUsername(userLogin.username)
-    console.log(user);
+    user = await userApi.getUserByUsername(userLogin.username)
+    if(user.data.length === 0){
+      user = await userApi.getUserByEmail(userLogin.username)
+    }
     if (user.data.length == 0) {
       alert('Thông tin đăng nhập không chính xác!')
     } else {
-      if (user.data[0].username == userLogin.username && user.data[0].password == userLogin.password) {
+      if ((user.data[0].email == userLogin.username ||user.data[0].username == userLogin.username) && user.data[0].password == userLogin.password) {
         if (user.data[0].vaitro == 1) {
           localStorage.setItem('accessToken', true)
           localStorage.setItem('username', user.data[0].username)
@@ -112,7 +114,7 @@ const Login = (props) => {
         <Link id="aLogin" className="underlineHover" to="/signup">Sign up</Link>
 
         <div id="formFooter">
-          <a id="aLogin" className="underlineHover" href="#">Forgot Password?</a>
+          <Link id="aLogin" className="underlineHover" to="/forgot-password">Forgot Password?</Link>
         </div>
       </div>
     </div>

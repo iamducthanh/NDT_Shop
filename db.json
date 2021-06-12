@@ -1425,10 +1425,8 @@
     },
     {
       "username": "admin123",
+      "password": "tttt",
       "email": "mrthanh260801@gmail.com",
-      "password": "123",
-      "passwordComfirm": "123",
-      "macode": "192751",
       "id": "TMcHzTS"
     },
     {
@@ -1441,10 +1439,8 @@
     },
     {
       "username": "thanh321",
+      "password": "newpass",
       "email": "vjpvai08@gmail.com",
-      "password": "123",
-      "passwordComfirm": "123",
-      "macode": "927453",
       "id": "MoZQTSq"
     }
   ],

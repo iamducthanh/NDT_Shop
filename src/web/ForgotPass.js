@@ -44,6 +44,9 @@ const ForgotPass = () => {
             document.getElementsByClassName('form3')[0].style.display = 'unset'
         } else {
             document.getElementById('messege2').style.display = 'unset'
+            const dataNew = {
+
+            }
         }
     }
 
@@ -57,12 +60,29 @@ const ForgotPass = () => {
             .catch(err => console.error('There has been an error.  Here some thoughts on the error that occured:', err))
     }
 
-    const doiMauKhau = (data) => {
-        console.log(data);
+    const doiMauKhau = async (data) => {
+        if (data.newpass != data.newnewpass) {
+            document.getElementById('error4').style.display = 'unset'
+        } else {
+            document.getElementById('error4').style.display = 'none'
+            const dataNew = {
+                username: user[0].username,
+                password: data.newpass,
+                email: user[0].email,
+                id: user[0].id
+            }
+            await userApi.update(dataNew, user[0].id)
+            document.getElementById('alertBox7').style.display = 'unset'
+            setTimeout(()=>{document.getElementById('backLogin').click()},1000)
+        }
     }
 
     return (
         <div className="wrapper fadeInDown" id="contai">
+            <div className="alertBox" id="alertBox7">
+               Đổi mật khẩu thành công<br />
+                <Link to="/login" id="backLogin"> Đóng </Link>
+            </div>
             <div id="formContent" className="form1">
                 <h2>Tìm tài khoản của bạn  1</h2>
                 <hr />
@@ -115,7 +135,7 @@ const ForgotPass = () => {
             <div id="formContent" className="form3">
                 <h2>Đổi mật khẩu</h2>
                 <hr />
-                <p style={{ textAlign: 'left', marginLeft: '30px' }}>Thay đổi mật khẩu mới</p>
+                <p style={{ textAlign: 'left', marginLeft: '30px' }}>Thay đổi mật khẩu</p>
                 <form onSubmit={handleSubmit(doiMauKhau)}>
                     <input
                         type="text"
@@ -124,7 +144,7 @@ const ForgotPass = () => {
                         placeholder="Mhập mật khẩu mới"
                         {...register('newpass', { required: true })}
                     />
-                    {errors.newpass && <div className="form-text text-danger">Emal đang để trống.</div>}
+                    {errors.newpass && <div className="form-text text-danger">Vui lòng nhập mật khẩu mới.</div>}
                     <input
                         type="text"
                         id="login"
@@ -132,8 +152,8 @@ const ForgotPass = () => {
                         placeholder="Nhập lại mật khẩu mới"
                         {...register('newnewpass', { required: true })}
                     />
-                    {errors.newnewpass && <div className="form-text text-danger">Emal đang để trống.</div>}
-
+                    {errors.newnewpass && <div className="form-text text-danger">Vui lòng nhập mật khẩu mới.</div>}
+                    <br /><div className="form-text text-danger" id="error4" style={{ display: "none" }}>Mật khẩu mới và nhập lại mật khẩu mới phải giống nhau</div>
                     <hr />
                     <input
                         type="submit"
