@@ -732,6 +732,14 @@
       "soLuong": "12",
       "id": "ToSaodS",
       "loaisp": "ao-khoac"
+    },
+    {
+      "loaisp": "ao-thun",
+      "name": "4444",
+      "price": "3",
+      "image1": "234",
+      "soLuong": "234",
+      "id": "lGuJIsY"
     }
   ],
   "jeans": [
@@ -1391,28 +1399,28 @@
       "id": "2",
       "username": "2",
       "password": "2",
-      "email": "ducthanh260801@gmail.com",
+      "email": "ducthanh26080144@gmail.com",
       "vaitro": "0"
     },
     {
       "username": "thanh",
       "password": "123",
       "passwordComfirm": "123",
-      "email": "ducthanh260801@gmail.com",
+      "email": "ducthanh26080133@gmail.com",
       "id": "7FhrqHZ"
     },
     {
       "username": "iamducthanh",
       "password": "321",
       "passwordComfirm": "321",
-      "email": "ducthanh260801@gmail.com",
+      "email": "ducthanh26080122@gmail.com",
       "id": "hPJpgfm"
     },
     {
       "username": "321",
       "password": "321",
       "passwordComfirm": "321",
-      "email": "ducthanh260801@gmail.com",
+      "email": "ducthanh26080111@gmail.com",
       "id": "CucQyT5"
     },
     {
@@ -1422,6 +1430,22 @@
       "passwordComfirm": "123",
       "macode": "192751",
       "id": "TMcHzTS"
+    },
+    {
+      "username": "admin321",
+      "email": "vjpvai03@gmail.com",
+      "password": "3",
+      "passwordComfirm": "3",
+      "macode": "475392",
+      "id": "BGIssqg"
+    },
+    {
+      "username": "thanh321",
+      "email": "vjpvai08@gmail.com",
+      "password": "123",
+      "passwordComfirm": "123",
+      "macode": "927453",
+      "id": "MoZQTSq"
     }
   ],
   "cart": [
@@ -1836,6 +1860,14 @@
       "noiDung": "e",
       "ngayThang": "21:33:28 9-6-2021",
       "id": "hAudm1T"
+    },
+    {
+      "username": "Thanh321",
+      "loaiSP": "ao-khoac",
+      "idProduct": "3dnyt",
+      "noiDung": "hello các bro",
+      "ngayThang": "8:46:30 12-6-2021",
+      "id": "nlQ8Kq4"
     }
   ],
   "hoa-don": [

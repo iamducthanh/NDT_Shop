@@ -69,7 +69,7 @@ const AddProduct = (props) => {
                 {errors.image1 && <div id="emailHelp" className="form-text text-danger">Không được để trống hình ảnh.</div>}
             </div>
 
-            <div className="mb-3">
+            {/* <div className="mb-3">
                 <label htmlFor="quantity" className="form-label">Hình ảnh 2</label>
                 <input
                     type="text"
@@ -91,7 +91,7 @@ const AddProduct = (props) => {
                     id="quantity"
                     {...register('image3', { required: true })} />
                 {errors.image3 && <div id="emailHelp" className="form-text text-danger">Không được để trống hình ảnh.</div>}
-            </div>
+            </div> */}
 
             <div className="mb-3">
                 <label htmlFor="quantity" className="form-label">Số lượng</label>

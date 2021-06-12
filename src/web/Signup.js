@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 
 const Signup = () => {
     let history = useHistory();
-    var checkSignup = false;
+    var checkSignup = true;
     const [maCode, setMaCode] = useState(1);
     const { register, handleSubmit, formState: { errors }, watch } = useForm();
     var maXacNhan = 0;
@@ -105,7 +105,7 @@ const Signup = () => {
             document.getElementById('nutGuiMa').style.display = 'none'
             document.getElementById('nutSleep').style.display = 'unset'
             setMaCode(maXacNhan)
-            i = 10;
+            i = 60;
             seti();
         } else {
             alert('Bạn nhập sai định dạng email')

@@ -14,6 +14,8 @@ import Product from './web/Product';
 import QuanLiProduct from './admin/QuanLiProduct';
 import AddProduct from './admin/Add';
 import EditProduct from './admin/Edit'
+import ForgotPass from './web/ForgotPass';
+
 
 class Router extends Component {
     constructor(props) {
@@ -26,6 +28,11 @@ class Router extends Component {
                     <Route exact path='/login'>
                         <WebLayout {...this.props}>
                             <Login {...this.props} />
+                        </WebLayout>
+                    </Route>
+                    <Route exact path='/forgot-password'>
+                        <WebLayout {...this.props}>
+                            <ForgotPass {...this.props} />
                         </WebLayout>
                     </Route>
                     <Route exact path='/don-hang'>
