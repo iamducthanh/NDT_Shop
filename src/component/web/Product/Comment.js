@@ -1,10 +1,11 @@
 import React from 'react'
+import img from '../../../css/regift.gif'
 
 const Comment = (props) => {
     return (
         <div className="boxCmt">
             <div className="imgRate">
-                <img src="https://taimienphi.vn/tmp/cf/aut/mAKI-top-anh-dai-dien-dep-chat-1.jpg" alt />
+                <img src={img} alt />
             </div>
             <div className="cmt">
                 <div className="name">{props.comment.username}</div>

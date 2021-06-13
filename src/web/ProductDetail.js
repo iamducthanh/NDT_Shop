@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form'
 import gioHangApi from '../api/gioHangApi';
 import Comment from '../component/web/Product/Comment';
 import commentApi from '../api/commentApi';
+import img from '../css/regift.gif'
 
 const ProductDetail = (props) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -286,7 +287,7 @@ const ProductDetail = (props) => {
                                     <h4>Bình luận</h4>
                                     <div className="InputComment">
                                         <div className="userComment">
-                                            <img src="https://scontent.fhph1-1.fna.fbcdn.net/v/t1.6435-9/34530400_125389335009169_5924819458261516288_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=174925&_nc_ohc=n3kAxo30IlQAX8KOoTp&_nc_ht=scontent.fhph1-1.fna&oh=2fab0f116dea0d1bfe53015c9795db35&oe=60C8117D" alt />
+                                            <img src={img} alt />
                                             <form onSubmit={handleSubmit(addCmt)}>
                                                 <input
                                                     className="commentI"
