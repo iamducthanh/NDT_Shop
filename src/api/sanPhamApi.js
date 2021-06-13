@@ -8,7 +8,8 @@ const sanPhamApi = {
     },
 
     getProductRelated(sp, key){
-        const url = `${sp}?q=${key}&_page=1&_limit=2`;
+        const url = `product?loaisp=${sp}&q=${key}&_page=1&_limit=2`;
+        console.log(url);
         return axiosClient.get(url);
     }
 }
