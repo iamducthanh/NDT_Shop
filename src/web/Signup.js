@@ -48,8 +48,9 @@ const Signup = () => {
 
     const checkTrungEmail = async (event) => {
         const { data } = await userApi.getUserByEmail(event.target.value)
+        console.log(data.length);
         if (data.length > 0) {
-            document.getElementById('errorEmail').style.display = 'inline-block'
+            document.getElementById('errorEmail').style.display = 'unset'
             checkSignup = false
         } else {
             document.getElementById('errorEmail').style.display = 'none'
@@ -100,7 +101,8 @@ const Signup = () => {
                 from_name: "Chào mừng đến với NDT Shop",
                 message: "Mã xác nhận tài khoản của bạn là: " + maXacNhan,
                 nguoi_nhan: document.getElementsByClassName('email')[0].value,
-                reply_to: "ducthanh260801@gmail.com"
+                reply_to: "ducthanh260801@gmail.com",
+                link: '<a href="http://ndtshop.herokuapp.com/signup">Truy cập tại đây</a>'
             })
             document.getElementById('nutGuiMa').style.display = 'none'
             document.getElementById('nutSleep').style.display = 'unset'
@@ -144,7 +146,8 @@ const Signup = () => {
                             }
                         })} />
                     {errors.email && <div className="form-text text-danger">{errors.email.message}</div>}
-                    <br /> <div id="errorEmail" className="form-text text-danger" style={{ display: 'none' }}>Email này đã được đăng kí</div> <br />
+                    <br /> 
+                    <div id="errorEmail" className="form-text text-danger" style={{ display: 'none' }}>Email này đã được đăng kí</div> <br />
 
                     <input
                         type="text"

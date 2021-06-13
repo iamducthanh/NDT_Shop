@@ -27,7 +27,8 @@ const ForgotPass = () => {
                 from_name: "Chào mừng đến với NDT Shop",
                 message: "Mã xác nhận lấy lại mật khẩu của bạn là: " + maXacNhan,
                 nguoi_nhan: email,
-                reply_to: "ducthanh260801@gmail.com"
+                reply_to: "ducthanh260801@gmail.com",
+                link: <a href="http://ndtshop.herokuapp.com/forgot-password">Truy cập tại đây</a>
             })
             setMaCode(maXacNhan)
             document.getElementsByClassName('formp2')[0].style.display = 'none'

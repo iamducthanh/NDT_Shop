@@ -25,7 +25,7 @@ const Product = (props) => {
                     <tbody>
                         {props.product.map((sanPham, index) => (
                             <tr>
-                                <td>{index + 1 + (8 * (props.page - 1))}</td>
+                                <td>{index + 1 + (8 * (Number(props.page) - 1))}</td>
                                 <td>{sanPham.name}</td>
                                 <td>{Number(sanPham.price).toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}</td>
                                 <td>
