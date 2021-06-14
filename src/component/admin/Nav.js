@@ -52,6 +52,16 @@ const Nav = (props) => {
                     </div>
                 </li>
             ))}
+            <div className="sidebar-heading">
+                DANH MỤC SẢN PHẨM
+            </div>  
+                <li className="nav-item">
+                    <Link className="nav-link collapsed" to={`/admin/danh-muc/`} data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <i className="fas fa-fw fa-folder" />
+                        <span>Danh mục</span>
+                    </Link>
+                </li>
+
             {/* <li className="nav-item">
                 <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i className="fas fa-fw fa-folder" />
@@ -118,7 +128,7 @@ const Nav = (props) => {
             <div className="sidebar-heading">
                 bán hàng
 
-</div>
+            </div>
             {/* Nav Item - Pages Collapse Menu */}
             <li className="nav-item">
                 <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">

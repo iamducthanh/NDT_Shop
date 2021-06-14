@@ -12,8 +12,11 @@ import DonMua from './web/DonMua';
 import DonHang from './admin/DonHang';
 import Product from './web/Product';
 import QuanLiProduct from './admin/QuanLiProduct';
+import QuanLiDanhMuc from './admin/QuanLiDanhMuc';
 import AddProduct from './admin/Add';
+import AddDanhMuc from './admin/AddDanhMuc';
 import EditProduct from './admin/Edit'
+import EditDanhMuc from './admin/EditDanhMuc'
 import ForgotPass from './web/ForgotPass';
 
 
@@ -78,6 +81,15 @@ class Router extends Component {
                                     </Route>
                                     <Route exact path="/admin/don-hang">
                                         <DonHang />
+                                    </Route>
+                                    <Route exact path="/admin/danh-muc">
+                                        <QuanLiDanhMuc {...this.props} />
+                                    </Route>
+                                    <Route exact path="/admin/danh-muc/add">
+                                        <AddDanhMuc {...this.props} />
+                                    </Route>
+                                    <Route exact path="/admin/danh-muc/:id">
+                                        <EditDanhMuc {...this.props} />
                                     </Route>
                                     <Route exact path={`/admin/product/:sp/add`}>
                                         <AddProduct />

@@ -1,6 +1,7 @@
 {
   "loaisp": [
     {
+      "id": "1",
       "tenloai": "Áo",
       "chitietloai": [
         {
@@ -10,10 +11,15 @@
         {
           "tenchitietloai": "Áo khoác",
           "url": "ao-khoac"
+        },
+        {
+          "tenchitietloai": "Áo dài",
+          "url": "Ao-dai"
         }
       ]
     },
     {
+      "id": "2",
       "tenloai": "Quần",
       "chitietloai": [
         {
@@ -21,6 +27,34 @@
           "url": "jeans"
         }
       ]
+    },
+    {
+      "tenloai": "Trang sức",
+      "chitietloai": [
+        {
+          "tenchitietloai": "",
+          "url": ""
+        },
+        {
+          "tenchitietloai": "Nhẫn",
+          "url": "Nhan"
+        }
+      ],
+      "id": "d5dyu8w"
+    },
+    {
+      "tenloai": "Giầy",
+      "chitietloai": [
+        {
+          "tenchitietloai": "",
+          "url": ""
+        },
+        {
+          "tenchitietloai": "jordan",
+          "url": "jordan"
+        }
+      ],
+      "id": "pMeZ6Tr"
     }
   ],
   "product": [
@@ -740,6 +774,16 @@
       "image1": "234",
       "soLuong": "234",
       "id": "lGuJIsY"
+    },
+    {
+      "loaisp": "Ao-dai",
+      "name": "thành",
+      "price": "123",
+      "image1": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+      "image2": "https://martinvalen.com/5978/men-s-light-blue-jeans-with-rips.jpg",
+      "image3": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQji_FF_G-eag9aYLdQ1d678RE8u8S2GbCLw&usqp=CAU",
+      "soLuong": "11",
+      "id": "MCQKDlT"
     }
   ],
   "jeans": [
@@ -1425,7 +1469,7 @@
     },
     {
       "username": "admin123",
-      "password": "tttt",
+      "password": "newpass",
       "email": "mrthanh260801@gmail.com",
       "id": "TMcHzTS"
     },
@@ -1444,18 +1488,7 @@
       "id": "MoZQTSq"
     }
   ],
-  "cart": [
-    {
-      "username": "admin",
-      "tenSP": "Refined Steel Shoes 3",
-      "size": "L",
-      "mauSac": "black",
-      "gia": 200000,
-      "soLuong": 1,
-      "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
-      "id": 1
-    }
-  ],
+  "cart": [],
   "comment": [
     {
       "id": "1",
@@ -2015,7 +2048,7 @@
         }
       ],
       "thoigian": "17:38:28 10-6-2021",
-      "trangThai": "0",
+      "trangThai": 1,
       "thanhToan": "Thanh toán bằng momo",
       "id": "SiLPq-K"
     },
@@ -2090,6 +2123,87 @@
       "trangThai": "0",
       "thanhToan": "Thanh toán khi nhận hàng",
       "id": "lvGJdvg"
+    },
+    {
+      "username": "admin",
+      "product": [
+        {
+          "idsp": 1,
+          "tensp": "Refined Steel Shoes 3",
+          "image": "https://salt.tikicdn.com/cache/w444/ts/product/ae/ae/36/b0562271185e81b2be0756ff4b191f42.jpg",
+          "price": 200000,
+          "soluong": 1,
+          "size": "L",
+          "color": "black"
+        },
+        {
+          "idsp": 2,
+          "tensp": "Jeans 8",
+          "image": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
+          "price": 2100000,
+          "soluong": 3,
+          "size": "S",
+          "color": "yellow"
+        }
+      ],
+      "thoigian": "10:4:53 13-6-2021",
+      "trangThai": "0",
+      "thanhToan": "Thanh toán khi nhận hàng",
+      "id": "3S1NElA"
+    },
+    {
+      "username": "admin",
+      "product": [
+        {
+          "idsp": 1,
+          "tensp": "Áo thun 2",
+          "image": "https://product.hstatic.net/1000026602/product/118071394_671482550387997_8296446070533145704_o_9bd939fe54504b829e3f932999dfee30.jpg",
+          "price": 300000,
+          "soluong": 5,
+          "size": "S",
+          "color": "black"
+        }
+      ],
+      "thoigian": "10:5:24 13-6-2021",
+      "trangThai": "0",
+      "thanhToan": "Thanh toán khi nhận hàng",
+      "id": "8RqpGX-"
+    },
+    {
+      "username": "admin",
+      "product": [
+        {
+          "idsp": 1,
+          "tensp": "Jeans 2",
+          "image": "https://martinvalen.com/5975-large_default/men-s-light-blue-jeans-with-rips.jpg",
+          "price": 400000,
+          "soluong": 1,
+          "size": "L",
+          "color": "black"
+        }
+      ],
+      "thoigian": "15:46:20 14-6-2021",
+      "trangThai": "0",
+      "thanhToan": "Thanh toán khi nhận hàng",
+      "id": "4WTIEjE"
+    },
+    {
+      "username": "admin",
+      "product": [
+        {
+          "idsp": 1,
+          "tensp": "Áo thun 2",
+          "image": "https://product.hstatic.net/1000026602/product/118071394_671482550387997_8296446070533145704_o_9bd939fe54504b829e3f932999dfee30.jpg",
+          "price": 300000,
+          "soluong": 1,
+          "size": "L",
+          "color": "black"
+        }
+      ],
+      "thoigian": "15:47:20 14-6-2021",
+      "trangThai": "0",
+      "thanhToan": "Thanh toán bằng momo",
+      "id": "aXrpCAJ"
     }
   ]
 }
